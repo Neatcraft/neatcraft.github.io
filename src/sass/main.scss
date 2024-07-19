@@ -20,7 +20,9 @@ header {
   top: 0;
   left: 0;
 }
-
+.hidden {
+  display: none;
+}
 nav {
   ul {
     list-style: none;
@@ -38,7 +40,7 @@ nav {
       }
 
       &:last-child {
-        border-right: none; // Remove border for the last item
+        border-right: none; 
       }
 
       a {
@@ -60,8 +62,8 @@ nav {
   align-items: center;
   text-align: center;
   .logo {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     margin: 50px;
   }
   .content_text{
@@ -72,7 +74,7 @@ nav {
     .content_text_title{
       display: flex;
       gap: 1rem;
-      justify-content: center;
+      
         .logo-arrow{
           width: 100px;
           height: 100px;
@@ -80,7 +82,7 @@ nav {
         } 
 
         h1 {
-          font-size: 3.6em;
+          font-size: 3em;
           margin: 20px ;
           color: #f7f7f7;
         }
@@ -113,8 +115,6 @@ nav {
       }
   }
 }
-
-
 
 
 
