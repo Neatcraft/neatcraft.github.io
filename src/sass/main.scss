@@ -5,8 +5,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #460088;
+  
+  
 }
 
 header {
@@ -15,7 +15,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
-  background-color: #460088;
+  background-color: #460098;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,6 +61,8 @@ nav {
   display: flex;
   align-items: center;
   text-align: center;
+  background-color: #460098;
+  width: 100%;
   .logo {
     width: 500px;
     height: 500px;
@@ -96,8 +98,8 @@ nav {
         text-align: start;
       }
       .button {
-        padding: 10px 20px;
-        font-size: 1em;
+        padding: 10px ;
+        font-size: 1.4em;
         font-weight: bold;
         color: #fff;
         background-color: #5d358f;
@@ -115,6 +117,118 @@ nav {
       }
   }
 }
+main{
+  width: 100%;
+  height: 100;
+}
+.vision-content{
+  display: flex;
+  background-color: #f7f7f7;
+  padding: 10%;
+
+  .vision-content_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    .button{
+      padding: 10px ;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #fff;
+      background-color: #5d358f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 20%;
+      text-align: center;
+    }
+
+    .vision-content_title{
+      display: flex;
+        img{
+          width: 100px;
+          height: 100px;
+          
+        }
+        h1{
+          font-size: 3em;
+          margin: 20px ;
+          color: #002740;
+        }
+    }
+    h2{
+      color: #ed7d1a;
+      font-size: 2.6em;
+      line-height: 1.5;
+      margin: 20px 0;
+      font-weight: bold;
+      text-align: start;
+    }
+    p{
+      font-size: 1.8em;
+    }
+}
+}
+.vision-content_img {
+  width: 100%;
+
+  .logo-balance{
+    width: 550px;
+    
+  }
+  
+}
+
+.valeurs-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: #5d358f;
+
+    h1{
+      font-size: 3em;
+      margin: 5%;
+      color: #f7f7f7;
+    }
+
+    .valeurs-content_card{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+     
+
+
+        .card{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: solid 2px #ed7d1a ;
+          border-radius: 15px;
+          width: 20%;
+          margin: 25px;
+          background-color: #f7f7f7;
+          text-align: center;
+            img{
+              width: 50px;
+              padding: 25px;
+            }
+            h2{
+              color: #ed7d1a;
+              font-size: 2em;
+            }
+            p{
+              font-size: 1.5em;
+              padding: 1em;
+              text-align: center;
+            }
+        }
+    }
+}
+
 
 
 
