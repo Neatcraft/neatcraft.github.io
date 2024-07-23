@@ -290,6 +290,48 @@ main{
     }
 }
 
+.domaines-content{
+  background-color:#002740;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  padding-top: 0%;
+
+    h1{
+      padding-top: 5%;
+    }
+ 
+
+    .domaines-content_card{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+       
+        .domaines-card{
+          flex: 1 1 calc(33.33% - 50px); /* 33.33% de la largeur moins les marges */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: solid 2px #ed7d1a;
+          border-radius: 15px;
+          margin: 25px; /* Ajoute de l'espace autour de chaque card */
+          background-color: #f7f7f7;
+          text-align: center;
+          align-items: center;  
+
+          h2{
+            color: #dd781e;
+          }
+
+          img{
+            width: 100px;
+          }
+        }
+    }
+}
 
 
 
