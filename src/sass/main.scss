@@ -229,6 +229,66 @@ main{
     }
 }
 
+.axe-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  margin: 3em;
+  
+
+    .axe-content_box{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 40%;
+
+      h2{
+        color: #dd781e;
+        font-size: 2.5em;
+      }
+
+      p{
+        font-size: 1.5em;
+      }
+      
+      .button{
+        padding: 10px ;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #fff;
+        background-color: #5d358f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 20%;
+        text-align: center;
+      }
+
+        .axe-content_title{
+          display: flex;
+          flex-direction: row;
+            img{
+              width: 100px;
+              padding: 25px;
+              
+            }
+            h1{
+              color: #002740;
+              font-size: 3em;
+            }
+        }
+    }
+    .axe-content_image{
+      width:  30%;
+      img{
+        width: 80%;  
+        border-radius: 50%;
+      }
+    
+    }
+}
 
 
 
