@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.95 84.61">
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.38 41.95">
   <defs>
     <style>
       .cls-1 {
-        stroke: #fff;
+        fill: url(#Dégradé_sans_nom_301);
       }
 
-      .cls-1, .cls-2, .cls-3 {
-        fill: #fff;
-      }
-
-      .cls-1, .cls-3 {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 15.26px;
-      }
-
-      .cls-4 {
-        fill: #2a3159;
-      }
-
-      .cls-4, .cls-5, .cls-2 {
+      .cls-1, .cls-2, .cls-3, .cls-4 {
         stroke-width: 0px;
       }
 
-      .cls-5 {
+      .cls-1, .cls-3, .cls-4 {
+        opacity: .24;
+      }
+
+      .cls-2 {
         fill: #ed7d1a;
+        filter: url(#drop-shadow-1);
       }
 
       .cls-3 {
-        stroke: #ed7d1a;
+        fill: url(#Dégradé_sans_nom_301-3);
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_301-2);
       }
     </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx=".87" dy=".87"/>
+      <feGaussianBlur result="blur" stdDeviation="1.54"/>
+      <feFlood flood-color="#000" flood-opacity=".35"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="Dégradé_sans_nom_301" data-name="Dégradé sans nom 301" x1="1284.49" y1="-7125.86" x2="1329.15" y2="-7125.86" gradientTransform="translate(1349.77 7146.85) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_301-2" data-name="Dégradé sans nom 301" x1="1231.03" y1="-7125.83" x2="1275.64" y2="-7125.83" xlink:href="#Dégradé_sans_nom_301"/>
+    <linearGradient id="Dégradé_sans_nom_301-3" data-name="Dégradé sans nom 301" x1="2103.9" y1="-8068.92" x2="2145.79" y2="-8068.92" gradientTransform="translate(8123.41 -2103.84) rotate(90) scale(1 -1)" xlink:href="#Dégradé_sans_nom_301"/>
   </defs>
   <g id="Calque_3" data-name="Calque 3">
     <g>
-      <g>
-        <path class="cls-1" d="M7.63,41.81s56.55-77.66,117.69,1.14c0,0-57.04,77.32-117.69-1.14Z"/>
-        <circle class="cls-3" cx="66.47" cy="42.26" r="25.32"/>
-      </g>
-      <path class="cls-4" d="M7.63,41.81s56.55-77.66,117.69,1.14c0,0-57.04,77.32-117.69-1.14Z"/>
-      <circle class="cls-5" cx="66.47" cy="42.26" r="22.85"/>
-      <circle class="cls-2" cx="80.17" cy="28.78" r="8.87"/>
+      <path class="cls-2" d="M0,0v41.95h595.38V0H0Z"/>
+      <polygon class="cls-1" points="65.28 41.95 20.62 .03 20.62 41.91 65.28 41.95"/>
+      <polygon class="cls-4" points="118.74 41.95 74.14 .08 74.14 41.91 118.74 41.95"/>
+      <polygon class="cls-3" points="74.14 .07 34.83 41.95 74.11 41.95 74.14 .07"/>
     </g>
   </g>
 </svg>

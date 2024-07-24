@@ -15,7 +15,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
-  background-color: #460098;
+  background-color: #2a3159;
   position: fixed;
   top: 0;
   left: 0;
@@ -57,23 +57,23 @@ nav {
   }
 }
 
-.content {
+.content-mission {
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: #460098;
+  background-color: #2a3159;
   width: 100%;
   .logo {
     width: 500px;
     height: 500px;
     margin: 50px;
   }
-  .content_text{
+  .content-mission_text{
     margin: 10%;
     display: flex;
     flex-direction: column;
   
-    .content_text_title{
+    .content-mission_title{
       display: flex;
       gap: 1rem;
       
@@ -90,10 +90,11 @@ nav {
         }
     }  
       p {
+        font-family: montserrat, sans serif;
         font-size: 2.6em;
         line-height: 1.5;
         margin: 20px 0;
-        font-weight: bold;
+        font-weight: 900;
         color: #dd781e;
         text-align: start;
       }
@@ -187,7 +188,7 @@ main{
   height: 100%;
   align-items: center;
   background-color: #5d358f;
-
+    
     h1{
       font-size: 3em;
       margin: 5%;
@@ -198,6 +199,7 @@ main{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin: 5%;
       
      
 
@@ -209,7 +211,6 @@ main{
           border: solid 2px #ed7d1a ;
           border-radius: 15px;
           width: 20%;
-          margin: 25px;
           background-color: #f7f7f7;
           text-align: center;
             img{
@@ -301,6 +302,8 @@ main{
 
     h1{
       padding-top: 5%;
+      font-size: 3em;
+      color: #f7f7f7;
     }
  
 
@@ -308,19 +311,31 @@ main{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: 2%;
      
+      .border-card {
+        border: 5px solid white;
+        border-radius: 15px;
+        background-color: white;
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+    }
        
         .domaines-card{
-          flex: 1 1 calc(33.33% - 50px); /* 33.33% de la largeur moins les marges */
+          flex: 1;
           display: flex;
           flex-direction: column;
-          align-items: center;
           border: solid 2px #ed7d1a;
-          border-radius: 15px;
-          margin: 25px; /* Ajoute de l'espace autour de chaque card */
+          border-radius: 15px; 
           background-color: #f7f7f7;
           text-align: center;
           align-items: center;  
+          justify-content: center;
+          padding: 20px; 
+          box-sizing: border-box;
 
           h2{
             color: #dd781e;
@@ -328,10 +343,82 @@ main{
 
           img{
             width: 100px;
+            padding: 20px;
           }
         }
     }
 }
+
+.contact{
+  background-color: rgb(221, 215, 215);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1{
+    font-size: 3em;
+    color: #2a3159;
+    font-family: monserrat;
+  }
+
+  .contact-name{
+    
+    h2{
+      font-size: 2em;
+      color: #2a3159;
+      font-family: monserrat ;
+    }
+    p{
+      font-size: 0.7em;
+    }
+  }
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3%;
+    
+
+    img{
+      width: 20px;
+      padding: 8px;
+    }
+    a{
+      text-decoration: none;
+      color: #002740;
+    }
+    p{
+      margin: 0%;
+    }
+  }
+  
+}
+.mentions {
+  position: relative;
+  
+}
+.logo-contact {
+  display: block; 
+  max-width: 100%; 
+}
+
+.mentions-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 16px; 
+  text-align: center;
+  text-decoration: none; 
+  
+  
+}
+
+
 
 
 

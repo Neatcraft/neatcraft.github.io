@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.01 107.01">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 22.99px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke: #2a3159;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 8.84px;
+      }
+
+      .cls-3 {
+        stroke: #ed7d1a;
+      }
+    </style>
+  </defs>
+  <g id="Calque_3" data-name="Calque 3">
+    <g>
+      <g>
+        <line class="cls-1" x1="53.5" y1="95.52" x2="53.5" y2="11.49"/>
+        <line class="cls-1" x1="11.49" y1="53.5" x2="95.52" y2="53.5"/>
+        <line class="cls-1" x1="23.8" y1="83.21" x2="83.21" y2="23.8"/>
+        <line class="cls-1" x1="23.8" y1="23.8" x2="83.21" y2="83.21"/>
+      </g>
+      <g>
+        <line class="cls-2" x1="23.8" y1="83.21" x2="83.21" y2="23.8"/>
+        <line class="cls-2" x1="23.8" y1="23.8" x2="83.21" y2="83.21"/>
+      </g>
+      <line class="cls-3" x1="53.5" y1="95.52" x2="53.5" y2="11.49"/>
+      <line class="cls-3" x1="11.49" y1="53.5" x2="95.52" y2="53.5"/>
+    </g>
+  </g>
+</svg>
