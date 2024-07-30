@@ -26,20 +26,13 @@ header {
   display: none;
 }
 
-#staticLogo {
-  transition: all 0.3s ease;
-  width: 150px; /* Taille initiale */
-  position: absolute;
-  top: 20px;
-  left: 20%;
-  transform: translateX(-50%); /* Centrer */
-}
+
 
 #staticLogo.fixed {
   position: fixed;
   top: -260px;
   left: 20px;
-  width: 150px; 
+  width: 500px; 
   transform: none; 
   z-index: 1000; 
 }

@@ -1,9 +1,9 @@
 window.addEventListener('load', function() {
     const animatedLogo = document.getElementById('animatedLogo');
     const staticLogo = document.getElementById('staticLogo');
-    const initialLogoWidth = 150; // Largeur initiale du logo en px
+    const initialLogoWidth = 500; // Largeur initiale du logo en px
     const finalLogoWidth = 50; // Largeur finale du logo en px
-    const scrollCountThreshold = 3; // Nombre de défilements nécessaires avant fixation
+    const scrollCountThreshold = 5; // Nombre de défilements nécessaires avant fixation
     const scrollIncrementThreshold = 100; // Pixels parcourus pour chaque défilement
     let scrollCount = 0; // Compteur de défilements
 
