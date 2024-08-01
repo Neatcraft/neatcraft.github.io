@@ -40,6 +40,12 @@ header {
   transform: none; 
   z-index: 1000; 
 }
+
+nav ul li a.active {
+  text-decoration: underline;
+  color: #dd781e; /* Couleur de texte pour l'élément actif */
+}
+
 nav {
   ul {
     list-style: none;

@@ -33,3 +33,21 @@ window.addEventListener('load', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour déterminer la section active
+    function setActiveLink() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        let index = sections.length;
+
+        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+    }
+
+    // Ajouter l'événement de défilement pour détecter la section active
+    window.addEventListener('scroll', setActiveLink);
+    setActiveLink(); // Pour définir le lien actif au chargement de la page
+});
