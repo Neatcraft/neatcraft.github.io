@@ -1,6 +1,14 @@
 ---
 import '../index.css';
 import {css} from "../../styled-system/css";
+
+const link = css({
+	"&:hover": {
+		textDecoration: "underline",
+		cursor: "pointer",
+		color: "secondary.100",
+	}
+});
 ---
 
 <html lang="en">
@@ -9,9 +17,43 @@ import {css} from "../../styled-system/css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Neatcraft</title>
 	</head>
 	<body>
-		<h1 class={css({ fontSize: "4xl"})}>Astro</h1>
+		<header class={css({
+			display: "flex",
+			justifyContent: "end",
+			paddingRight: "1%",
+			height: "7vh",
+			bgColor: "primary.100",
+			fontFamily: "montserrat",
+			color: "white",
+			fontSize: "1.2em",
+			fontWeight: "500"
+		})}>
+			<nav class={css({height: "100%"})}>
+				<ul class={css({
+					height: "100%",
+					display: "flex",
+					alignItems: "center",
+                    "& li": {
+                        borderRight: "2px solid white",
+                        paddingX: "10px",
+                        "&:last-child": {
+                            borderRight: "none",
+                            paddingRight: "0"
+                        }
+                    }
+				})}>
+					<li><a class={link}>Mission</a></li>
+					<li><a class={link}>Vision</a></li>
+					<li><a class={link}>Valeurs</a></li>
+					<li><a class={link}>Axes de travail</a></li>
+					<li><a class={link}>Domaines</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		</main>
 	</body>
 </html>
