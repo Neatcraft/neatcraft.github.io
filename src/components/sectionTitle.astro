@@ -1,0 +1,25 @@
+---
+import {css} from "../../styled-system/css";
+
+const {iconSrc} = Astro.props
+
+---
+<div class={css({
+    display: "flex",
+    alignItems: "center",
+    gap: "2%"
+})}>
+    <img src={iconSrc}
+         class={css({
+             height: "12vh",
+         })}/>
+    <h1 class={css({
+        fontFamily: "barlow",
+        fontSize: "5em",
+        fontWeight: "500",
+        textTransform: "uppercase",
+        color: "white",
+    })}>
+        <slot/>
+    </h1>
+</div>
