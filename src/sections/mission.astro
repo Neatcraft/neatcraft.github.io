@@ -1,9 +1,9 @@
 ---
 import {css} from "../../styled-system/css";
-import SectionTitle from "../components/sectionTitle.astro";
 import Subtitle from "../components/subtitle.astro";
 import Button from "../components/button.astro";
-import {section, title} from "../../styled-system/patterns";
+import {paragraph, section, title} from "../../styled-system/patterns";
+import SectionTitle from "../components/sectionTitle.astro";
 ---
 <section id="mission"
          class={section({marginTop: "7vh"})}>
@@ -18,11 +18,15 @@ import {section, title} from "../../styled-system/patterns";
         display: "flex",
         flexDir: "column",
     })}>
-        <SectionTitle iconSrc="/img/icons/target.svg" titleClass={title()}>Notre mission</SectionTitle>
+         <SectionTitle iconSrc="/img/icons/target.svg" titleClass={title({color: "white"})}>Notre mission</SectionTitle>
         <Subtitle>
-            Aider les entreprises à mieux s'organiser, pour améliorer
-            la qualité de vie de leurs employés, et devenir plus performantes.
+            Rendre les entreprises plus performantes et plus épanouissantes.
         </Subtitle>
+        <p class={paragraph({color: "white"})}>
+            Nous cherchons tous à être performants et atteindre nos objectifs, mais dans un monde incertain et mouvant il est difficile d'y arriver.
+            <br/>
+            C'est pour cela que nous nous inspirons des meilleures méthodes existantes pour <b>construire des solutions innovantes qui répondent à vos besoins</b>.
+        </p>
         <Button>Nous contacter</Button>
     </div>
 </section>

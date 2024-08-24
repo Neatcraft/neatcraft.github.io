@@ -1,0 +1,52 @@
+---
+import {section, title, paragraph} from "../../styled-system/patterns";
+import {css} from "../../styled-system/css";
+import Card from "../components/card/card.astro";
+import CardIcon from "../components/card/cardIcon.astro";
+import CardParagraph from "../components/card/CardParagraph.astro";
+import CardTitle from "../components/card/CardTitle.astro";
+---
+<section id="valeurs"
+         class={section({
+             bgColor: "third.100",
+             flexDir: "column",
+             bgImage: "url(/img/triangle.svg)"
+         })}>
+    <h1 class={title()}>Nos valeurs</h1>
+    <div class={css({
+        display: "flex",
+        flex: "1",
+        flexDir: "row",
+        gap: "1.3em",
+        marginTop: "3%",
+    })}>
+        <Card>
+            <CardIcon iconSrc="/img/icons/link.svg" />
+            <CardTitle>Empathie</CardTitle>
+            <CardParagraph>
+                Nous serons toujours à votre écoute pour que votre expérience avec nous soit la plus agréable possible.
+            </CardParagraph>
+        </Card>
+        <Card>
+            <CardIcon iconSrc="/img/icons/ampoule.svg" />
+            <CardTitle>Créativité</CardTitle>
+            <CardParagraph>
+                Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes .
+            </CardParagraph>
+        </Card>
+        <Card>
+            <CardIcon iconSrc="/img/icons/gauge.svg" />
+            <CardTitle>Humilité</CardTitle>
+            <CardParagraph>
+                Nous  reconnaissons nos erreurs et nous faisons de chaque expériences un apprentissage, afin de nous améliorer constamment pour mieux vous servir.
+            </CardParagraph>
+        </Card>
+        <Card>
+            <CardIcon iconSrc="/img/icons/improve.svg" />
+            <CardTitle>Rigueur</CardTitle>
+            <CardParagraph>
+                Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.
+            </CardParagraph>
+        </Card>
+    </div>
+</section>

@@ -11,43 +11,62 @@ export default defineConfig({
     exclude: [],
 
     patterns: {
-      extend: {
-          section: {
-              description: "section container",
-              properties: {
-                  marginTop: {type: "string"},
-                  bgColor: {type: "string"},
-              },
-              transform(prop) {
-                  return {
-                      display: "flex",
-                      width: "100%",
-                      alignItems: "center",
-                      marginTop: "0",
-                      bgColor: "primary.100",
-                      ...prop
-                  }
-              }
-          },
-          title: {
-              description: "title",
-              defaultValues: {
-                  color: "white"
-              },
-              properties: {
-                  color: { type: "string" },
-              },
-              transform(props) {
-                  return {
-                      fontFamily: "barlow",
-                      fontSize: {sm: "3rem", lgTo2xl: "5rem"},
-                      fontWeight: "500",
-                      textTransform: "uppercase",
-                      ...props
-                  }
-              }
-          },
-      }
+        extend: {
+            section: {
+                description: "section container",
+                defaultValues: {
+                    marginTop: "0",
+                    bgColor: "primary.100",
+                    flexDir: "row"
+                },
+                properties: {
+                    marginTop: {type: "string"},
+                    bgColor: {type: "string"},
+                    flexDir: {type: "enum", value: ["column", "row"]}
+                },
+                transform(prop) {
+                    return {
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "3% 2% 7% 2%",
+                        ...prop
+                    }
+                }
+            },
+            title: {
+                description: "title",
+                defaultValues: {
+                    color: "white"
+                },
+                properties: {
+                    color: {type: "string"},
+                },
+                transform(props) {
+                    return {
+                        fontFamily: "barlow",
+                        fontSize: {sm: "3rem", lgTo2xl: "5rem"},
+                        fontWeight: "500",
+                        textTransform: "uppercase",
+                        ...props
+                    }
+                }
+            },
+            paragraph: {
+                description: "paragraph",
+                transform(props) {
+                    return {
+                        fontFamily: "montserrat",
+                        fontSize: {base: "0.8rem", lgTo2xl: "1.5rem"},
+                        fontWeight: "500",
+                        lineHeight: "1.7rem",
+                        marginTop: "1rem",
+                        marginBottom: "2rem",
+                        ...props
+                    }
+                }
+            },
+        }
     },
 
     // Useful for theme customization
