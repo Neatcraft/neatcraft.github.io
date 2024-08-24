@@ -1,7 +1,7 @@
 ---
 import {css} from "../../styled-system/css";
 
-const {iconSrc} = Astro.props
+const {iconSrc, titleClass} = Astro.props
 
 ---
 <div class={css({
@@ -11,15 +11,10 @@ const {iconSrc} = Astro.props
 })}>
     <img src={iconSrc}
          class={css({
-             height: "12vh",
+             height: { base: "6vh",  mdTo2xl: "12vh"},
+             width: { base: "6vh", mdTo2xl: "12vw"},
          })}/>
-    <h1 class={css({
-        fontFamily: "barlow",
-        fontSize: "5em",
-        fontWeight: "500",
-        textTransform: "uppercase",
-        color: "white",
-    })}>
+    <h1 class={titleClass}>
         <slot/>
     </h1>
 </div>

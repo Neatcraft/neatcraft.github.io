@@ -10,6 +10,46 @@ export default defineConfig({
     // Files to exclude
     exclude: [],
 
+    patterns: {
+      extend: {
+          section: {
+              description: "section container",
+              properties: {
+                  marginTop: {type: "string"},
+                  bgColor: {type: "string"},
+              },
+              transform(prop) {
+                  return {
+                      display: "flex",
+                      width: "100%",
+                      alignItems: "center",
+                      marginTop: "0",
+                      bgColor: "primary.100",
+                      ...prop
+                  }
+              }
+          },
+          title: {
+              description: "title",
+              defaultValues: {
+                  color: "white"
+              },
+              properties: {
+                  color: { type: "string" },
+              },
+              transform(props) {
+                  return {
+                      fontFamily: "barlow",
+                      fontSize: {sm: "3rem", lgTo2xl: "5rem"},
+                      fontWeight: "500",
+                      textTransform: "uppercase",
+                      ...props
+                  }
+              }
+          },
+      }
+    },
+
     // Useful for theme customization
     theme: {
         extend: {

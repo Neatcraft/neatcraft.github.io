@@ -1,0 +1,19 @@
+---
+import {css} from "../../styled-system/css";
+---
+<a class={css({
+    width: "fit-content",
+    marginTop: "3vh",
+    padding: "1% 2.5%",
+    borderRadius: "5px",
+    fontFamily: "barlow",
+    fontSize: "1.7em",
+    fontWeight: "800",
+    textTransform: "uppercase",
+    color: "white",
+    bgColor: "third.100",
+    "&:hover": {
+        bgColor: "third.500",
+        cursor: "pointer",
+    }
+})}><slot/></a>

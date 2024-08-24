@@ -1,0 +1,36 @@
+---
+import {section, title} from "../../styled-system/patterns";
+import {css} from "../../styled-system/css";
+import SectionTitle from "../components/sectionTitle.astro";
+import Button from "../components/button.astro";
+import Subtitle from "../components/subtitle.astro";
+---
+<section id="vision"
+    class={section({bgColor: "#f8f8f8"})}>
+    <div class={css({
+        display: "flex",
+        flexDir: "column",
+        paddingX: "5%"
+    })}>
+        <SectionTitle iconSrc="/img/icons/eye.svg" titleClass={title({color: "primary.100"})}>Notre vision</SectionTitle>
+        <Subtitle>Construire un monde
+            de l'entreprise plus juste
+            et plus épanouissant.
+        </Subtitle>
+        <p class={css({
+            fontFamily: "montserrat",
+            fontSize: {base: "0.8rem", lgTo2xl: "1.5rem"},
+            fontWeight: "500",
+            lineHeight: "1.7rem",
+            marginTop: "1rem",
+            marginBottom: "2rem"
+        })}>
+            Lorem ipsum dolor bilba eratum ocosit amet, coctetera adispiscing elit, ecosed diam nonlorem resomul derec serti golam rosu de perfecto Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummyeuis
+        </p>
+        <Button>Nous contacter</Button>
+    </div>
+    <img src="/img/icons/libra.svg" class={css({
+        height: {base: "20vh", mdTo2xl: "60vh"},
+        width: {base: "20vh", mdTo2xl: "60vh"},
+    })}/>
+</section>

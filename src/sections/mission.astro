@@ -1,0 +1,28 @@
+---
+import {css} from "../../styled-system/css";
+import SectionTitle from "../components/sectionTitle.astro";
+import Subtitle from "../components/subtitle.astro";
+import Button from "../components/button.astro";
+import {section, title} from "../../styled-system/patterns";
+---
+<section id="mission"
+         class={section({marginTop: "7vh"})}>
+    <img alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
+         class={css({
+             height: {base: "20vh", mdTo2xl: "60vh"},
+             width: {base: "20vh", mdTo2xl: "60vh"},
+             paddingX: "3%"
+         })}
+         src="/img/logos/neatcraft.svg"/>
+    <div class={css({
+        display: "flex",
+        flexDir: "column",
+    })}>
+        <SectionTitle iconSrc="/img/icons/target.svg" titleClass={title()}>Notre mission</SectionTitle>
+        <Subtitle>
+            Aider les entreprises à mieux s'organiser, pour améliorer
+            la qualité de vie de leurs employés, et devenir plus performantes.
+        </Subtitle>
+        <Button>Nous contacter</Button>
+    </div>
+</section>
