@@ -7,8 +7,8 @@ const {iconSrc} = Astro.props;
 <img src={iconSrc}
      alt="representation d'un lien"
      class={css({
-         height: "12vh",
-         width: "12vh",
+         height: {xs:"6vh", lg: "12vh"},
+         width: {xs:"6vh", lg: "12vh"},
          marginBottom: "4%"
      })}
 />

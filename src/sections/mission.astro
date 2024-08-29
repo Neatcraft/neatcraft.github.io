@@ -6,21 +6,21 @@ import {paragraph, section, title} from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
 ---
 <section id="mission"
-         class={section({marginTop: "7vh"})}>
+         class={section({marginTop: "7vh", gap: "4%"})}>
     <img alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
          class={css({
-             height: {base: "20vh", mdTo2xl: "60vh"},
-             width: {base: "20vh", mdTo2xl: "60vh"},
-             paddingX: "3%"
+             display: {xs: "none", md: "block"},
+             height: {xs: "15vh", md: "30vh", xl: "60vh"},
+             width: {xs: "15vh", md: "30vh", xl: "60vh"},
          })}
          src="/img/logos/neatcraft.svg"/>
     <div class={css({
         display: "flex",
         flexDir: "column",
     })}>
-         <SectionTitle iconSrc="/img/icons/target.svg" titleClass={title({color: "white"})}>Notre mission</SectionTitle>
+        <SectionTitle iconSrc="/img/icons/target.svg" titleClass={title({color: "white"})}>Notre mission</SectionTitle>
         <Subtitle>
-            Rendre les entreprises plus performantes et plus épanouissantes.
+            Créer des solutions innovantes au service de votre business.
         </Subtitle>
         <p class={paragraph({color: "white"})}>
             Nous cherchons tous à être performants et atteindre nos objectifs, mais dans un monde incertain et mouvant il est difficile d'y arriver.

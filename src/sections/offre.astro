@@ -1,0 +1,68 @@
+---
+import SectionTitle from "../components/sectionTitle.astro";
+import {paragraph, section, title} from "../../styled-system/patterns";
+import {css} from "../../styled-system/css";
+import Subtitle from "../components/subtitle.astro";
+import Button from "../components/button.astro";
+import Card from "../components/card/card.astro";
+import CardIcon from "../components/card/cardIcon.astro";
+import CardTitle from "../components/card/CardTitle.astro";
+import CardParagraph from "../components/card/CardParagraph.astro";
+---
+<section id="offre" class={section({bgColor: "gray.100"})}>
+    <div class={css({
+        display: "flex",
+        flexDir: "column",
+        paddingX: "5%"
+    })}>
+        <SectionTitle iconSrc="/img/icons/star.svg" titleClass={title({color: "primary.100"})}>
+            Notre offre
+        </SectionTitle>
+        <Subtitle>
+            Une facturation sans surprise.
+        </Subtitle>
+        <div class={css({
+            display: "flex",
+            gap: "3%",
+            justifyContent: "center",
+            alignItems: "center",
+        })}>
+        </div>
+        <div class={css({
+            display: "flex",
+            flexDir: {xs: "column", "lg": "row"},
+            gap: "1.3em",
+            marginTop: "3%",
+        })}>
+            <Card>
+                <CardIcon iconSrc="/img/icons/letter.svg" />
+                <CardTitle>forfait</CardTitle>
+                <CardParagraph>
+                    Nous garantissons une facturation simple et transparente, basée sur la valeur apportée.
+                </CardParagraph>
+            </Card>
+            <Card>
+                <CardIcon iconSrc="/img/icons/rocket.svg" />
+                <CardTitle>Agilité</CardTitle>
+                <CardParagraph>
+                    Le marché change constamment, il est normal que votre projet aussi, nous vous suivrons dans ce processus.
+                </CardParagraph>
+            </Card>
+            <Card>
+                <CardIcon iconSrc="/img/icons/nut.svg" />
+                <CardTitle>Qualité</CardTitle>
+                <CardParagraph>
+                    Nous utilisons les meilleures pratiques de conception et de développement pour vous garantir des produits fiables.
+                </CardParagraph>
+            </Card>
+            <Card>
+                <CardIcon iconSrc="/img/icons/eye.svg" />
+                <CardTitle>Suivi</CardTitle>
+                <CardParagraph>
+                    Nous livrons votre projet en continu, vous garantissant une livraison régulière et un suivi accru.
+                </CardParagraph>
+            </Card>
+        </div>
+        <Button>Nous contacter</Button>
+    </div>
+</section>

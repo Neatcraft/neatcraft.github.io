@@ -1,6 +1,10 @@
 ---
 import {paragraph} from "../../../styled-system/patterns";
 ---
-<p class={paragraph({fontSize: {sm: "0.7rem", lgTo2xl: "1.2rem"}, textAlign: "center"})}>
+<p class={paragraph({
+    fontSize: {xs: "0.7rem", xl: "1.2rem"},
+    color: "primary.100",
+    textAlign: "center"
+})}>
     <slot/>
 </p>

@@ -6,11 +6,13 @@ import Button from "../components/button.astro";
 import Subtitle from "../components/subtitle.astro";
 ---
 <section id="vision"
-    class={section({bgColor: "#f8f8f8"})}>
+    class={section({
+        bgColor: "#f8f8f8"
+    })}>
     <div class={css({
         display: "flex",
         flexDir: "column",
-        paddingX: "5%"
+        paddingX: {xs: "0", lg: "5%"}
     })}>
         <SectionTitle iconSrc="/img/icons/eye.svg" titleClass={title({color: "primary.100"})}>Notre engagement</SectionTitle>
         <Subtitle>Peut importe votre besoin, nous avons une solution pour vous.</Subtitle>
@@ -22,7 +24,8 @@ import Subtitle from "../components/subtitle.astro";
         <Button>Nous contacter</Button>
     </div>
     <img src="/img/icons/libra.svg" class={css({
-        height: {base: "20vh", mdTo2xl: "60vh"},
-        width: {base: "20vh", mdTo2xl: "60vh"},
+        height: {xs: "15vh", md: "30vh", xl: "60vh"},
+        width: {xs: "15vh", md: "30vh", xl: "60vh"},
+        display: {xs: "none", md: "block"},
     })}/>
 </section>

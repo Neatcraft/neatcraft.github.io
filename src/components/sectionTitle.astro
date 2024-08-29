@@ -11,8 +11,8 @@ const {iconSrc, titleClass} = Astro.props
 })}>
     <img src={iconSrc}
          class={css({
-             height: { base: "6vh",  mdTo2xl: "12vh"},
-             width: { base: "6vh", mdTo2xl: "12vw"},
+             height: { xs: "6vh",  md: "10vh"},
+             width: { xs: "6vh", md: "10vh"},
          })}/>
     <h1 class={titleClass}>
         <slot/>

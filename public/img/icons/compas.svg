@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.89 71.65">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #ed7d1a;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke: #2a3159;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <g id="Calque_3">
+    <g>
+      <line class="cls-3" x1="25.45" y1="47.86" x2="25.45" y2="54.86"/>
+      <path class="cls-3" d="M36.89,49.01s-11.35,5.27-22.89,0"/>
+      <g>
+        <circle class="cls-3" cx="25.45" cy="21.9" r="6.31"/>
+        <line class="cls-3" x1="25.45" y1="7.5" x2="25.45" y2="15.59"/>
+        <g>
+          <polyline class="cls-3" points="7.5 64.15 13.85 48.84 22.52 27.91"/>
+          <polyline class="cls-3" points="28.37 27.91 34.72 43.22 43.39 64.15"/>
+        </g>
+      </g>
+    </g>
+    <g>
+      <line class="cls-2" x1="25.45" y1="47.86" x2="25.45" y2="54.86"/>
+      <path class="cls-2" d="M36.89,49.01s-11.35,5.27-22.89,0"/>
+      <g>
+        <circle class="cls-1" cx="25.45" cy="21.9" r="6.31"/>
+        <line class="cls-1" x1="25.45" y1="7.5" x2="25.45" y2="15.59"/>
+        <g>
+          <polyline class="cls-1" points="7.5 64.15 13.85 48.84 22.52 27.91"/>
+          <polyline class="cls-1" points="28.37 27.91 34.72 43.22 43.39 64.15"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

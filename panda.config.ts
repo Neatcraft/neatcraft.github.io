@@ -17,7 +17,7 @@ export default defineConfig({
                 defaultValues: {
                     marginTop: "0",
                     bgColor: "primary.100",
-                    flexDir: "row"
+                    flexDir: "row",
                 },
                 properties: {
                     marginTop: {type: "string"},
@@ -45,7 +45,7 @@ export default defineConfig({
                 transform(props) {
                     return {
                         fontFamily: "barlow",
-                        fontSize: {sm: "3rem", lgTo2xl: "5rem"},
+                        fontSize: {xs: "3rem", lg: "5rem"},
                         fontWeight: "500",
                         textTransform: "uppercase",
                         ...props
@@ -57,7 +57,7 @@ export default defineConfig({
                 transform(props) {
                     return {
                         fontFamily: "montserrat",
-                        fontSize: {base: "0.8rem", lgTo2xl: "1.5rem"},
+                        fontSize: {xs: "0.8rem", lg: "1.5rem"},
                         fontWeight: "500",
                         lineHeight: "1.7rem",
                         marginTop: "1rem",
@@ -72,6 +72,14 @@ export default defineConfig({
     // Useful for theme customization
     theme: {
         extend: {
+            breakpoints: {
+                xs: "350px",
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1280px",
+                "2xl": "1536px",
+            },
             tokens: {
                 fonts: {
                     montserrat: {

@@ -4,6 +4,7 @@ import {css} from "../../styled-system/css";
 import Mission from "../sections/mission.astro";
 import Vision from "../sections/vision.astro";
 import Valeurs from "../sections/valeurs.astro";
+import Offre from "../sections/offre.astro";
 
 const link = css({
 	"&:hover": {
@@ -53,9 +54,8 @@ const link = css({
 				})}>
 					<li><a href="#mission" class={link}>Mission</a></li>
 					<li><a href="#vision" class={link}>Vision</a></li>
-					<li><a class={link}>Valeurs</a></li>
-					<li><a class={link}>Axes de travail</a></li>
-					<li><a class={link}>Domaines</a></li>
+					<li><a href="#valeurs" class={link}>Valeurs</a></li>
+					<li><a href="#offre" class={link}>Offre</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -63,6 +63,7 @@ const link = css({
 			<Mission/>
 			<Vision/>
 			<Valeurs/>
+			<Offre/>
 		</main>
 	</body>
 </html>

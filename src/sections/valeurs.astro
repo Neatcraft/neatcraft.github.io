@@ -15,18 +15,10 @@ import CardTitle from "../components/card/CardTitle.astro";
     <h1 class={title()}>Nos valeurs</h1>
     <div class={css({
         display: "flex",
-        flex: "1",
-        flexDir: "row",
+        flexDir: {xs: "column", "lg": "row"},
         gap: "1.3em",
         marginTop: "3%",
     })}>
-        <Card>
-            <CardIcon iconSrc="/img/icons/link.svg" />
-            <CardTitle>Empathie</CardTitle>
-            <CardParagraph>
-                Nous serons toujours à votre écoute pour que votre expérience avec nous soit la plus agréable possible.
-            </CardParagraph>
-        </Card>
         <Card>
             <CardIcon iconSrc="/img/icons/ampoule.svg" />
             <CardTitle>Créativité</CardTitle>
@@ -36,13 +28,20 @@ import CardTitle from "../components/card/CardTitle.astro";
         </Card>
         <Card>
             <CardIcon iconSrc="/img/icons/gauge.svg" />
-            <CardTitle>Humilité</CardTitle>
+            <CardTitle>Simplicité</CardTitle>
             <CardParagraph>
-                Nous  reconnaissons nos erreurs et nous faisons de chaque expériences un apprentissage, afin de nous améliorer constamment pour mieux vous servir.
+                Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
             </CardParagraph>
         </Card>
         <Card>
-            <CardIcon iconSrc="/img/icons/improve.svg" />
+            <CardIcon iconSrc="/img/icons/link.svg" />
+            <CardTitle>Empathie</CardTitle>
+            <CardParagraph>
+                Nous serons toujours à votre écoute pour que votre pour vous offrir le produit le plus adapté à vos besoins.
+            </CardParagraph>
+        </Card>
+        <Card>
+            <CardIcon iconSrc="/img/icons/compas.svg" />
             <CardTitle>Rigueur</CardTitle>
             <CardParagraph>
                 Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.
