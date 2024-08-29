@@ -22,7 +22,10 @@ const link = css({
 		<meta name="generator" content={Astro.generator} />
 		<title>Neatcraft</title>
 	</head>
-	<body>
+	<body class={css({
+		bgColor: "primary.100",
+		color: "white",
+	})}>
 		<header class={css({
 			display: "flex",
 			position: "fixed",
@@ -65,6 +68,9 @@ const link = css({
 			<Valeurs/>
 			<Offre/>
 		</main>
+		<footer>
+			<p class={css({textAlign: "center"})}>Copyright © 2024 Neatcraft - Tous droits réservés</p>
+		</footer>
 	</body>
 </html>
 
