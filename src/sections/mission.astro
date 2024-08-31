@@ -4,10 +4,12 @@ import Subtitle from "../components/subtitle.astro";
 import Button from "../components/button.astro";
 import {paragraph, section, title} from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
+
 ---
 <section id="mission"
          class={section({marginTop: "7vh", gap: "4%"})}>
-    <img alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
+    <img id="logo-neatcraft-mission"
+            alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
          class={css({
              display: {xs: "none", md: "block"},
              height: {xs: "15vh", md: "30vh", xl: "60vh"},
@@ -27,6 +29,36 @@ import SectionTitle from "../components/sectionTitle.astro";
             <br/>
             C'est pour cela que nous nous inspirons des meilleures méthodes existantes pour <b>construire des solutions innovantes qui répondent à vos besoins</b>.
         </p>
-        <Button>Nous contacter</Button>
     </div>
 </section>
+
+<script lang="ts">
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("scroll", () => {
+            const logo = document.getElementById("logo-neatcraft-mission");
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("2d");
+            const path = new Path2D();
+
+
+
+            if (window.scrollY > 100) {
+                path.createImageBitmap(logo, {
+                    resizeWidth: logo.width - 100,
+                    resizeHeight: logo.height - 100,
+                });
+            } else {
+                path.createImageBitmap(logo, {
+                    resizeWidth: logo.width + 100,
+                    resizeHeight: logo.height + 100,
+                });
+            }
+            canvas.getContext("2d").fill(path);
+            logo.src = canvas.toDataURL();
+        });
+
+        document.getElementById("logo-neatcraft-mission");
+    });
+
+</script>

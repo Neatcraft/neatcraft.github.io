@@ -91,7 +91,16 @@ export default defineConfig({
                         100: {value: "#2a3159"}
                     },
                     secondary: {
-                        100: {value: "#ed7d1a"}
+                        100: {value: "#ed7d1a"},
+                        200: {value: "#ef8a31"},
+                        300: {value: "#f19748"},
+                        400: {value: "#f2a45f"},
+                        500: {value: "#f4b176"},
+                        600: {value: "#f6be8c"},
+                        700: {value: "#f8cba3"},
+                        800: {value: "#fad8ba"},
+                        900: {value: "#fbe5d1"},
+                        950: {value: "#fdf2e8"}
                     },
                     third: {
                         100: {value: "#7d41aa"},
