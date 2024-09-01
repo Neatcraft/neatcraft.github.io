@@ -5,21 +5,7 @@ import Mission from "../sections/mission.astro";
 import Vision from "../sections/vision.astro";
 import Valeurs from "../sections/valeurs.astro";
 import Offre from "../sections/offre.astro";
-
-const link = css({
-    "&:hover": {
-        textDecoration: "underline",
-        cursor: "pointer",
-        color: "secondary.100",
-    }
-});
-
-const vr = css({
-    width: "1px",
-    height: "1rem",
-    marginX: "0.7rem",
-    borderRight: "2px solid white",
-});
+import Navigation from "../components/navigation.astro";
 ---
 <html lang="en">
 <head>
@@ -40,7 +26,7 @@ const vr = css({
     left: "0",
     justifyContent: {xs: "center", lg: "space-between"},
     paddingRight: "1.5%",
-    height: {_portrait: "10vh", _landscape: {xs: "10vw", lg: "3vw"}},
+    height: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "15vh"}},
     width: "100%",
     bgColor: "primary.100",
     fontFamily: "montserrat",
@@ -54,49 +40,13 @@ const vr = css({
             height: "14vh"
         },
         _landscape: {
-            width: {xs: "14vw", lg: "5vw"},
-            height: {xs: "14vw", lg: "5vw"},
+            width: {xs: "8vw", lg: "5vw"},
+            height: {xs: "8vw", lg: "5vw"},
         },
         margin: "1rem",
     })}/>
 
-    <nav class={css({
-        height: "100%",
-    })}>
-        <ul class={css({
-            _portrait: {
-                display: {xs: "none", lg: "flex"},
-            },
-            _landscape: {
-                display: "flex",
-            },
-            height: "100%",
-            alignItems: "center",
-            overflowY: "hidden",
-            overflowX: "auto",
-        })}>
-            <li><a href="#mission" class={link}>Mission</a></li>
-            <li aria-hidden="true" class={vr}/>
-            <li><a href="#vision" class={link}>Vision</a></li>
-            <li aria-hidden="true" class={vr}/>
-            <li><a href="#valeurs" class={link}>Valeurs</a></li>
-            <li aria-hidden="true" class={vr}/>
-            <li><a href="#offre" class={link}>Offre</a></li>
-            <li><a href="/contact" class={css({
-                display: "inline-block",
-                bgColor: "secondary.100",
-                fontWeight: "800",
-                marginLeft: "2rem",
-                padding: ".7rem 1rem",
-                borderRadius: "xl",
-                border: "2px solid {color.secondary.100}",
-                "&:hover": {
-                    bgColor: "secondary.300",
-                    color: "primary.200",
-                }
-            })}>Nous Contacter</a></li>
-        </ul>
-    </nav>
+    <Navigation/>
 </header>
 <main class={css({
     _portrait: {

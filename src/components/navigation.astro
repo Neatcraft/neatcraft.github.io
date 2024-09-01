@@ -1,0 +1,78 @@
+---
+import {css} from "../../styled-system/css";
+
+const link = css({
+    "&:hover, &[aria-current=true]": {
+        textDecoration: "underline",
+        cursor: "pointer",
+        color: "secondary.100",
+    }
+});
+
+const vr = css({
+    width: "1px",
+    height: "1rem",
+    marginX: "0.7rem",
+    borderRight: "2px solid white",
+});
+---
+
+<nav class={css({
+    height: "100%",
+})}>
+    <ul class={css({
+        _portrait: {
+            display: {xs: "none", lg: "flex"},
+        },
+        _landscape: {
+            display: "flex",
+        },
+        fontSize: "1.5em",
+        height: "100%",
+        alignItems: "center",
+        overflowY: "hidden",
+        overflowX: "auto",
+    })}>
+        <li><a href="#mission" class={link} aria-current="true">Mission</a></li>
+        <li aria-hidden="true" class={vr}/>
+        <li><a href="#vision" class={link}>Vision</a></li>
+        <li aria-hidden="true" class={vr}/>
+        <li><a href="#valeurs" class={link}>Valeurs</a></li>
+        <li aria-hidden="true" class={vr}/>
+        <li><a href="#offre" class={link}>Offre</a></li>
+        <li><a href="/contact" class={css({
+            display: "inline-block",
+            bgColor: "secondary.100",
+            fontWeight: "800",
+            marginLeft: "2rem",
+            padding: ".7rem 1rem",
+            borderRadius: "xl",
+            border: "2px solid {color.secondary.100}",
+            "&:hover": {
+                bgColor: "secondary.300",
+                color: "primary.200",
+            }
+        })}>Nous Contacter</a></li>
+    </ul>
+</nav>
+
+<script>
+    const sections = document.querySelectorAll("section");
+    const menuItems = document.querySelectorAll("nav ul li a");
+
+    document.addEventListener("scroll", () => {
+        let currentSection = sections[0];
+
+        sections.forEach((section: HTMLElement) => {
+            if ( window.scrollY >=  section.offsetTop - 100) {
+                currentSection = section;
+            }
+        });
+        menuItems.forEach((item: HTMLAnchorElement, index) => {
+            item.ariaCurrent = "false";
+            if (item.href.endsWith("#" + currentSection.id)) {
+                item.ariaCurrent = "true";
+            }
+        });
+    });
+</script>
