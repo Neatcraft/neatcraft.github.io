@@ -88,7 +88,16 @@ export default defineConfig({
                 },
                 colors: {
                     primary: {
-                        100: {value: "#2a3159"}
+                        100: {value: "#2a3159"},
+                        200: {value: "#3a3f6b"},
+                        300: {value: "#4a4f7f"},
+                        400: {value: "#5a5f8f"},
+                        500: {value: "#6a6f9f"},
+                        600: {value: "#7a7fa0"},
+                        700: {value: "#8a8fa1"},
+                        800: {value: "#9a9fa2"},
+                        900: {value: "#aaaaa3"},
+                        950: {value: "#bbbbb4"},
                     },
                     secondary: {
                         100: {value: "#ed7d1a"},
