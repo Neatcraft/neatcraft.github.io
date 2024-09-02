@@ -19,14 +19,15 @@ import Navigation from "../components/navigation.astro";
     bgColor: "primary.100",
     color: "white",
 })}>
-<header class={css({
+<header id="header" class={css({
     display: "flex",
     position: "fixed",
     top: "0",
     left: "0",
-    justifyContent: {xs: "center", lg: "space-between"},
-    paddingRight: "1.5%",
-    height: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "15vh"}},
+    justifyContent: {xs: "center", lg: "end"},
+    paddingLeft: "2%",
+    paddingRight: "2%",
+    height: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "8vh"}},
     width: "100%",
     bgColor: "primary.100",
     fontFamily: "montserrat",
@@ -34,7 +35,8 @@ import Navigation from "../components/navigation.astro";
     fontSize: "0.8em",
     fontWeight: "500",
 })}>
-    <img src="/img/logos/neatcraft.svg" alt="Neatcraft" class={css({
+    <img id="logo-neatcraft-header" src="/img/logos/neatcraft.svg" alt="Neatcraft" class={css({
+        display: {xs: "block", lg: "none"},
         _portrait: {
             width: "14vh",
             height: "14vh"
@@ -42,8 +44,7 @@ import Navigation from "../components/navigation.astro";
         _landscape: {
             width: {xs: "8vw", lg: "5vw"},
             height: {xs: "8vw", lg: "5vw"},
-        },
-        margin: "1rem",
+        }
     })}/>
 
     <Navigation/>
@@ -75,7 +76,9 @@ import Navigation from "../components/navigation.astro";
     paddingY: "5%",
     bottom: "0",
 })}>
-    <a href="/contact" class={css({
+    <a href="/contact"
+       aria-hidden="true"
+       class={css({
         bgColor: "secondary.100",
         color: "white",
         fontFamily: "montserrat",

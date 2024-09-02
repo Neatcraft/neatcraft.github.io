@@ -3,14 +3,15 @@ import {css} from "../../styled-system/css";
 import Subtitle from "../components/subtitle.astro";
 import {paragraph, section, title} from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
-
 ---
 <section id="mission"
-         class={section({ gap: "4%"})}>
+         class={section({gap: "4%", marginTop: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "10vh"}}})}>
+
     <img id="logo-neatcraft-mission"
-            alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
+         alt="Logo de Neatcraft: tête de cerf dans un cercle orange"
          class={css({
-             display: {xs: "none", md: "block"},
+             transformOrigin: "center left",
+             display: {xs: "none", lg: "block"},
              height: {xs: "15vh", md: "30vh", xl: "60vh"},
              width: {xs: "15vh", md: "30vh", xl: "60vh"},
          })}
@@ -24,9 +25,54 @@ import SectionTitle from "../components/sectionTitle.astro";
             Créer des solutions innovantes au service de votre business.
         </Subtitle>
         <p class={paragraph({color: "white"})}>
-            Nous cherchons tous à être performants et atteindre nos objectifs, mais dans un monde incertain et mouvant il est difficile d'y arriver.
+            Nous cherchons tous à être performants et atteindre nos objectifs, mais dans un monde incertain et mouvant
+            il est difficile d'y arriver.
             <br/>
-            C'est pour cela que nous nous inspirons des meilleures méthodes existantes pour <b>construire des solutions innovantes qui répondent à vos besoins</b>.
+            C'est pour cela que nous nous inspirons des meilleures méthodes existantes pour <b>construire des solutions
+            innovantes qui répondent à vos besoins</b>.
         </p>
     </div>
 </section>
+
+<script>
+    const missionSection = document.getElementById("mission");
+    const logoHeader = document.getElementById("logo-neatcraft-header");
+    const logo = document.getElementById("logo-neatcraft-mission");
+    const missionSectionBottom = missionSection.offsetHeight + missionSection.offsetTop;
+    const header = document.getElementById("header");
+    let oldRatio = 100;
+
+    document.addEventListener("scroll", () => {
+        window.requestIdleCallback(() => {
+            if (screen.width < 1024) {
+                return;
+            }
+
+            const ratio = 0.8 - scrollY / missionSectionBottom;
+
+            console.log(ratio);
+
+            if (ratio < 0.23 && oldRatio < 0.23) {
+                return;
+            }
+
+            if (ratio >= 1) {
+                header.style.justifyContent = "end";
+                logo.style.display = "block";
+                logoHeader.style.display = "none";
+                logo.style.transform = `scale(${1}) translate(0, ${scrollY}px)`;
+            }
+            if (ratio > 0.23) {
+                header.style.justifyContent = "end";
+                logo.style.display = "block";
+                logoHeader.style.display = "none";
+                logo.style.transform = `scale(${ratio}) translate(0, ${scrollY}px)`;
+            } else {
+                logoHeader.style.display = "block";
+                header.style.justifyContent = "space-between";
+                logo.style.display = "none";
+            }
+            oldRatio = ratio;
+        });
+    });
+</script>
