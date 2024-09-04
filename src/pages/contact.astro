@@ -6,6 +6,7 @@ import Header from "../components/header.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
+import Footer from "../components/navigation/Footer.astro";
 ---
 <html lang="en">
 <head>
@@ -15,6 +16,10 @@ import NavigationSeparator from "../components/navigation/navigationSeparator.as
     <meta name="generator" content={Astro.generator}/>
     <title>Neatcraft</title>
 </head>
+<body class={css({
+    bgColor: "primary.100",
+    color: "white",
+})}>
 
 <Header>
     <Navigation>
@@ -51,7 +56,9 @@ import NavigationSeparator from "../components/navigation/navigationSeparator.as
         display: "none",
     })}>Merci ! Votre demande a été envoyée.</p>
 
-</main> class={css({})}
+</main>
+<Footer />
+</body>
 <script >
     const form = document.getElementById("contact-form");
     const confirmationMessage = document.getElementById("confirmation-message");
