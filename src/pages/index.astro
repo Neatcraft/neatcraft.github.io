@@ -1,11 +1,16 @@
 ---
 import '../index.css';
-import {css} from "../../styled-system/css";
+
 import Mission from "../sections/mission.astro";
 import Vision from "../sections/vision.astro";
 import Valeurs from "../sections/valeurs.astro";
 import Offre from "../sections/offre.astro";
-import Navigation from "../components/navigation.astro";
+import Navigation from "../components/navigation/navigation.astro";
+import NavigationItem from "../components/navigation/navigationItem.astro";
+import NavigationButton from "../components/navigation/navigationButton.astro";
+import {css} from "../../styled-system/css";
+import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
+import Header from "../components/header.astro";
 ---
 <html lang="en">
 <head>
@@ -19,36 +24,20 @@ import Navigation from "../components/navigation.astro";
     bgColor: "primary.100",
     color: "white",
 })}>
-<header id="header" class={css({
-    display: "flex",
-    position: "fixed",
-    top: "0",
-    left: "0",
-    justifyContent: {xs: "center", lg: "end"},
-    paddingLeft: "2%",
-    paddingRight: "2%",
-    height: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "8vh"}},
-    width: "100%",
-    bgColor: "primary.100",
-    fontFamily: "montserrat",
-    color: "white",
-    fontSize: "0.8em",
-    fontWeight: "500",
-})}>
-    <img id="logo-neatcraft-header" src="/img/logos/neatcraft.svg" alt="Neatcraft" class={css({
-        display: {xs: "block", lg: "none"},
-        _portrait: {
-            width: "14vh",
-            height: "14vh"
-        },
-        _landscape: {
-            width: {xs: "8vw", lg: "5vw"},
-            height: {xs: "8vw", lg: "5vw"},
-        }
-    })}/>
+<Header>
+    <Navigation>
+        <NavigationItem href="#mission" aria-current="true">Mission</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="#vision">Vision</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="#valeurs">Valeurs</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="#offre">Offre</NavigationItem>
+        <NavigationButton href="/contact">Nous contacter</NavigationButton>
+    </Navigation>
+</Header>
 
-    <Navigation/>
-</header>
+
 <main class={css({
     _portrait: {
         marginTop: "15vh",
@@ -99,5 +88,6 @@ import Navigation from "../components/navigation.astro";
 </footer>
 </body>
 </html>
+
 
 

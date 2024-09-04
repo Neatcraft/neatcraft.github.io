@@ -1,0 +1,19 @@
+---
+// components/NavigationItem.astro
+import {css} from "../../../styled-system/css";
+
+const {href} = Astro.props;
+---
+
+<li>
+    <a href={href}
+       class={css({
+           "&:hover, &[aria-current=true]": {
+               textDecoration: "underline",
+               cursor: "pointer",
+               color: "secondary.100",
+           }
+       })} aria-current={Astro.props["aria-current"]}>
+        <slot/>
+    </a>
+</li>
