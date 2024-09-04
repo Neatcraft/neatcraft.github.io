@@ -1,5 +1,5 @@
 ---
-import {css} from "../../styled-system/css";
+import {css} from "../../../styled-system/css";
 
 const link = css({
     "&:hover, &[aria-current=true]": {
@@ -19,6 +19,7 @@ const vr = css({
 
 <nav class={css({
     height: "100%",
+
 })}>
     <ul class={css({
         _portrait: {
@@ -34,27 +35,7 @@ const vr = css({
         overflowY: "hidden",
         overflowX: "auto",
     })}>
-        <li><a href="#mission" class={link} aria-current="true">Mission</a></li>
-        <li aria-hidden="true" class={vr}/>
-        <li><a href="#vision" class={link}>Vision</a></li>
-        <li aria-hidden="true" class={vr}/>
-        <li><a href="#valeurs" class={link}>Valeurs</a></li>
-        <li aria-hidden="true" class={vr}/>
-        <li><a href="#offre" class={link}>Offre</a></li>
-        <li><a href="/contact" class={css({
-            color: "primary.200",
-            display: "inline-block",
-            bgColor: "secondary.100",
-            fontWeight: "800",
-            marginLeft: "2rem",
-            padding: ".7rem 1rem",
-            borderRadius: "xl",
-            border: "2px solid {color.secondary.100}",
-            "&:hover": {
-                bgColor: "secondary.300",
-                color: "primary.200",
-            }
-        })}>Nous Contacter</a></li>
+        <slot/>
     </ul>
 </nav>
 

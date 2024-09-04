@@ -42,15 +42,13 @@ import SectionTitle from "../components/sectionTitle.astro";
     const header = document.getElementById("header");
     let oldRatio = 100;
 
-    document.addEventListener("scroll", () => {
+    const animateLogoOnScroll = () => {
         window.requestIdleCallback(() => {
             if (screen.width < 1024) {
                 return;
             }
 
             const ratio = 0.8 - scrollY / missionSectionBottom;
-
-            console.log(ratio);
 
             if (ratio < 0.23 && oldRatio < 0.23) {
                 return;
@@ -74,5 +72,9 @@ import SectionTitle from "../components/sectionTitle.astro";
             }
             oldRatio = ratio;
         });
-    });
+    };
+
+    document.addEventListener("scroll", animateLogoOnScroll);
+
+    animateLogoOnScroll();
 </script>

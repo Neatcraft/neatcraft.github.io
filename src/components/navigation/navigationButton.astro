@@ -1,0 +1,19 @@
+---
+import {css} from "../../../styled-system/css";
+
+const {href} = Astro.props
+---
+
+<li><a href={href} class={css({
+    display: "inline-block",
+    bgColor: "secondary.100",
+    fontWeight: "800",
+    marginLeft: "2rem",
+    padding: ".7rem 1rem",
+    borderRadius: "xl",
+    border: "2px solid {color.secondary.100}",
+    "&:hover": {
+        bgColor: "secondary.300",
+        color: "primary.200",
+    }
+})}><slot/></a></li>

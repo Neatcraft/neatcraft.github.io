@@ -1,0 +1,67 @@
+---
+import { css } from "../../../styled-system/css";
+
+const link = css({
+    "&:hover, &[aria-current=true]": {
+        textDecoration: "underline",
+        cursor: "pointer",
+        color: "secondary.100",
+    }
+});
+
+const vr = css({
+    width: "1px",
+    height: "1rem",
+    marginX: "0.7rem",
+    borderRight: "2px solid white",
+});
+
+const bodyStyle = css({
+    bgColor: "gray.100",
+});
+---
+
+<body class={bodyStyle}>
+    <nav class={css({ height: "100%" })}>
+        <ul class={css({
+            _portrait: { display: { xs: "none", lg: "flex" } },
+            _landscape: { display: "flex" },
+            fontSize: "1.5em",
+            height: "100%",
+            alignItems: "center",
+            overflowY: "hidden",
+            overflowX: "auto",
+        })}>
+           <li><a href="http://localhost:4324/#mission" class={link} aria-current="true">Mission</a></li>
+                   <li aria-hidden="true" class={vr} />
+                   <li><a href="http://localhost:4324/#vision" class={link}>Vision</a></li>
+                   <li aria-hidden="true" class={vr} />
+                   <li><a href="http://localhost:4324/#valeurs" class={link}>Valeurs</a></li>
+                   <li aria-hidden="true" class={vr} />
+                   <li><a href="http://localhost:4324/#offre" class={link}>Offre</a></li>
+        </ul>
+    </nav>
+
+    <script type="module">
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+            const menuItems = document.querySelectorAll("nav ul li a");
+
+            document.addEventListener("scroll", () => {
+                let currentSection = sections[0];
+
+                sections.forEach((section) => {
+                    if (window.scrollY >= section.offsetTop - 100) {
+                        currentSection = section;
+                    }
+                });
+                menuItems.forEach((item) => {
+                    item.ariaCurrent = "false";
+                    if (item.href.endsWith("#" + currentSection.id)) {
+                        item.ariaCurrent = "true";
+                    }
+                });
+            });
+        });
+    </script>
+</body>

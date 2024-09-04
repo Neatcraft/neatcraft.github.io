@@ -1,1 +1,20 @@
-<h1>Contact</h1>
+---
+import '../index.css';
+
+import Header from "../components/header.astro";
+import Navigation from "../components/navigation/navigation.astro";
+import NavigationItem from "../components/navigation/navigationItem.astro";
+import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
+---
+
+<Header>
+    <Navigation>
+        <NavigationItem href="/#mission">Mission</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#vision">Vision</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#valeurs">Valeurs</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#offre">Offre</NavigationItem>
+    </Navigation>
+</Header>
