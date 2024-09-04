@@ -1,6 +1,7 @@
 ---
 import '../index.css';
-
+import {css} from "../../styled-system/css";
+import Formulaire from "../components/form/formulaire.astro";
 import Header from "../components/header.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
@@ -18,3 +19,21 @@ import NavigationSeparator from "../components/navigation/navigationSeparator.as
         <NavigationItem href="/#offre">Offre</NavigationItem>
     </Navigation>
 </Header>
+<main class={css({
+    _portrait: {
+        marginTop: "15vh",
+    },
+    _landscape: {
+        marginTop: { xs: "15vw", lg: "5vw" },
+    },
+    padding: "2rem",
+})}>
+    <h1 class={css({
+        fontSize: "1.5em",
+        marginBottom: "1rem",
+        textAlign: "center",
+        color: "secondary.100",  // Couleur du titre
+    })}>Comment pouvons-nous vous aider ?</h1>
+    <Formulaire />
+
+</main> class={css({})}
