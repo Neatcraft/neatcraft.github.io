@@ -6,7 +6,7 @@ import Header from "../components/header.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
-import Footer from "../components/navigation/Footer.astro";
+import Footer from "../components/footer.astro";
 ---
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@ import Footer from "../components/navigation/Footer.astro";
     <title>Neatcraft</title>
 </head>
 <body class={css({
-    bgColor: "primary.100",
+    bgColor: "gray.100",
     color: "white",
 })}>
 
@@ -42,10 +42,11 @@ import Footer from "../components/navigation/Footer.astro";
     padding: "2rem",
 })}>
     <h1 class={css({
-        fontSize: "1.5em",
+        fontSize: "2em",
         marginBottom: "1rem",
         textAlign: "center",
-        color: "secondary.100",  // Couleur du titre
+        color: "secondary.100",
+        fontFamily: "barlow",
     })}>Comment pouvons-nous vous aider ?</h1>
     <Formulaire />
     <p id="confirmation-message" class={css({
@@ -54,10 +55,17 @@ import Footer from "../components/navigation/Footer.astro";
         fontSize: "1.2em",
         marginTop: "1rem",
         display: "none",
+        fontFamily: "montserrat",
     })}>Merci ! Votre demande a été envoyée.</p>
 
 </main>
-<Footer />
+<div class={css({
+    bgColor: "primary.100",
+    marginBottom: "-1rem",
+})}>
+    <Footer />
+</div>
+
 </body>
 <script >
     const form = document.getElementById("contact-form");
