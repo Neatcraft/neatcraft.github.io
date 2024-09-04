@@ -7,6 +7,14 @@ import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
 ---
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Neatcraft</title>
+</head>
 
 <Header>
     <Navigation>
@@ -35,5 +43,32 @@ import NavigationSeparator from "../components/navigation/navigationSeparator.as
         color: "secondary.100",  // Couleur du titre
     })}>Comment pouvons-nous vous aider ?</h1>
     <Formulaire />
+    <p id="confirmation-message" class={css({
+        textAlign: "center",
+        color: "green",
+        fontSize: "1.2em",
+        marginTop: "1rem",
+        display: "none",
+    })}>Merci ! Votre demande a été envoyée.</p>
 
 </main> class={css({})}
+<script >
+    const form = document.getElementById("contact-form");
+    const confirmationMessage = document.getElementById("confirmation-message");
+
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            alert("Veuillez cliquer sur le lien de validation qui vous a été envoyé à votre adresse mail.");
+
+            if (confirmationMessage) {
+                confirmationMessage.style.display = "block";
+            }
+        });
+    } else {
+        console.error("Formulaire non trouvé : assurez-vous que l'élément avec l'ID 'contact-form' existe.");
+    }
+
+
+</script>
