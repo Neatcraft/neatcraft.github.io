@@ -1,0 +1,46 @@
+---
+import {css} from "../../../styled-system/css";
+---
+
+<form class={css({
+    maxWidth: "600px",
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    backgroundColor: "white",
+    padding: "2rem",
+    borderRadius: "8px",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+})}>
+    <label for="prenom" class={css({ display: "block", fontWeight: "bold", color: "black" })}>Prénom:</label>
+    <input type="text" id="prenom" name="prenom" required class={css({ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc", color: "black" })}/>
+
+    <label for="nom" class={css({ display: "block", fontWeight: "bold", color: "black" })}>Nom:</label>
+    <input type="text" id="nom" name="nom" required class={css({ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc", color: "black" })}/>
+
+    <label for="societe" class={css({ display: "block", fontWeight: "bold", color: "black" })}>Société:</label>
+    <input type="text" id="societe" name="societe" class={css({ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc", color: "black" })}/>
+
+    <label for="email" class={css({ display: "block", fontWeight: "bold", color: "black" })}>Email:</label>
+    <input type="email" id="email" name="email" required class={css({ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc", color: "black" })}/>
+
+    <label for="demande" class={css({ display: "block", fontWeight: "bold", color: "black" })}>Demande:</label>
+    <textarea id="demande" name="demande" rows="4" required class={css({ padding: "0.5rem", borderRadius: "4px", border: "1px solid #ccc", color: "black" })}></textarea>
+
+    <button type="submit" class={css({
+        padding: "0.75rem 1.5rem",
+        bgColor: "secondary.100",
+        fontWeight: "800",
+        borderRadius: "8px",
+        border: "2px solid #ccc",
+        marginTop: "1rem",
+        alignSelf: "center",
+        "&:hover": {
+            bgColor: "secondary.300",
+            color: "primary.200",
+        },
+    })}>
+        Soumettre
+    </button>
+</form>
