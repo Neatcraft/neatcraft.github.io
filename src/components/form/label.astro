@@ -1,0 +1,12 @@
+---
+const { htmlFor } = Astro.props;
+import { css } from "../../../styled-system/css";
+---
+<label for={htmlFor} class={css({
+    display: "block",
+    fontWeight: "bold",
+    color: "black",
+    marginBottom: "0.5rem",
+})}>
+    <slot /> <!-- Contenu du label -->
+</label>
