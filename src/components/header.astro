@@ -2,14 +2,15 @@
 import {css} from "../../styled-system/css";
 ---
 <header id="header" class={css({
+    paddingTop: ".6%",
     display: "flex",
     position: "fixed",
     top: "0",
     left: "0",
-    justifyContent: {xs: "center", lg: "space-between"},
+    justifyContent: {_portrait: "center", _landscape: {xs: "center", md: "space-between"}},
     paddingLeft: "2%",
     paddingRight: "2%",
-    height: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "8vh"}},
+    height: {_portrait: "10vh", _landscape: {xs: "18vh", lg: "8vh", xl: "7vh"}},
     width: "100%",
     bgColor: "primary.100",
     fontFamily: "montserrat",
