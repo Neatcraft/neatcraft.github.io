@@ -1,0 +1,19 @@
+---
+import Label from "./Label.astro";
+import Input from "./Input.astro";
+import { css } from "../../../styled-system/css";
+---
+<form id="contact-form" class={css({
+    display: "flex",
+    flexDirection: "column",
+    fontFamily: "montserrat",
+    gap: "1rem",
+    maxWidth: "600px",
+    margin: "0 auto",
+    padding: "2% 1.5%",
+    backgroundColor: "#f9f9f9",
+    borderRadius: "8px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+})}>
+    <slot/>
+</form>
