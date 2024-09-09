@@ -1,14 +1,17 @@
 ---
 import '../index.css';
 import {css} from "../../styled-system/css";
-import Formulaire from "../components/form/formulaire.astro";
+import Form from "../components/form/form.astro";
 import Header from "../components/header.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
 import Footer from "../components/footer.astro";
+import {title} from "../../styled-system/patterns";
+import Label from "../components/form/label.astro";
+import Input from "../components/form/input.astro";
 ---
-<html lang="en">
+<html lang="en" class={css({height: "100vh"})}>
 <head>
     <meta charset="utf-8"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -17,8 +20,12 @@ import Footer from "../components/footer.astro";
     <title>Neatcraft</title>
 </head>
 <body class={css({
-    bgColor: "gray.100",
+    bgColor: "primary.100",
     color: "white",
+    display: "flex",
+    height: "100%" ,
+    flexDirection: "column",
+    justifyContent: "space-between",
 })}>
 
 <Header>
@@ -33,22 +40,58 @@ import Footer from "../components/footer.astro";
     </Navigation>
 </Header>
 <main class={css({
-    _portrait: {
-        marginTop: "15vh",
-    },
-    _landscape: {
-        marginTop: { xs: "15vw", lg: "5vw" },
-    },
+    bgColor: "gray.100",
+    flexGrow: "1",
+    paddingTop: {_portrait: "15vh", _landscape: "7vw"},
     padding: "2rem",
 })}>
-    <h1 class={css({
-        fontSize: "2em",
-        marginBottom: "1rem",
-        textAlign: "center",
-        color: "secondary.100",
-        fontFamily: "barlow",
-    })}>Comment pouvons-nous vous aider ?</h1>
-    <Formulaire />
+    <h1 class={title({color: "secondary.100", textAlign: "center"})}>Comment pouvons-nous vous aider ?</h1>
+    <Form>
+        <div>
+            <Label htmlFor="prenom">Prénom:</Label>
+            <Input id="prenom" name="prenom" />
+        </div>
+
+        <div class={css({ width: "100%" })}>
+            <Label htmlFor="nom">Nom:</Label>
+            <Input id="nom" name="nom" />
+        </div>
+
+        <div class={css({ width: "100%" })}>
+            <Label htmlFor="societe">Société:</Label>
+            <Input id="societe" name="societe" />
+        </div>
+
+        <div class={css({ width: "100%" })}>
+            <Label htmlFor="email">Email:</Label>
+            <Input id="email" name="email" type="email" />
+        </div>
+
+        <div class={css({ width: "100%" })}>
+            <Label htmlFor="demande">Demande:</Label>
+            <Input id="demande" name="demande" type="textarea" rows="4" />
+        </div>
+
+        <button type="submit" class={css({
+            display: "block",
+            width: "auto",
+            margin: "0 auto",
+            padding: ".8rem 2rem",
+            backgroundColor: "secondary.100",
+            color: "white",
+            border: "2px solid secondary.100",
+            borderRadius: "4px",
+            fontWeight: "700",
+            fontSize: "1em",
+            cursor: "pointer",
+            "&:hover": {
+                backgroundColor: "secondary.300",
+                color: "primary.200",
+            },
+        })}>
+            Soumettre
+        </button>
+    </Form>
     <p id="confirmation-message" class={css({
         textAlign: "center",
         color: "green",
@@ -59,15 +102,10 @@ import Footer from "../components/footer.astro";
     })}>Merci ! Votre demande a été envoyée.</p>
 
 </main>
-<div class={css({
-    bgColor: "primary.100",
-    marginBottom: "-1rem",
-})}>
-    <Footer />
-</div>
+<Footer/>
 
 </body>
-<script >
+<script>
     const form = document.getElementById("contact-form");
     const confirmationMessage = document.getElementById("confirmation-message");
 
@@ -87,3 +125,4 @@ import Footer from "../components/footer.astro";
 
 
 </script>
+</html>

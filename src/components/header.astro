@@ -7,10 +7,10 @@ import {css} from "../../styled-system/css";
     position: "fixed",
     top: "0",
     left: "0",
-    justifyContent: {_portrait: "center", _landscape: {xs: "center", md: "space-between"}},
+    justifyContent: {_portrait: {xs: "center", lg: "space-between"}, _landscape: {xs: "center", md: "space-between"}},
     paddingLeft: "2%",
     paddingRight: "2%",
-    height: {_portrait: "10vh", _landscape: {xs: "18vh", lg: "8vh", xl: "7vh"}},
+    height: {_portrait: "10vh", _landscape: "6vw"},
     width: "100%",
     bgColor: "primary.100",
     fontFamily: "montserrat",
@@ -24,8 +24,8 @@ import {css} from "../../styled-system/css";
             height: "14vh"
         },
         _landscape: {
-            width: {xs: "8vw", lg: "5vw"},
-            height: {xs: "8vw", lg: "5vw"},
+            width: {xs: "8vw", lg: "7vw"},
+            height: {xs: "8vw", lg: "7vw"},
         }
     })}/>
     <slot/>
