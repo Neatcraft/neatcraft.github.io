@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.83 44.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5.07px;
+      }
+
+      .cls-2 {
+        fill: #ed7d1a;
+      }
+
+      .cls-3 {
+        fill: #2a3159;
+      }
+    </style>
+  </defs>
+  <g id="Calque_3">
+    <g>
+      <g>
+        <rect class="cls-1" x="8.47" y="19.16" width="23.22" height="16.3"/>
+        <rect class="cls-1" x="2.53" y="37.64" width="34.77" height="3.86"/>
+        <rect class="cls-1" x="2.53" y="13.11" width="34.77" height="3.86"/>
+        <polygon class="cls-1" points="20.11 2.53 5.13 12.76 35.1 12.76 20.11 2.53"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-2" x="8.47" y="19.16" width="4.87" height="16.3"/>
+          <rect class="cls-2" x="17.65" y="19.16" width="4.87" height="16.3"/>
+          <rect class="cls-2" x="26.82" y="19.16" width="4.87" height="16.3"/>
+        </g>
+        <g>
+          <rect class="cls-3" x="2.53" y="37.64" width="34.77" height="3.86"/>
+          <path class="cls-3" d="M34.99,13.11L20.11,2.96,5.23,13.11h-2.7v3.86h34.77v-3.86h-2.31ZM19.86,7.62c1.48,0,2.69,1.2,2.69,2.69s-1.2,2.69-2.69,2.69-2.69-1.2-2.69-2.69,1.2-2.69,2.69-2.69Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
