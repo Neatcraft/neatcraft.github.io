@@ -1,0 +1,135 @@
+---
+import '../index.css';
+import {css} from "../../styled-system/css";
+import Header from "../components/header.astro";
+import Navigation from "../components/navigation/navigation.astro";
+import NavigationItem from "../components/navigation/navigationItem.astro";
+import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
+import Footer from "../components/footer.astro";
+import {title} from "../../styled-system/patterns";
+---
+
+<html lang="fr" class={css({height: "100vh"})}>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Mentions légales | NeatCraft</title>
+</head>
+
+<body class={css({
+    bgColor: "primary.100",
+    color: "white",
+    display: "flex",
+    height: "100%",
+    flexDirection: "column",
+    justifyContent: "space-between",
+})}>
+
+<Header>
+    <Navigation>
+        <NavigationItem href="/">Accueil</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#mission">Mission</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#vision">Vision</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#engagement">Engagement</NavigationItem>
+        <NavigationSeparator/>
+        <NavigationItem href="/#offre">Offre</NavigationItem>
+    </Navigation>
+</Header>
+
+<main class={css({
+    bgColor: "gray.100",
+    flexGrow: "1",
+    paddingTop: {_portrait: "15vh", _landscape: "7vw"},
+    padding: "2rem",
+    color: "black",
+})}>
+    <h1 class={title({color: "secondary.100", textAlign: "center"})}>Mentions Légales</h1>
+
+    <section class={css({
+        fontSize: "1.2rem",
+        lineHeight: "1.8",
+        margin: "0 auto",
+        maxWidth: "900px",
+        padding: "1rem",
+        backgroundColor: "white",
+        borderRadius: "8px",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        color: "black",
+    })}>
+
+        <h2>1. Éditeur du site</h2>
+        <p>
+            Le site NeatCraft est édité par la société NeatCraft, une SARL unipersonnelle au capital social de 1 000,00 €, immatriculée au Registre du Commerce et des Sociétés de Saint-Brieuc sous le numéro RCS 908 882 541.
+        </p>
+        <ul>
+            <li>Dénomination sociale : NeatCraft</li>
+            <li>Forme juridique : SARL unipersonnelle</li>
+            <li>Numéro SIRET : 908 882 541 00018</li>
+            <li>Numéro de TVA intracommunautaire : FR42908882541</li>
+            <li>Siège social : 38 Boulevard Pasteur, 22000 Saint-Brieuc, France</li>
+            <li>Responsable de la publication : Antoine Carpier-Jouan</li>
+            <li>Email : antoine.jouan@neatcraft.fr</li>
+            <li>Téléphone : 06 15 93 90 15</li>
+        </ul>
+
+        <h2>2. Hébergeur du site</h2>
+        <p>
+            Le site est hébergé par :
+        </p>
+        <ul>
+            <li>Nom de l'hébergeur : [Nom de l’hébergeur]</li>
+            <li>Adresse : [Adresse complète de l’hébergeur]</li>
+            <li>Téléphone : [Numéro de téléphone de l’hébergeur]</li>
+            <li>Site web : [URL du site de l’hébergeur]</li>
+        </ul>
+
+        <h2>3. Propriété intellectuelle</h2>
+        <p>
+            L'ensemble des éléments présents sur le site (textes, images, logos, vidéos, etc.) sont la propriété exclusive de NeatCraft, sauf mentions contraires. Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces éléments, même partielle, est strictement interdite sans l'accord écrit de NeatCraft.
+        </p>
+
+        <h2>4. Design du site</h2>
+        <p>
+            Le design du site a été réalisé par Loic.
+        </p>
+
+        <h2>5. Collecte de données personnelles</h2>
+        <p>
+            NeatCraft respecte la vie privée de ses utilisateurs et se conforme aux lois en vigueur concernant la protection des données personnelles, notamment le Règlement Général sur la Protection des Données (RGPD).
+        </p>
+        <p>
+            Les informations collectées via les formulaires de contact (nom, e-mail, etc.) sont uniquement utilisées pour répondre aux demandes des utilisateurs. Ces données ne seront en aucun cas partagées avec des tiers sans consentement préalable.
+        </p>
+        <p>
+            Droit d'accès, de rectification et de suppression des données : Vous pouvez à tout moment demander l'accès, la rectification ou la suppression de vos données en nous contactant par e-mail à antoine.jouan@neatcraft.fr.
+        </p>
+        <p>
+            Utilisation des cookies : Le site utilise des cookies pour améliorer l'expérience utilisateur. En naviguant sur le site, vous acceptez l'utilisation de cookies conformément à notre politique de confidentialité.
+        </p>
+
+        <h2>6. Conditions d'utilisation</h2>
+        <p>
+            L'accès et l'utilisation du site NeatCraft sont soumis aux présentes mentions légales. En accédant au site, vous acceptez sans réserve les conditions suivantes :
+        </p>
+        <ul>
+            <li>Le contenu du site est fourni à titre informatif. NeatCraft ne saurait être tenu responsable des erreurs ou omissions dans les informations fournies sur le site.</li>
+            <li>NeatCraft se réserve le droit de modifier le contenu du site à tout moment, sans préavis.</li>
+        </ul>
+
+        <h2>7. Droits applicables</h2>
+        <p>
+            Les présentes mentions légales sont régies par la loi française. En cas de litige, les tribunaux compétents seront ceux de la juridiction du siège social de NeatCraft.
+        </p>
+
+    </section>
+</main>
+
+<Footer/>
+
+</body>
+</html>

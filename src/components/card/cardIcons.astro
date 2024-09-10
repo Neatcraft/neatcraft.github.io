@@ -4,41 +4,39 @@ import {css} from "../../../styled-system/css";
 
 <div class={css({
     position: "relative",
-    width: "450px", // Taille du conteneur global
+    width: "450px",
     height: "450px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
 })}>
 
-    <!-- Icône centrale (circle.svg) -->
     <img src="/img/icons/circle.svg" alt="Cercle central" class={css({
-        width: "350px", // Taille de l'icône centrale
+        width: "350px",
         height: "350px",
         zIndex: "1"
     })} />
 
-    <!-- Icône en haut à gauche (compas.svg) dans des cercles -->
     <div class={css({
         position: "absolute",
-        top: "10px", // Ajuster la position pour bien centrer les icônes
+        top: "10px",
         left: "0px",
-        width: "160px",  // Taille du cercle extérieur
+        width: "160px",
         height: "160px",
-        backgroundColor: "white",  // Couleur du fond
-        borderRadius: "50%",  // Cercle complet
-        border: "5px solid orange",  // Premier border radius (orange)
+        backgroundColor: "white",
+        borderRadius: "50%",
+        border: "5px solid orange",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         boxSizing: "border-box",
-        zIndex: "2" // S'assurer que l'icône est visible au-dessus du cercle central
+        zIndex: "2"
     })}>
         <div class={css({
             width: "85px",
             height: "85px",
             borderRadius: "50%",
-            border: "3px solid white",  // Second border radius (blanc)
+            border: "3px solid white",
             display: "flex",
             justifyContent: "center",
             alignItems: "center"
@@ -50,7 +48,6 @@ import {css} from "../../../styled-system/css";
         </div>
     </div>
 
-    <!-- Icône en haut à droite (ampoule.svg) dans des cercles -->
     <div class={css({
         position: "absolute",
         top: "10px",
@@ -82,7 +79,6 @@ import {css} from "../../../styled-system/css";
         </div>
     </div>
 
-    <!-- Icône en bas à gauche (speaker.svg) dans des cercles -->
     <div class={css({
         position: "absolute",
         bottom: "50px",
@@ -114,7 +110,6 @@ import {css} from "../../../styled-system/css";
         </div>
     </div>
 
-    <!-- Icône en bas à droite (finger.svg) dans des cercles -->
     <div class={css({
         position: "absolute",
         bottom: "50px",

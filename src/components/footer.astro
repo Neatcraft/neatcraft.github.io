@@ -12,4 +12,16 @@ import {css} from "../../styled-system/css";
     <p class={css({ textAlign: "center" })}>
         Copyright © 2024 Neatcraft - Tous droits réservés
     </p>
+    <p class={css({ textAlign: "center", marginTop: "1rem" })}>
+        <a href="/mentionsLegales" class={css({
+            color: "white",
+            textDecoration: "none",
+            "&:hover": {
+                textDecoration: "underline",
+                color: "secondary.100",
+            }
+        })}>
+            Mentions légales
+        </a>
+    </p>
 </footer>
