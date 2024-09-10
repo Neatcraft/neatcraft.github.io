@@ -3,7 +3,7 @@ import SectionTitle from "../components/sectionTitle.astro";
 import Subtitle from "../components/subtitle.astro";
 import {paragraph, section, title} from "../../styled-system/patterns";
 import {css} from "../../styled-system/css";
-import CardIcons from "../components/card/cardIcons.astro"; // Importation du composant CardIcons
+import CardIcons from "../components/card/cardIcons.astro";
 ---
 <section id="engagement" class={css({
     display: "flex",
@@ -11,7 +11,7 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
     flexDir: { xs: "column", lg: "row" },
     gap: "1.5em",
     justifyContent: "center",
-    alignItems: "flex-start", // Aligner les blocs en haut
+    alignItems: "flex-start",
     width: "100%",
     height: "100%",
     flexDir: "column",
@@ -20,9 +20,7 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
     bgColor: "third.100",
     bgImage: "url(/img/triangle.svg)"
 })}>
-    <div class={css({
-
-    })}>
+    <div class={css({})}>
         <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({ color: "white.100" })}>
             Engagements
         </SectionTitle>
@@ -33,17 +31,16 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
             gap: "1.5em",
             padding: "8%",
             justifyContent: "center",
-            alignItems: "flex-start", // Aligner les blocs en haut
+            alignItems: "flex-start",
             width: "100%",
         })}>
 
-            <!-- Bloc gauche : Rigueur et Empathie -->
             <div class={css({
                 display: "flex",
                 flexDir: "column",
                 alignItems: "flex-end",
                 width: "30%",
-                gap: "0.5em" // Ajouter un espace entre les sous-titres et paragraphes
+                gap: "0.5em"
             })}>
                 <Subtitle>Rigueur</Subtitle>
                 <p class={css({
@@ -57,25 +54,23 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
 
                 <Subtitle>Empathie</Subtitle>
                 <p class={css({
-                        textAlign: "end",
-                        fontSize: {xs: "1rem", xl: "1.2rem"},
-                        color: "white",
-                        paddingBottom:"60px"
+                    textAlign: "end",
+                    fontSize: {xs: "1rem", xl: "1.2rem"},
+                    color: "white",
+                    paddingBottom:"60px"
                 })}>
                     Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
                 </p>
             </div>
 
-            <!-- Composant CardIcons au centre -->
             <CardIcons />
 
-            <!-- Bloc droit : Créativité et Simplicité -->
             <div class={css({
                 display: "flex",
                 flexDir: "column",
                 width: "30%",
-                alignItems: "flex-start", // Alignement des éléments à gauche
-                gap: "0.5em" // Ajouter un espace entre les sous-titres et paragraphes
+                alignItems: "flex-start",
+                gap: "0.5em"
             })}>
                 <Subtitle>Créativité</Subtitle>
                 <p class={css({
@@ -83,7 +78,7 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
                     fontSize: {xs: "1rem", xl: "1.2rem"},
                     color: "white",
                     textAlign: "start",
-                    paddingBottom:"40px"// Alignement du texte à gauche
+                    paddingBottom:"60px"
                 })}>
                     Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes.
                 </p>
@@ -92,7 +87,7 @@ import CardIcons from "../components/card/cardIcons.astro"; // Importation du co
                 <p class={css({
                     fontSize: {xs: "1rem", xl: "1.2rem"},
                     color: "white",
-                    textAlign: "start"// Alignement du texte à gauche
+                    textAlign: "start"
                 })}>
                     Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
                 </p>
