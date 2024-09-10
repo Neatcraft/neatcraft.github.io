@@ -1,0 +1,103 @@
+---
+import SectionTitle from "../components/sectionTitle.astro";
+import Subtitle from "../components/subtitle.astro";
+import {paragraph, section, title} from "../../styled-system/patterns";
+import {css} from "../../styled-system/css";
+import CardIcons from "../components/card/cardIcons.astro"; // Importation du composant CardIcons
+---
+<section id="engagement" class={css({
+    display: "flex",
+    padding: "3% 2% 7% 2%",
+    flexDir: { xs: "column", lg: "row" },
+    gap: "1.5em",
+    justifyContent: "center",
+    alignItems: "flex-start", // Aligner les blocs en haut
+    width: "100%",
+    height: "100%",
+    flexDir: "column",
+    paddingX: "5%",
+    alignItems: "center",
+    bgColor: "third.100",
+    bgImage: "url(/img/triangle.svg)"
+})}>
+    <div class={css({
+
+    })}>
+        <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({ color: "white.100" })}>
+            Engagements
+        </SectionTitle>
+
+        <div class={css({
+            display: "flex",
+            flexDir: { xs: "column", lg: "row" },
+            gap: "1.5em",
+            padding: "8%",
+            justifyContent: "center",
+            alignItems: "flex-start", // Aligner les blocs en haut
+            width: "100%",
+        })}>
+
+            <!-- Bloc gauche : Rigueur et Empathie -->
+            <div class={css({
+                display: "flex",
+                flexDir: "column",
+                alignItems: "flex-end",
+                width: "30%",
+                gap: "0.5em" // Ajouter un espace entre les sous-titres et paragraphes
+            })}>
+                <Subtitle>Rigueur</Subtitle>
+                <p class={css({
+                    textAlign: "end",
+                    fontSize: {xs: "1rem", xl: "1.2rem"},
+                    color: "white",
+                    paddingBottom:"60px"
+                })}>
+                    Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.
+                </p>
+
+                <Subtitle>Empathie</Subtitle>
+                <p class={css({
+                        textAlign: "end",
+                        fontSize: {xs: "1rem", xl: "1.2rem"},
+                        color: "white",
+                        paddingBottom:"60px"
+                })}>
+                    Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
+                </p>
+            </div>
+
+            <!-- Composant CardIcons au centre -->
+            <CardIcons />
+
+            <!-- Bloc droit : Créativité et Simplicité -->
+            <div class={css({
+                display: "flex",
+                flexDir: "column",
+                width: "30%",
+                alignItems: "flex-start", // Alignement des éléments à gauche
+                gap: "0.5em" // Ajouter un espace entre les sous-titres et paragraphes
+            })}>
+                <Subtitle>Créativité</Subtitle>
+                <p class={css({
+                    textAlign: "start",
+                    fontSize: {xs: "1rem", xl: "1.2rem"},
+                    color: "white",
+                    textAlign: "start",
+                    paddingBottom:"40px"// Alignement du texte à gauche
+                })}>
+                    Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes.
+                </p>
+
+                <Subtitle>Simplicité</Subtitle>
+                <p class={css({
+                    fontSize: {xs: "1rem", xl: "1.2rem"},
+                    color: "white",
+                    textAlign: "start"// Alignement du texte à gauche
+                })}>
+                    Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

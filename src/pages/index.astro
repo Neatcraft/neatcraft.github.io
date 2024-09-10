@@ -2,8 +2,7 @@
 import '../index.css';
 
 import Mission from "../sections/mission.astro";
-import Vision from "../sections/vision.astro";
-import Valeurs from "../sections/valeurs.astro";
+import Engagement from "../sections/engagement.astro";
 import Offre from "../sections/offre.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
@@ -12,6 +11,7 @@ import {css} from "../../styled-system/css";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+import Vision from "../sections/vision.astro";
 ---
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@ import Footer from "../components/footer.astro";
         <NavigationSeparator/>
         <NavigationItem href="#vision">Vision</NavigationItem>
         <NavigationSeparator/>
-        <NavigationItem href="#valeurs">Valeurs</NavigationItem>
+        <NavigationItem href="#engagement">Engagement</NavigationItem>
         <NavigationSeparator/>
         <NavigationItem href="#offre">Offre</NavigationItem>
         <NavigationButton href="/contact">Nous contacter</NavigationButton>
@@ -49,7 +49,7 @@ import Footer from "../components/footer.astro";
 })}>
     <Mission/>
     <Vision/>
-    <Valeurs/>
+    <Engagement/>
     <Offre/>
 </main>
 <div class={css({

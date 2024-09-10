@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.32 57.35">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #ed7d1a;
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6.4px;
+      }
+
+      .cls-5 {
+        fill: #2a3159;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-8.94" y="-8.59" width="72" height="75" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="2.83"/>
+      <feFlood flood-color="#000" flood-opacity=".25"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Calque_3">
+    <g class="cls-4">
+      <rect class="cls-1" x="27.01" y="13.5" width="8.62" height="10.91"/>
+      <g>
+        <path class="cls-2" d="M47.39,25.74h-25.81l3.48-4.98c1.18-1.69.76-4.01-.92-5.19h0c-1.69-1.18-4.01-.76-5.19.92,0,0-3.06,4.4-8.48,6.11-5.41,1.72-7.26,6.73-7.26,10.82v9.24c0,4.75,6.34,11.48,10.58,11.48h3.41l.04-.1h8.51c2.06,0,3.73-1.67,3.73-3.73,0-1.32-.69-2.47-1.72-3.14h.9c2.06,0,3.73-1.67,3.73-3.73,0-1.66-1.09-3.05-2.59-3.53h.84c2.06,0,3.73-1.67,3.73-3.73,0-1.24-.61-2.33-1.54-3h14.57c2.06,0,3.73-1.67,3.73-3.73s-1.67-3.73-3.73-3.73Z"/>
+        <rect class="cls-2" x="28.24" y="3.2" width="3.7" height="9.11" rx="1.85" ry="1.85"/>
+        <rect class="cls-2" x="39.77" y="14.22" width="3.7" height="9.11" rx="1.85" ry="1.85" transform="translate(60.39 -22.84) rotate(90)"/>
+        <rect class="cls-2" x="36.16" y="6.39" width="3.7" height="9.11" rx="1.85" ry="1.85" transform="translate(18.87 -23.67) rotate(45)"/>
+      </g>
+      <g>
+        <path class="cls-5" d="M47.39,25.74h-25.81l3.48-4.98c1.18-1.69.76-4.01-.92-5.19h0c-1.69-1.18-4.01-.76-5.19.92,0,0-3.06,4.4-8.48,6.11-5.41,1.72-7.26,6.73-7.26,10.82v9.24c0,4.75,6.34,11.48,10.58,11.48h3.41l.04-.1h8.51c2.06,0,3.73-1.67,3.73-3.73,0-1.32-.69-2.47-1.72-3.14h.9c2.06,0,3.73-1.67,3.73-3.73,0-1.66-1.09-3.05-2.59-3.53h.84c2.06,0,3.73-1.67,3.73-3.73,0-1.24-.61-2.33-1.54-3h14.57c2.06,0,3.73-1.67,3.73-3.73s-1.67-3.73-3.73-3.73Z"/>
+        <rect class="cls-3" x="28.24" y="3.2" width="3.7" height="9.11" rx="1.85" ry="1.85"/>
+        <rect class="cls-3" x="39.77" y="14.22" width="3.7" height="9.11" rx="1.85" ry="1.85" transform="translate(60.39 -22.84) rotate(90)"/>
+        <rect class="cls-3" x="36.16" y="6.39" width="3.7" height="9.11" rx="1.85" ry="1.85" transform="translate(18.87 -23.67) rotate(45)"/>
+      </g>
+    </g>
+  </g>
+</svg>
