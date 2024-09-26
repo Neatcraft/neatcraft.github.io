@@ -12,6 +12,7 @@ import NavigationSeparator from "../components/navigation/navigationSeparator.as
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Vision from "../sections/vision.astro";
+import Contact from "../sections/contact.astro";
 ---
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@ import Vision from "../sections/vision.astro";
         <NavigationItem href="#engagement">Engagement</NavigationItem>
         <NavigationSeparator/>
         <NavigationItem href="#offre">Offre</NavigationItem>
-        <NavigationButton href="/contact">Nous contacter</NavigationButton>
+        <NavigationButton href="#contact">Nous contacter</NavigationButton>
     </Navigation>
 </Header>
 
@@ -51,6 +52,7 @@ import Vision from "../sections/vision.astro";
     <Vision/>
     <Engagement/>
     <Offre/>
+    <Contact/>
 </main>
 <div class={css({
     _portrait: {
@@ -66,7 +68,7 @@ import Vision from "../sections/vision.astro";
     paddingY: "5%",
     bottom: "0",
 })}>
-    <a href="/contact"
+    <a href="#contact"
        class={css({
            bgColor: "secondary.100",
            color: "primary.200",
