@@ -1,98 +1,249 @@
 ---
+import { css } from "../../styled-system/css";
+import { title } from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
-import Subtitle from "../components/subtitle.astro";
-import {paragraph, section, title} from "../../styled-system/patterns";
-import {css} from "../../styled-system/css";
-import CardIcons from "../components/card/cardIcons.astro";
+import SubTitle from "../components/subtitle.astro";
 ---
 <section id="engagement" class={css({
     display: "flex",
+    flexDirection: "column",
     padding: "3% 2% 7% 2%",
-    flexDir: { xs: "column", lg: "row" },
-    gap: "1.5em",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
     width: "100%",
     height: "100%",
-    flexDir: "column",
-    paddingX: "5%",
-    alignItems: "center",
     bgColor: "third.100",
-    bgImage: "url(/img/triangle.svg)"
+    bgImage: "url(/img/triangle.svg)",
 })}>
-    <div class={css({})}>
-        <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({ color: "white.100" })}>
-            Engagements
+    <div class={css({
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        gap: "1rem",
+        width: "100%",
+    })}>
+        <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({color: "white"})}>
+            Engagement
         </SectionTitle>
+    </div>
+
+    <div class={css({
+        display: "grid",
+        gridTemplateColumns: "repeat(6, 1fr)",
+        gridTemplateRows: "repeat(1, 1fr)",
+        gap: "1rem",
+        padding: "5%",
+        width: "100%",
+        height: "auto",
+        position: "relative",
+    })}>
 
         <div class={css({
+            gridColumn: "2 / 3",
+            gridRow: "1 / 2",
             display: "flex",
-            flexDir: { xs: "column", lg: "row" },
-            gap: "1.5em",
-            padding: "8%",
+            flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-start",
-            width: "100%",
+            color: "white",
         })}>
-
-            <div class={css({
-                display: "flex",
-                flexDir: "column",
-                alignItems: "flex-end",
-                width: "30%",
-                gap: "0.5em"
-            })}>
-                <Subtitle>Rigueur</Subtitle>
-                <p class={css({
-                    textAlign: "end",
-                    fontSize: {xs: "1rem", xl: "1.2rem"},
-                    color: "white",
-                    paddingBottom:"60px"
-                })}>
-                    Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.
-                </p>
-
-                <Subtitle>Empathie</Subtitle>
-                <p class={css({
-                    textAlign: "end",
-                    fontSize: {xs: "1rem", xl: "1.2rem"},
-                    color: "white",
-                    paddingBottom:"60px"
-                })}>
-                    Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
-                </p>
-            </div>
-
-            <CardIcons />
-
-            <div class={css({
-                display: "flex",
-                flexDir: "column",
-                width: "30%",
-                alignItems: "flex-start",
-                gap: "0.5em"
-            })}>
-                <Subtitle>Créativité</Subtitle>
-                <p class={css({
-                    textAlign: "start",
-                    fontSize: {xs: "1rem", xl: "1.2rem"},
-                    color: "white",
-                    textAlign: "start",
-                    paddingBottom:"60px"
-                })}>
-                    Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes.
-                </p>
-
-                <Subtitle>Simplicité</Subtitle>
-                <p class={css({
-                    fontSize: {xs: "1rem", xl: "1.2rem"},
-                    color: "white",
-                    textAlign: "start"
-                })}>
-                    Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
-                </p>
-            </div>
-
+            <SubTitle>Rigueur</SubTitle>
+            <p>Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.</p>
         </div>
+
+        <div class={css({
+            gridColumn: "3 / 4",
+            gridRow: "1 / 2",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: "1",
+        })}>
+            <div class={css({
+                borderRadius: "50%",
+                backgroundColor: "white",
+                width: "200px",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid secondary.100",
+            })}>
+                <div class={css({
+                    borderRadius: "50%",
+                    width: "190px",
+                    height: "190px",
+                    border: "5px solid #ed7d1a",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                })}>
+                    <img src="/img/icons/compas.svg" alt="Compas" class={css({
+                        width: "100px",
+                        height: "100px",
+                    })} />
+                </div>
+            </div>
+        </div>
+
+        <div class={css({
+            gridColumn: "2 / 3",
+            gridRow: "3 / 4",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            color: "white",
+        })}>
+            <SubTitle>empathie</SubTitle>
+            <p>Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.</p>
+        </div>
+
+        <div class={css({
+            gridColumn: "3 / 4",
+            gridRow: "3 / 4",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: "1",
+        })}>
+            <div class={css({
+                borderRadius: "50%",
+                backgroundColor: "white",
+                width: "200px",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid secondary.100",
+            })}>
+                <div class={css({
+                    borderRadius: "50%",
+                    width: "190px",
+                    height: "190px",
+                    border: "5px solid #ed7d1a",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                })}>
+                    <img src="/img/icons/speaker.svg" alt="Speaker" class={css({
+                        width: "100px",
+                        height: "100px",
+                    })} />
+                </div>
+            </div>
+        </div>
+
+        <div class={css({
+            gridColumn: "3 / 5",
+            gridRow: "1 / 4",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+        })}>
+            <img src="/img/icons/circle.svg" alt="Cercle central" class={css({
+                width: "450px",
+                height: "450px",
+                zIndex: 0,
+            })} />
+        </div>
+
+        <div class={css({
+            gridColumn: "4 / 5",
+            gridRow: "1 / 2",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+        })}>
+            <div class={css({
+                borderRadius: "50%",
+                backgroundColor: "white",
+                width: "200px",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid secondary.100",
+            })}>
+                <div class={css({
+                    borderRadius: "50%",
+                    width: "190px",
+                    height: "190px",
+                    border: "5px solid #ed7d1a",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                })}>
+                    <img src="/img/icons/ampoule.svg" alt="Ampoule" class={css({
+                        width: "100px",
+                        height: "100px",
+                    })} />
+                </div>
+            </div>
+        </div>
+
+        <div class={css({
+            gridColumn: "5 / 6",
+            gridRow: "1 / 2",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            color: "white",
+        })}>
+            <SubTitle>créativité</SubTitle>
+            <p>Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes .</p>
+        </div>
+
+        <div class={css({
+            gridColumn: "4 / 5",
+            gridRow: "3 / 4",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+        })}>
+            <div class={css({
+                borderRadius: "50%",
+                backgroundColor: "white",
+                width: "200px",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid secondary.100",
+            })}>
+                <div class={css({
+                    borderRadius: "50%",
+                    width: "190px",
+                    height: "190px",
+                    border: "5px solid #ed7d1a",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                })}>
+                    <img src="/img/icons/finger.svg" alt="Finger" class={css({
+                        width: "100px",
+                        height: "100px",
+                    })} />
+                </div>
+            </div>
+        </div>
+
+        <div class={css({
+            gridColumn: "5 / 6",
+            gridRow: "3 / 4",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            color: "white",
+        })}>
+            <SubTitle>simplicité</SubTitle>
+            <p>Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
+
+            </p>
+        </div>
+
     </div>
 </section>
