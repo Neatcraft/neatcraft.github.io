@@ -3,6 +3,8 @@ import { css } from "../../styled-system/css";
 import { title } from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
 import SubTitle from "../components/subtitle.astro";
+import ParagraphEnd from "../components/card/ParagraphEnd.astro";
+import ParagraphStart from "../components/card/ParagraphStart.astro";
 ---
 <section id="engagement" class={css({
     display: "flex",
@@ -22,7 +24,7 @@ import SubTitle from "../components/subtitle.astro";
         gap: "1rem",
         width: "100%",
     })}>
-        <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({color: "white"})}>
+        <SectionTitle iconSrc="/img/icons/museum.svg" titleClass={title({ color: "white" })}>
             Engagement
         </SectionTitle>
     </div>
@@ -36,6 +38,13 @@ import SubTitle from "../components/subtitle.astro";
         width: "100%",
         height: "auto",
         position: "relative",
+
+
+        "@media (max-width: 720px)": {
+            display: "flex",
+            flexDirection: "column-reverse",
+    zIndex: "0",
+        },
     })}>
 
         <div class={css({
@@ -47,7 +56,9 @@ import SubTitle from "../components/subtitle.astro";
             color: "white",
         })}>
             <SubTitle>Rigueur</SubTitle>
-            <p>Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.</p>
+            <ParagraphEnd class={css({ color: "white" })}>
+                Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats exceptionnels.
+            </ParagraphEnd>
         </div>
 
         <div class={css({
@@ -94,8 +105,10 @@ import SubTitle from "../components/subtitle.astro";
             justifyContent: "center",
             color: "white",
         })}>
-            <SubTitle>empathie</SubTitle>
-            <p>Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.</p>
+            <SubTitle>Empathie</SubTitle>
+            <ParagraphEnd class={css({ color: "white" })}>
+                Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
+            </ParagraphEnd>
         </div>
 
         <div class={css({
@@ -141,6 +154,11 @@ import SubTitle from "../components/subtitle.astro";
             justifyContent: "center",
             alignItems: "center",
             position: "relative",
+
+
+            "@media (max-width: 720px)": {
+                display: "none",
+            },
         })}>
             <img src="/img/icons/circle.svg" alt="Cercle central" class={css({
                 width: "450px",
@@ -192,8 +210,10 @@ import SubTitle from "../components/subtitle.astro";
             justifyContent: "center",
             color: "white",
         })}>
-            <SubTitle>créativité</SubTitle>
-            <p>Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes .</p>
+            <SubTitle>Créativité</SubTitle>
+            <ParagraphStart>
+                Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à résoudre vos défis les plus complexes.
+            </ParagraphStart>
         </div>
 
         <div class={css({
@@ -239,10 +259,10 @@ import SubTitle from "../components/subtitle.astro";
             justifyContent: "center",
             color: "white",
         })}>
-            <SubTitle>simplicité</SubTitle>
-            <p>Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
-
-            </p>
+            <SubTitle>Simplicité</SubTitle>
+            <ParagraphStart class={css({ color: "white" })}>
+                Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
+            </ParagraphStart>
         </div>
 
     </div>
