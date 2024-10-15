@@ -2,7 +2,7 @@
 import '../index.css';
 
 import Mission from "../sections/mission.astro";
-import Engagement from "../sections/engagement.astro";
+import Engagement from "../sections/valeurs.astro";
 import Offre from "../sections/offre.astro";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
@@ -11,7 +11,7 @@ import {css} from "../../styled-system/css";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
-import Vision from "../sections/vision.astro";
+import Vision from "../sections/engagement.astro";
 import Contact from "../sections/contact.astro";
 ---
 <html lang="en">
@@ -68,21 +68,11 @@ import Contact from "../sections/contact.astro";
     paddingY: "5%",
     bottom: "0",
 })}>
-    <a href="#contact"
-       class={css({
-           bgColor: "secondary.100",
-           color: "primary.200",
-           fontFamily: "montserrat",
-           fontSize: "1.2em",
-           fontWeight: "900",
-           marginLeft: "2rem",
-           padding: "1rem 1rem",
-           borderRadius: "xl",
-           border: "2px solid {color.secondary.100}",
-       })}>Nous Contacter</a>
+
 </div>
 <Footer/>
 </body>
+
 </html>
 
 
