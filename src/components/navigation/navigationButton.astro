@@ -1,19 +1,48 @@
 ---
-import {css} from "../../../styled-system/css";
+import { css } from "../../../styled-system/css";
 
-const {href} = Astro.props
+const { href } = Astro.props;
 ---
 
-<li><a href={href} class={css({
-    display: "inline-block",
-    bgColor: "secondary.100",
-    fontWeight: "800",
-    marginLeft: "2rem",
-    padding: ".7rem 1rem",
-    borderRadius: "xl",
-    border: "2px solid {color.secondary.100}",
-    "&:hover": {
-        bgColor: "secondary.300",
-        color: "primary.200",
-    }
-})}><slot/></a></li>
+<li>
+    <a href={href} class={css({
+        display: "inline-block",
+        bgColor: "secondary.100",
+        fontWeight: "800",
+        marginLeft: {
+            xs: "1rem", // Réduit pour les petits écrans
+            s: "1.5rem", // Légèrement plus grand
+            m: "2rem",   // Valeur normale
+            l: "2rem",   // Même pour les écrans larges
+            xl: "2rem"   // Toujours constant pour les très grands écrans
+        },
+        padding: {
+            xs: ".5rem 0.8rem", // Padding réduit pour xs
+            s: ".6rem 0.9rem",   // Padding un peu plus grand
+            m: ".7rem 1rem",     // Padding normal
+            l: ".8rem 1.2rem",   // Plus grand pour les grands écrans
+            xl: ".9rem 1.5rem"   // Plus grand encore pour les très grands écrans
+        },
+        borderRadius: {
+            xs: "sm", // Taille de borderRadius pour xs
+            s: "md",  // Taille de borderRadius pour s
+            m: "lg",  // Taille de borderRadius pour m
+            l: "xl",  // Taille de borderRadius pour l
+            xl: "2xl" // Taille de borderRadius pour xl
+        },
+        border: "2px solid {color.secondary.100}",
+        fontSize: {
+            xs: "0.8rem", // Plus petit pour les petits écrans
+            s: "1rem",     // Taille normale pour s
+            m: "1.1rem",   // Un peu plus grand pour m
+            l: "1.2rem",   // Plus grand pour l
+            xl: "1.3rem"   // Très grand pour xl
+        },
+        "&:hover": {
+            bgColor: "secondary.300",
+            color: "primary.200",
+        }
+    })}>
+        <slot />
+    </a>
+</li>
