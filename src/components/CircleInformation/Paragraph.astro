@@ -1,11 +1,13 @@
 ---
 import {paragraph} from "../../../styled-system/patterns";
+
+const {extendClass} = Astro.props
+
 ---
+
 <p class={paragraph({
     fontSize: {xs: "1rem", xl: "1.2rem"},
     color: "white",
-    textAlign: "start",
-    textAlign: { xs: "center", xl: "start" },
-})}>
+}) + " " + extendClass}>
     <slot/>
 </p>
