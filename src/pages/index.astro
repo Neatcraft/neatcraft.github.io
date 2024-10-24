@@ -14,6 +14,7 @@ import Footer from "../components/footer.astro";
 import Vision from "../sections/engagement.astro";
 import Contact from "../sections/contact.astro";
 ---
+
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -21,7 +22,92 @@ import Contact from "../sections/contact.astro";
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
     <title>Neatcraft</title>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "NeatCraft",
+            "url": "https://neatcraft.fr",
+            "publisher": {
+                "@type": "Organization",
+                "name": "NeatCraft",
+                "legalName": "NeatCraft SARL unipersonnelle",
+                "identifier": "RCS 908 882 541",
+                "taxID": "FR42908882541",
+                "foundingDate": "2021",
+                "foundingLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "38 Boulevard Pasteur",
+                        "addressLocality": "Saint-Brieuc",
+                        "postalCode": "22000",
+                        "addressCountry": "FR"
+                    }
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Service",
+                    "name": "Antoine Carpier-Jouan",
+                    "email": "antoine.jouan@neatcraft.fr",
+                    "telephone": "+33-6-15-93-90-15",
+                    "sameAs": "https://www.linkedin.com/in/jouana/",
+                    "description": "Antoine Jouan, développeur web, architecte et agiliste."
+                }
+            },
+            "copyrightHolder": {
+                "@type": "Organization",
+                "name": "NeatCraft"
+
+            },
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "General Public"
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://neatcraft.fr"
+            },
+            "inLanguage": "fr",
+            "license": "https://neatcraft.fr/license",
+            "keywords": ["optimisation des processus", "efficacité opérationnelle", "gestion d'entreprise", "amélioration continue", "productivité", "organisation entreprise", "agilité", "stratégie d'entreprise", "performance organisationnelle"],
+            "about": {
+                "@type": "CreativeWork",
+                "description": "NeatCraft respecte les lois sur la protection des données personnelles, y compris le RGPD.",
+                "creator": {
+                    "@type": "Organization",
+                    "name": "NeatCraft"
+                },
+                "datePublished": "2024-10-24"
+            },
+            "policy": {
+                "@type": "PrivacyPolicy",
+                "name": "Politique de confidentialité",
+                "url": "https://neatcraft.fr/privacy-policy",
+                "requiresConsent": true,
+                "usesCookies": true
+            },
+            "legalName": "NeatCraft SARL unipersonnelle",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "38 Boulevard Pasteur",
+                "addressLocality": "Saint-Brieuc",
+                "postalCode": "22000",
+                "addressCountry": "FR"
+            },
+            "founder": {
+                "@type": "Person",
+                "name": "Antoine Jouan",
+                "sameAs": "https://www.linkedin.com/in/jouana/",
+                "description": "Antoine Jouan, développeur web, architecte et agiliste."
+            },
+            "legalStatus": "SARL unipersonnelle"
+        }
+    </script>
 </head>
+
 <body class={css({
     bgColor: "primary.100",
     color: "white",
