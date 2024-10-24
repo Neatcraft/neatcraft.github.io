@@ -3,7 +3,7 @@ import {css} from "../../styled-system/css";
 import {section, title} from "../../styled-system/patterns";
 import SectionTitle from "../components/sectionTitle.astro";
 import Paragraph from "../components/CircleInformation/Paragraph.astro";
-import RoundedIcon from "../components/RoundedIcon.astro";
+import RoundedIcon from "../components/CircleInformation/RoundedIcon.astro";
 import Title from "../components/CircleInformation/Title.astro";
 ---
 
@@ -22,16 +22,19 @@ import Title from "../components/CircleInformation/Title.astro";
         marginX: "auto",
         lg: {
             display: "grid",
-            gridTemplateColumns: "20vw auto 10vw auto 20vw",
-            gridTemplateRows: "4rem 1fr 10vw 4rem 1fr",
-            alignItems: "normal"
+            gridTemplateColumns: "20vw 14vw 10vw 14vw 20vw",
+            gridTemplateRows: "14vw 10vw 14vw",
+            gap: "1em",
+            alignItems: "normal",
+            width: "max-content",
+            height: "max-content",
         },
         xs: {
             display: "flex",
             flexDir: "column",
             alignItems: "center",
             textAlign: "center",
-            width:"70%"
+            width: "70%"
 
         }
     })}>
@@ -42,31 +45,43 @@ import Title from "../components/CircleInformation/Title.astro";
             borderRadius: "50%",
             border: "5px solid {colors.secondary.100}",
         })}/>
-        <RoundedIcon iconSrc="/img/icons/compas.svg" iconAlt="compas" extendClass={css({ gridColumn: "2/3", gridRow: "1/3"})}/>
-        <Title extendClass={css({ gridColumn: "1/2", gridRow: "1/2", textAlign: "end"  })}>Rigueur</Title>
-        <Paragraph extendClass={css({ gridColumn: "1/2", gridRow: "2/3" })}>
-            Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats
-            exceptionnels.
-        </Paragraph>
+        <RoundedIcon iconSrc="/img/icons/compas.svg" iconAlt="compas"
+                     extendClass={css({gridColumn: "2/3", gridRow: "1/2"})}/>
+        <div class={css({gridColumn: "1/2", gridRow: "1/2", textAlign: "end"})}>
+            <Title>Rigueur</Title>
+            <Paragraph>
+                Nous appliquons une rigueur sans compromis à chaque étape de notre travail pour garantir des résultats
+                exceptionnels.
+            </Paragraph>
+        </div>
 
-        <RoundedIcon iconSrc="/img/icons/speaker.svg" iconAlt="Speaker" extendClass={css({ gridColumn: "4/5", gridRow: "1/3"  })}/>
-        <Title extendClass={css({ gridColumn: "5/6", gridRow: "1/2", textAlign: "start"  })}>Empathie</Title>
-        <Paragraph extendClass={css({ gridColumn: "5/6", gridRow: "2/3"  })}>
-            Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
-        </Paragraph>
+        <RoundedIcon iconSrc="/img/icons/speaker.svg" iconAlt="Speaker"
+                     extendClass={css({gridColumn: "4/5", gridRow: "1/2"})}/>
+        <div class={css({gridColumn: "5/6", gridRow: "1/2", textAlign: "start"})}>
+            <Title>Empathie</Title>
+            <Paragraph>
+                Nous serons toujours à votre écoute pour vous offrir le produit le plus adapté à vos besoins.
+            </Paragraph>
 
-        <RoundedIcon iconSrc="/img/icons/ampoule.svg" iconAlt="Ampoule" extendClass={css({ gridColumn: "2/3", gridRow: "4/6"  })}/>
-        <Title extendClass={css({ gridColumn: "1/2", gridRow: "4/5",textAlign: "end"  })}>Créativité</Title>
-        <Paragraph extendClass={css({ gridColumn: "1/2", gridRow: "5/6"  })}>
-            Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à
-            résoudre vos défis les plus complexes.
-        </Paragraph>
+        </div>
 
-        <RoundedIcon iconSrc="/img/icons/finger.svg" iconAlt="Finger" extendClass={css({ gridColumn: "4/5", gridRow: "4/6"  })}/>
-        <Title extendClass={css({ gridColumn: "5/6", gridRow: "4/5",textAlign: "start"   })}>Simplicité</Title>
-        <Paragraph extendClass={css({ gridColumn: "5/6", gridRow: "5/6"  })}>
-            Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier
-            pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
-        </Paragraph>
+        <RoundedIcon iconSrc="/img/icons/ampoule.svg" iconAlt="Ampoule"
+                     extendClass={css({gridColumn: "2/3", gridRow: "3/4"})}/>
+        <div class={css({gridColumn: "1/2", gridRow: "3/4", textAlign: "end"})}>
+            <Title>Créativité</Title>
+            <Paragraph>
+                Nous encourageons l'innovation et cherchons constamment de nouvelles idées pour vous aider à
+                résoudre vos défis les plus complexes.
+            </Paragraph>
+        </div>
+        <RoundedIcon iconSrc="/img/icons/finger.svg" iconAlt="Finger"
+                     extendClass={css({gridColumn: "4/5", gridRow: "3/4"})}/>
+        <div class={css({gridColumn: "5/6", gridRow: "3/4", textAlign: "start"})}>
+            <Title>Simplicité</Title>
+            <Paragraph >
+                Nos processus sont conçus pour être intuitifs et faciles à suivre, vous permettant de bénéficier
+                pleinement et simplement de nos solutions complètes, depuis la conception jusqu'à la livraison.
+            </Paragraph>
+        </div>
     </div>
 </section>
