@@ -46,6 +46,7 @@ export default defineConfig({
                     return {
                         fontFamily: "barlow",
                         fontSize: {xs: "3rem", lg: "5rem"},
+                        lineHeight: "1",
                         fontWeight: "500",
                         textTransform: "uppercase",
                         ...props

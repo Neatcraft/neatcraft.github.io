@@ -1,0 +1,41 @@
+---
+import {css} from "../../../styled-system/css";
+
+const {iconSrc, iconAlt, extendClass} = Astro.props;
+
+---
+
+<div class={
+    css({
+        borderRadius: "50%",
+        height: "max-content",
+        width: "max-content",
+        border: "7px solid white",
+    }) + " " + extendClass
+}>
+    <div class={css({
+        borderRadius: "50%",
+        width: "max-content",
+        height: "max-content",
+        borderColor: "secondary.100",
+        borderWidth: {xs: "3px", md: "5px"},
+        backgroundColor: "white",
+        padding: {
+            xs: "20px",
+            lg: "30px",
+        },
+    })}>
+        <img src={iconSrc} alt={iconAlt} class={css({
+            width: {
+                xs: "40px",
+                md: "70px",
+                xl: "120px",
+            },
+            height: {
+                xs: "40px",
+                md: "70px",
+                xl: "120px",
+            },
+        })} />
+    </div>
+</div>
