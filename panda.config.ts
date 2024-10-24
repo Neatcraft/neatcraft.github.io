@@ -49,7 +49,8 @@ export default defineConfig({
                         lineHeight: "1",
                         fontWeight: "500",
                         textTransform: "uppercase",
-                        ...props
+                        textAlign: {xs:"center",sm:"center",md:"center"},
+                            ...props
                     }
                 }
             },

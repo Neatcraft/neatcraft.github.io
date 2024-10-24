@@ -1,16 +1,16 @@
 ---
 import {css} from "../../styled-system/css";
 
-const {iconSrc, titleClass} = Astro.props
+const {iconSrc, titleClass, iconAlt} = Astro.props
 
 ---
 <div class={css({
     display: "flex",
     alignItems: "center",
     gap: "5%",
-
+    paddingBottom: {lg:"3.5rem",xs:"1.6rem"},
 })}>
-    <img src={iconSrc}
+    <img src={iconSrc} alt={iconAlt}
          class={css({
              height: { xs: "6vh",  md: "10vh"},
              width: { xs: "6vh", md: "10vh"},
