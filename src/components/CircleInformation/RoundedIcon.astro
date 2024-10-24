@@ -8,20 +8,24 @@ const {iconSrc, iconAlt, extendClass} = Astro.props;
 <div class={
     css({
         borderRadius: "50%",
-        height: "max-content",
-        width: "max-content",
+        height: {xs:"max-content",lg:"100%"},
+        width: {xs:"max-content",lg:"100%"},
         border: "7px solid white",
-        alignItems: "center",
+        textAlign: {xs: "center", sm: "center"},
         justifyContent: "center",
+        marginBottom: {xs:"1em", sm:"1em"},
     }) + " " + extendClass
 }>
     <div class={css({
         borderRadius: "50%",
-        width: "max-content",
-        height: "max-content",
+        width: {xs:"max-content",lg:"100%"},
+        height: {xs:"max-content",lg:"100%"},
         borderColor: "secondary.100",
         borderWidth: {xs: "3px", md: "5px"},
         backgroundColor: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         padding: {
             xs: "20px",
             lg: "30px",
@@ -31,12 +35,14 @@ const {iconSrc, iconAlt, extendClass} = Astro.props;
             width: {
                 xs: "40px",
                 md: "70px",
-                xl: "120px",
+                lg: "140px",
+                xxl:"155px",
             },
             height: {
                 xs: "40px",
                 md: "70px",
-                xl: "120px",
+                lg: "140px",
+                xxl:"155px",
             },
         })} />
     </div>

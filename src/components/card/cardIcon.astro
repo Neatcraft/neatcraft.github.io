@@ -1,11 +1,11 @@
 ---
 import {css} from "../../../styled-system/css";
 
-const {iconSrc} = Astro.props;
+const {iconSrc, iconAlt} = Astro.props;
 
 ---
 <img src={iconSrc}
-     alt="representation d'un lien"
+     alt={iconAlt}
      class={css({
          height: {xs:"6vh", lg: "12vh"},
          width: {xs:"6vh", lg: "12vh"},
