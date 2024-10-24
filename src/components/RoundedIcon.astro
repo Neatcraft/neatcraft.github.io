@@ -5,28 +5,53 @@ const {iconSrc, iconAlt, extendClass} = Astro.props;
 
 ---
 
-<div class={css({
-    borderRadius: "50%",
-    width: "fit-content",
-    height: "fit-content",
-    border: "3px solid white",
-}) + " " + extendClass}>
+<div class={
+    css({
+        borderRadius: "50%",
+        width: {
+            xs: "70px",
+            md: "130px",
+            lg: "200px",
+        },
+        height: {
+            xs: "70px",
+            md: "130px",
+            lg: "200px",
+        },
+        border: "7px solid white",
+    }) + " " + extendClass
+}>
     <div class={css({
         borderRadius: "50%",
-        width: "fit-content",
-        border: "5px solid #ed7d1a",
+        width: {
+            xs: "60px",
+            md: "120px",
+            lg: "190px",
+        },
+        height: {
+            xs: "60px",
+            md: "120px",
+            lg: "190px",
+        },
+        border: {xs:"3px solid #ed7d1a", md:"5px solid #ed7d1a"},
         backgroundColor: "white",
-        padding: "50px",
+        padding: {
+            xs: "5px",
+            md: "20px",
+            lg: "30px",
+        },
     })}>
         <img src={iconSrc} alt={iconAlt} class={css({
-            xs: {
-                width: "50px",
-                height: "50px",
+            width: {
+                xs: "40px",
+                md: "70px",
+                lg: "120px",
             },
-            md: {
-                width: "100px",
-                height: "100px",
-            }
+            height: {
+                xs: "40px",
+                md: "70px",
+                lg: "120px",
+            },
         })} />
     </div>
 </div>
