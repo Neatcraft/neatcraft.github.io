@@ -8,17 +8,17 @@ import CardIcon from "../components/card/cardIcon.astro";
 import CardTitle from "../components/card/CardTitle.astro";
 import CardParagraph from "../components/card/CardParagraph.astro";
 ---
-<section id="offre" class={section({bgColor: "gray.100"})}>
+<section id="activite" class={section({bgColor: "gray.100"})}>
     <div class={css({
         display: "flex",
         flexDir: "column",
         paddingX: "5%"
     })}>
         <SectionTitle iconSrc="/img/icons/star.svg" iconAlt="icone représentant une astérisque" titleClass={title({color: "primary.100"})}>
-            Notre offre
+            Nos Activités
         </SectionTitle>
         <Subtitle>
-            Une facturation sans surprise.
+            Une accompagnement sur-mesure.
         </Subtitle>
         <div class={css({
             display: "flex",
@@ -33,32 +33,33 @@ import CardParagraph from "../components/card/CardParagraph.astro";
             gap: "1.3em",
             marginTop: "3%",
         })}>
+
             <Card>
-                <CardIcon iconSrc="/img/icons/letter.svg" iconAlt="icone représentant une enveloppe"/>
-                <CardTitle>forfait</CardTitle>
+                <CardIcon iconSrc="/img/icons/letter.svg" iconAlt="icone représentant une fusée"/>
+                <CardTitle>Conseil</CardTitle>
                 <CardParagraph>
-                    Nous garantissons une facturation simple et transparente, basée sur la valeur apportée.
-                </CardParagraph>
-            </Card>
-            <Card>
-                <CardIcon iconSrc="/img/icons/rocket.svg" iconAlt="icone représentant une fusée"/>
-                <CardTitle>Agilité</CardTitle>
-                <CardParagraph>
-                    Le marché change constamment, il est normal que votre projet aussi, nous vous suivrons dans ce processus.
+                    Nous vous aidons à prendre des décisions éclairées grâce à des audits précis et un accompagnement stratégique.
                 </CardParagraph>
             </Card>
             <Card>
                 <CardIcon iconSrc="/img/icons/nut.svg" iconAlt="icone représentant des chevrons dans un cercle"/>
-                <CardTitle>Qualité</CardTitle>
+                <CardTitle>Architecture</CardTitle>
                 <CardParagraph>
-                    Nous utilisons les meilleures pratiques de conception et de développement pour vous garantir des produits fiables.
+                    Nous vous accompagnons dans la conception d’architectures fiables et évolutives pour garantir la performance et l’adaptabilité de vos systèmes.
+                </CardParagraph>
+            </Card>
+            <Card>
+                <CardIcon iconSrc="/img/icons/rocket.svg" iconAlt="icone représentant une enveloppe"/>
+                <CardTitle>Réalisation</CardTitle>
+                <CardParagraph>
+                    Nous concevons et mettons en œuvre des solutions sur-mesure, robustes et alignées sur vos objectifs métier.
                 </CardParagraph>
             </Card>
             <Card>
                 <CardIcon iconSrc="/img/icons/eye.svg" iconAlt="icone représentant un oeil"/>
-                <CardTitle>Suivi</CardTitle>
+                <CardTitle>Formation</CardTitle>
                 <CardParagraph>
-                    Nous livrons votre projet en continu, vous garantissant une livraison régulière et un suivi accru.
+                    Nous renforçons les compétences de vos équipes à travers des formations pratiques et adaptées à vos besoins.
                 </CardParagraph>
             </Card>
         </div>
