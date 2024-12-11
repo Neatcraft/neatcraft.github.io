@@ -1,6 +1,10 @@
 ---
 import {css} from "../../styled-system/css";
 import {section, title} from "../../styled-system/patterns";
+import CardTitle from "../components/card/CardTitle.astro";
+import CardParagraph from "../components/card/CardParagraph.astro";
+import {paragraph} from "../../styled-system/patterns";
+import NavigationButton from "../components/navigation/navigationButton.astro";
 ---
 <section id="contact" class={section({
     bgColor: "primary.100",
@@ -9,25 +13,22 @@ import {section, title} from "../../styled-system/patterns";
     color: "white"
 })}>
     <h1 class={title()}>contact</h1>
-    <h2 class={css({
+    <h2 class={title({
         marginTop: "4%",
         fontFamily: "Montserrat, sans-serif",
         fontWeight: "600",
-        fontSize: "1.5em",
+        fontSize: "2em",
     })}>Antoine Jouan</h2>
-    <p class={css({
-        fontFamily: "Montserrat, sans-serif",
-        fontWeight: "300",
-        fontSize: "14px",
-        color: "white"
+    <p class={paragraph({
+
     })}>Consultant en Stratégie & Tactique IT et en Efficacité Opérationnelle</p>
 
-    <ul class={css({
+    <div class={css({
         display: 'flex',
-        flexDir: 'column',
+        flexDirection: 'column',
         gap: '1rem',
         marginTop: '2%',
-        "& > li": {
+        "& > div": {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -36,31 +37,32 @@ import {section, title} from "../../styled-system/patterns";
                 width: '40px',
                 height: '40px'
             },
-            "& > a": {
-                fontSize: "14px",
+            "& > a, & > p": {
+                fontSize: "1.2rem",
                 textDecoration: "none",
-                fontWeight: "300"
+                fontWeight: "500"
             }
         }
-
     })}>
-        <li>
-            <img src="/img/icons/phone.svg" alt="Phone Icon"/>
-            <a href="tel:+33615939015">06.15.93.90.15</a>
-        </li>
-        <li>
-            <img src="/img/icons/mail.svg" alt="Email Icon"/>
+        <div>
+            <img src="/img/icons/phone.svg" alt="Phone Icon" />
+            <a class="{paragraph()}" href="tel:+33615939015">06.15.93.90.15</a>
+        </div>
+        <div>
+            <img src="/img/icons/mail.svg" alt="Email Icon" />
             <a href="mailto:antoine.jouan@neatcraft.fr">antoine.jouan@neatcraft.fr</a>
-        </li>
-        <li>
-            <img src="/img/icons/location.svg" alt="Location Icon"/>
+        </div>
+        <div>
+            <img src="/img/icons/location.svg" alt="Location Icon" />
             <p>38 boulevard Pasteur, 22000 Saint-Brieuc</p>
-        </li>
-        <li>
+        </div>
+        <div>
             <a href="https://www.linkedin.com/in/jouana/" target="_blank" rel="noopener noreferrer">
-                <img src="/img/logos/logo_linkedin.webp" alt="LinkedIn Logo"/>
+                <img src="/img/logos/logo_linkedin.webp" alt="LinkedIn Logo" />
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
+
+
 
 </section>
