@@ -1,5 +1,5 @@
 ---
-import {css} from "../../styled-system/css";
+import { css } from "../../styled-system/css";
 ---
 <header id="header" class={css({
     paddingTop: ".6%",
@@ -7,27 +7,32 @@ import {css} from "../../styled-system/css";
     position: "fixed",
     top: "0",
     left: "0",
-    justifyContent: {_portrait: {xs: "center", lg: "space-between"}, _landscape: {xs: "center", md: "space-between"}},
+    justifyContent: {
+        _portrait: { xs: "center", lg: "space-between" },
+        _landscape: { xs: "center", md: "space-between" }
+    },
     paddingLeft: "2%",
     paddingRight: "2%",
-    height: {_portrait: "10vh", _landscape: "6vw"},
+    height: { _portrait: "10vh", _landscape: "6vw" },
     width: "100%",
     bgColor: "primary.100",
     fontFamily: "montserrat",
     color: "white",
     fontSize: "0.8em",
     fontWeight: "500",
-    zIndex:"10"
+    zIndex: "10"
 })}>
-    <img id="logo-neatcraft-header" src="/img/logos/neatcraft.svg" alt="Neatcraft" class={css({
-        _portrait: {
-            width: "14vh",
-            height: "14vh"
-        },
-        _landscape: {
-            width: {xs: "8vw", lg: "7vw"},
-            height: {xs: "8vw", lg: "7vw"},
-        }
-    })}/>
+    <a href="/#mission">
+        <img id="logo-neatcraft-header" src="/img/logos/neatcraft.svg" alt="Neatcraft" class={css({
+            _portrait: {
+                width: "14vh",
+                height: "14vh"
+            },
+            _landscape: {
+                width: { xs: "8vw", lg: "7vw" },
+                height: { xs: "8vw", lg: "7vw" },
+            }
+        })}/>
+    </a>
     <slot/>
 </header>
