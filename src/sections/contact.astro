@@ -5,64 +5,54 @@ import CardTitle from "../components/card/CardTitle.astro";
 import CardParagraph from "../components/card/CardParagraph.astro";
 import {paragraph} from "../../styled-system/patterns";
 import NavigationButton from "../components/navigation/navigationButton.astro";
+import SectionTitle from "../components/section/title/sectionTitle.astro";
+import Subtitle from "../components/section/subtitle.astro";
+
+
+const informationTextClass = css({
+    display: "flex",
+    flexDirection: "column",
+    color: "white",
+    fontFamily: "montserrat",
+    fontSize: "1.8rem",
+    fontWeight: "300",
+    alignItems: "center",
+    justifyContent: "center"
+});
+
+const iconStyle = css({
+    width: "5vh",
+    height: "5vh",
+});
 ---
+
 <section id="contact" class={section({
     bgColor: "primary.100",
     bgImage: "url(/img/triangle.svg)",
     flexDir: "column",
     color: "white"
 })}>
-    <h1 class={title()}>contact</h1>
-    <h2 class={title({
-        marginTop: "4%",
-        fontFamily: "Montserrat, sans-serif",
-        fontWeight: "600",
-        fontSize: "2em",
-    })}>Antoine Jouan</h2>
-    <p class={paragraph({
-
-    })}>Consultant en Stratégie & Tactique IT et en Efficacité Opérationnelle</p>
-
-    <div class={css({
+    <SectionTitle titleClass={title()}>contact</SectionTitle>
+    <Subtitle>Antoine Jouan</Subtitle>
+    <p class={paragraph()}>Consultant en Stratégie & Tactique IT et en Efficacité Opérationnelle</p>
+    <ul class={css({
         display: 'flex',
         flexDirection: 'column',
-        gap: '1rem',
+        alignItems: "center",
+        gap: '2rem',
         marginTop: '2%',
-        "& > div": {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.5rem',
-            "& > img, & > a > img": {
-                width: '40px',
-                height: '40px'
-            },
-            "& > a, & > p": {
-                fontSize: "1.2rem",
-                textDecoration: "none",
-                fontWeight: "500"
-            }
-        }
     })}>
-        <div>
-            <img src="/img/icons/phone.svg" alt="Phone Icon" />
-            <a class="{paragraph()}" href="tel:+33615939015">06.15.93.90.15</a>
-        </div>
-        <div>
-            <img src="/img/icons/mail.svg" alt="Email Icon" />
-            <a href="mailto:antoine.jouan@neatcraft.fr">antoine.jouan@neatcraft.fr</a>
-        </div>
-        <div>
-            <img src="/img/icons/location.svg" alt="Location Icon" />
-            <p>38 boulevard Pasteur, 22000 Saint-Brieuc</p>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/jouana/" target="_blank" rel="noopener noreferrer">
+        <li>
+
+            <a class={informationTextClass} href="mailto:contact@neatcraft.fr">
+                <img src="/img/icons/mail.svg" class={iconStyle} alt="Email Icon" />
+                contact@neatcraft.fr
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/jouana/" class={iconStyle} target="_blank" rel="noopener noreferrer">
                 <img src="/img/logos/logo_linkedin.webp" alt="LinkedIn Logo" />
             </a>
-        </div>
-    </div>
-
-
-
+        </li>
+    </ul>
 </section>

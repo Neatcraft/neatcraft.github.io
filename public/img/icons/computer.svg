@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_3" data-name="Calque 3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 134.64 136.08">
+  <defs>
+    <style>
+      .cls-1 {
+      filter: url(#drop-shadow-1);
+      }
+
+      .cls-2 {
+      stroke-width: 6.12px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+      stroke: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-6, .cls-5 {
+      fill: none;
+      stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+      stroke-width: 6.58px;
+      }
+
+      .cls-4 {
+      fill: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 13.77px;
+      }
+
+      .cls-6 {
+      stroke: #ed7d1a;
+      }
+
+      .cls-6, .cls-5 {
+      stroke-width: 4.59px;
+      }
+
+      .cls-7 {
+      fill: #ed7d1a;
+      }
+
+      .cls-8 {
+      fill: #2a3159;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="0" width="134.64" height="136.08" filterUnits="userSpaceOnUse">
+      <feOffset dx="1.42" dy="1.42"/>
+      <feGaussianBlur result="blur" stdDeviation="4.25"/>
+      <feFlood flood-color="#000" flood-opacity=".31"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-1">
+    <path class="cls-4" d="M105.28,18.26H25.8c-4.17,0-7.55,3.38-7.55,7.55v55.59c0,4.17,3.38,7.55,7.55,7.55h29.48l-3.45,18.1h-5.94c-2.22,0-4.02,1.8-4.02,4.02v3.75h47.39v-3.75c0-2.22-1.8-4.02-4.02-4.02h-5.67l-3.41-18.1h29.65c4.17,0,7.55-3.38,7.55-7.55V26.34c0-4.46-3.62-8.08-8.08-8.08Z"/>
+    <path class="cls-8" d="M105.28,18.26H25.8c-4.17,0-7.55,3.38-7.55,7.55v55.59c0,4.17,3.38,7.55,7.55,7.55h29.48l-3.45,18.1h-5.94c-2.22,0-4.02,1.8-4.02,4.02v3.75h47.39v-3.75c0-2.22-1.8-4.02-4.02-4.02h-5.67l-3.41-18.1h29.65c4.17,0,7.55-3.38,7.55-7.55V26.34c0-4.46-3.62-8.08-8.08-8.08Z"/>
+    <line class="cls-2" x1="115.93" y1="78.15" x2="15.68" y2="78.15"/>
+    <line class="cls-3" x1="100.53" y1="92.28" x2="31.08" y2="92.28"/>
+    <g>
+      <line class="cls-6" x1="67.42" y1="26" x2="63.38" y2="42.53"/>
+      <polyline class="cls-7" points="58.2 27.97 52.7 34.28 58.2 40.42"/>
+      <polyline class="cls-7" points="73.41 27.97 78.91 34.28 73.41 40.42"/>
+    </g>
+    <g>
+      <path class="cls-5" d="M101.95,63.88c-5.98,0,.84,0-13.26,0"/>
+      <path class="cls-5" d="M41.62,63.88c-5.98,0,.97,0-11.97,0"/>
+      <path class="cls-5" d="M61.68,53.15c-5.98,0,.07,0-32.03,0"/>
+      <path class="cls-5" d="M101.95,53.15c-5.98,0,.06,0-33,0"/>
+      <path class="cls-5" d="M80.28,63.88c-5.98,0,.1,0-30.73,0"/>
+    </g>
+  </g>
+</svg>

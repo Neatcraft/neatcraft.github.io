@@ -30,6 +30,14 @@ export default defineConfig({
                         alignItems: "center",
                         justifyContent: "center",
                         padding: "3% 2% 7% 2%",
+                        "&:target": {
+                            _portrait: {
+                                scrollMarginTop: "15vh",
+                            },
+                            _landscape: {
+                                scrollMarginTop: {xs: "15vw", lg: "5vw"},
+                            },
+                        },
                         ...prop
                     }
                 }
@@ -44,8 +52,9 @@ export default defineConfig({
                 },
                 transform(props) {
                     return {
+                        display: "block",
                         fontFamily: "barlow",
-                        fontSize: {xs: "3rem", lg: "5rem"},
+                        fontSize: {xs: "3rem", lg: "7rem"},
                         lineHeight: "1",
                         fontWeight: "500",
                         textTransform: "uppercase",
@@ -59,9 +68,9 @@ export default defineConfig({
                 transform(props) {
                     return {
                         fontFamily: "montserrat",
-                        fontSize: {xs: "0.8rem", lg: "1.5rem"},
-                        fontWeight: "500",
-                        lineHeight: "1.7rem",
+                        fontSize: {xs: "0.8rem", lg: "2rem"},
+                        fontWeight: "400",
+                        lineHeight: "2.7rem",
                         marginTop: "1rem",
                         marginBottom: "2rem",
                         ...props

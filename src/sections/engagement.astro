@@ -1,8 +1,10 @@
 ---
 import {paragraph, section, title} from "../../styled-system/patterns";
 import {css} from "../../styled-system/css";
-import SectionTitle from "../components/sectionTitle.astro";
-import Subtitle from "../components/subtitle.astro";
+import SectionTitle from "../components/section/title/sectionTitle.astro";
+import Subtitle from "../components/section/subtitle.astro";
+import SectionTitleContainer from "../components/section/title/sectionTitleContainer.astro";
+import SectionIconTitle from "../components/section/title/sectionIconTitle.astro";
 ---
 <section id="engagement"
     class={section({
@@ -11,9 +13,14 @@ import Subtitle from "../components/subtitle.astro";
     <div class={css({
         display: "flex",
         flexDir: "column",
-        paddingX: {xs: "0", lg: "5%"}
     })}>
-        <SectionTitle iconSrc="/img/icons/eye.svg" iconAlt="icone representant un oeil" titleClass={title({color: "primary.100"})}>Notre engagement</SectionTitle>
+        <SectionTitleContainer>
+            <SectionIconTitle iconSrc="/img/icons/eye.svg" iconAlt="icone représentant un oeil" iconClass={css({
+                height: { xs: "10vh",  md: "20vh"},
+                width: { xs: "10vh", md: "20vh"},
+            })}/>
+            <SectionTitle titleClass={title({color: "primary.100"})}>Notre engagement</SectionTitle>
+        </SectionTitleContainer>
         <Subtitle>Nous nous engageons à vous accompagner avec rigueur et pragmatisme face à l’incertitude.</Subtitle>
         <p class={paragraph({color: "primary.100"})}>
             Nous savons que <b>vous êtes unique</b> et que vos besoins requièrent un accompagnement sur-mesure.
@@ -21,9 +28,9 @@ import Subtitle from "../components/subtitle.astro";
             C’est pourquoi, en exploitant la donnée pour <b>observer les faits</b> et en appliquant des <b>méthodes éprouvées</b>, nous sommes à vos côtés pour vous aider à <b>libérer tout votre potentiel</b> et atteindre vos objectifs avec <b>efficacité et confiance</b>.
         </p>
     </div>
-    <img src="/img/icons/libra.svg" Alt="icone représentant une balance" class={css({
-        height: {xs: "15vh", md: "30vh", xl: "60vh"},
-        width: {xs: "15vh", md: "30vh", xl: "60vh"},
+    <img src="/img/icons/balance.svg" Alt="icone représentant une balance" class={css({
+        height: {xs: "15vh", md: "30vh", xl: "50vh"},
+        width: {xs: "15vh", md: "30vh", xl: "50vh"},
         display: {xs: "none", md: "block"},
     })}/>
 </section>

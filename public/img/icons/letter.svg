@@ -1,25 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.44 42.62">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 69.12 52.8">
   <defs>
     <style>
-      .cls-1 {
-        fill: #fff;
+      .cls-1, .cls-2 {
+        fill: none;
       }
 
-      .cls-1, .cls-2 {
-        stroke: #ed7d1a;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 5px;
+      .cls-3 {
+        mix-blend-mode: multiply;
+        opacity: .25;
+      }
+
+      .cls-4 {
+        fill: #ed7d1a;
+      }
+
+      .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-1);
       }
 
       .cls-2 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.5px;
+      }
+
+      .cls-7 {
         fill: #2a3159;
       }
+
+      .cls-8 {
+        clip-path: url(#clippath);
+      }
     </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="0" width="69.12" height="52.8"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="0" width="69.12" height="52.8"/>
+    </clipPath>
   </defs>
-  <g id="Calque_3">
-    <rect class="cls-2" x="2.5" y="2.5" width="55.44" height="37.62"/>
-    <polygon class="cls-1" points="54.98 2.5 30.22 22.85 5.47 2.5 54.98 2.5"/>
+  <g class="cls-5">
+    <g id="Calque_2" data-name="Calque 2">
+      <g id="Calque_1-2" data-name="Calque 1">
+        <g>
+          <g class="cls-3">
+            <g class="cls-8">
+              <g class="cls-6">
+                <image width="96" height="74" transform="translate(0) scale(.72)" xlink:href="data:image/png;base64,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"/>
+              </g>
+            </g>
+          </g>
+          <rect class="cls-4" x="9.62" y="9.46" width="49.9" height="33.86"/>
+          <rect class="cls-2" x="9.62" y="9.46" width="49.9" height="33.86"/>
+          <polygon class="cls-7" points="56.85 9.46 34.57 27.77 12.29 9.46 56.85 9.46"/>
+          <polygon class="cls-2" points="56.85 9.46 34.57 27.77 12.29 9.46 56.85 9.46"/>
+        </g>
+      </g>
+    </g>
   </g>
 </svg>

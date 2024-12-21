@@ -1,8 +1,10 @@
 ---
 import {css} from "../../styled-system/css";
-import Subtitle from "../components/subtitle.astro";
+import Subtitle from "../components/section/subtitle.astro";
 import {paragraph, section, title} from "../../styled-system/patterns";
-import SectionTitle from "../components/sectionTitle.astro";
+import SectionTitle from "../components/section/title/sectionTitle.astro";
+import SectionTitleContainer from "../components/section/title/sectionTitleContainer.astro";
+import SectionIconTitle from "../components/section/title/sectionIconTitle.astro";
 ---
 <section id="mission"
          class={section({gap: "4%", marginTop: {_portrait: "10vh", _landscape: {xs: "20vh", lg: "10vh"}}})}>
@@ -21,11 +23,17 @@ import SectionTitle from "../components/sectionTitle.astro";
         display: "flex",
         flexDir: "column",
     })}>
-        <SectionTitle iconSrc="/img/icons/target.svg" iconAlt="flèche au centre d'une cible" titleClass={title({color: "white"})}>Notre mission</SectionTitle>
+        <SectionTitleContainer>
+            <SectionIconTitle iconSrc="/img/icons/target.svg" iconAlt="flèche au centre d'une cible" iconClass={css({
+                    height: { xs: "6vh",  md: "15vh"},
+                    width: { xs: "6vh", md: "15vh"},
+                })}/>
+            <SectionTitle titleClass={title({color: "white"})}>Notre mission</SectionTitle>
+        </SectionTitleContainer>
         <Subtitle>
             Le connaissance au service de l'excellence opérationnelle.
         </Subtitle>
-        <p class={paragraph({color: "white", lineHeight: "2rem"})}>
+        <p class={paragraph({color: "white"})}>
             Nous sommes convaincus que <b>le monde des affaires, incertain et mouvant</b>, peut freiner les performances et la prise de décision.
             <br/>
             Face à cette réalité, nous croyons fermement qu’il est essentiel d’observer les faits et de <b>mobiliser la connaissance</b> comme levier pour surmonter ces défis.

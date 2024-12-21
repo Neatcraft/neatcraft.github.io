@@ -1,22 +1,30 @@
 ---
-import SectionTitle from "../components/sectionTitle.astro";
+import SectionTitle from "../components/section/title/sectionTitle.astro";
 import {section, title} from "../../styled-system/patterns";
 import {css} from "../../styled-system/css";
-import Subtitle from "../components/subtitle.astro";
+import Subtitle from "../components/section/subtitle.astro";
 import Card from "../components/card/card.astro";
 import CardIcon from "../components/card/cardIcon.astro";
 import CardTitle from "../components/card/CardTitle.astro";
 import CardParagraph from "../components/card/CardParagraph.astro";
+import SectionTitleContainer from "../components/section/title/sectionTitleContainer.astro";
+import SectionIconTitle from "../components/section/title/sectionIconTitle.astro";
 ---
 <section id="activite" class={section({bgColor: "gray.100"})}>
     <div class={css({
         display: "flex",
         flexDir: "column",
-        paddingX: "5%"
     })}>
-        <SectionTitle iconSrc="/img/icons/star.svg" iconAlt="icone représentant une astérisque" titleClass={title({color: "primary.100"})}>
-            Nos Activités
-        </SectionTitle>
+        <SectionTitleContainer>
+            <SectionIconTitle iconSrc="/img/icons/computer.svg" iconAlt="icone représentant un ordinateur" iconClass={css({
+                height: { xs: "6vh",  md: "18vh"},
+                width: { xs: "6vh", md: "18vh"},
+            })}/>
+            <SectionTitle titleClass={title({color: "primary.100"})}>
+                Nos Activités
+            </SectionTitle>
+        </SectionTitleContainer>
+        
         <Subtitle>
             Une accompagnement sur-mesure.
         </Subtitle>
@@ -29,7 +37,7 @@ import CardParagraph from "../components/card/CardParagraph.astro";
         </div>
         <div class={css({
             display: "flex",
-            flexDir: {xs: "column", "lg": "row"},
+            flexDir: {xs: "column", lg: "row"},
             gap: "1.3em",
             marginTop: "3%",
         })}>
@@ -56,7 +64,7 @@ import CardParagraph from "../components/card/CardParagraph.astro";
                 </CardParagraph>
             </Card>
             <Card>
-                <CardIcon iconSrc="/img/icons/eye.svg" iconAlt="icone représentant un oeil"/>
+                <CardIcon iconSrc="/img/icons/plain_eye.svg" iconAlt="icone représentant un oeil"/>
                 <CardTitle>Formation</CardTitle>
                 <CardParagraph>
                     Nous renforçons les compétences de vos équipes à travers des formations pratiques et adaptées à vos besoins.

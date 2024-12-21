@@ -1,10 +1,12 @@
 ---
 import {css} from "../../styled-system/css";
 import {section, title} from "../../styled-system/patterns";
-import SectionTitle from "../components/sectionTitle.astro";
+import SectionTitle from "../components/section/title/sectionTitle.astro";
 import Paragraph from "../components/CircleInformation/Paragraph.astro";
 import RoundedIcon from "../components/CircleInformation/RoundedIcon.astro";
 import Title from "../components/CircleInformation/Title.astro";
+import SectionTitleContainer from "../components/section/title/sectionTitleContainer.astro";
+import SectionIconTitle from "../components/section/title/sectionIconTitle.astro";
 ---
 
 <section id="valeur" class={section({
@@ -13,12 +15,20 @@ import Title from "../components/CircleInformation/Title.astro";
     flexDir: "column",
     alignItems: "start",
 })}>
-    <SectionTitle iconSrc="/img/icons/museum.svg" iconAlt="temple" titleClass={title({color: "white"})}>
-        valeurs
-    </SectionTitle>
+    <SectionTitleContainer>
+        <SectionIconTitle iconSrc="/img/icons/museum.svg" iconAlt="représente un temple grecque" iconClass={css({
+            height: { xs: "6vh",  md: "12vh"},
+            width: { xs: "6vh", md: "12vh"},
+            marginX: "5%"
+        })} />
+        <SectionTitle  titleClass={title({color: "white"})}>
+            valeurs
+        </SectionTitle>
+    </SectionTitleContainer>
 
 
     <div class={css({
+        marginTop: "5%",
         marginX: "auto",
         lg: {
             display: "grid",
