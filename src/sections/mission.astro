@@ -12,6 +12,7 @@ import SectionTitle from "../components/sectionTitle.astro";
          class={css({
              transformOrigin: "center left",
              display: {xs: "none", lg: "block"},
+             zIndex: "100",
              height: {xs: "15vh", md: "30vh", xl: "60vh"},
              width: {xs: "15vh", md: "30vh", xl: "60vh"},
          })}
@@ -68,7 +69,7 @@ import SectionTitle from "../components/sectionTitle.astro";
             } else {
                 logoHeader.style.display = "block";
                 header.style.justifyContent = "space-between";
-                logo.style.display = "none";
+                logo.style.transform = `scale(0) translate(0, 0px)`;
             }
             oldRatio = ratio;
         });
