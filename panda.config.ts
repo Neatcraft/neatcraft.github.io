@@ -68,9 +68,10 @@ export default defineConfig({
                 transform(props) {
                     return {
                         fontFamily: "montserrat",
-                        fontSize: {xs: "0.8rem", lg: "2rem"},
+                        fontSize: {xs: "1.2rem", lg: "2rem"},
+                        textAlign: 'center',
                         fontWeight: "400",
-                        lineHeight: "2.7rem",
+                        lineHeight: {xs: "1.5rem", md: "2.7rem"},
                         marginTop: "1rem",
                         marginBottom: "2rem",
                         ...props
