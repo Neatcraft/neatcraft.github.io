@@ -123,7 +123,9 @@ import Contact from "../sections/contact.astro";
         <NavigationItem href="#valeur">Valeurs</NavigationItem>
         <NavigationSeparator/>
         <NavigationItem href="#activite">Activités</NavigationItem>
-        <NavigationButton href="#contact">Nous contacter</NavigationButton>
+        <li>
+            <NavigationButton href="https://calendly.com/antoine-jouan-neatcraft/30min">Prendre rendez-vous</NavigationButton>
+        </li>
     </Navigation>
 </Header>
 
@@ -142,26 +144,19 @@ import Contact from "../sections/contact.astro";
     <Offre/>
     <Contact/>
 </main>
-<div class={css({
-    _portrait: {
-        display: {xs: "flex", lg: "none"},
-    },
-    _landscape: {
-        display: "none",
-    },
-    position: "fixed",
-    justifyContent: "center",
-    width: "100%",
-    bgColor: "primary.100",
-    paddingY: "5%",
-
-})}>
-
-</div>
 <Footer/>
+<div aria-hidden="true"
+    class={css({
+        display: {base: "none", _portrait: { xs: "flex" }},
+        justifyContent: "center",
+        position: "fixed",
+        bottom: "0",
+        bgColor: "primary.100",
+        width: "100%",
+        paddingY: "2%"
+    })}>
+    <NavigationButton href="https://calendly.com/antoine-jouan-neatcraft/30min">Prendre rendez-vous</NavigationButton>
+</div>
 </body>
 
 </html>
-
-
-
