@@ -11,12 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "^0.9.6",
     "styled-system": "^5.1.5",
-    "typescript": "^5.5.4"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.45.1",
-    "astro": "^5.1.1"
+    "@pandacss/dev": "^1.8.1",
+    "astro": "^5.16.11"
   }
 }
