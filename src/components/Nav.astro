@@ -1,0 +1,92 @@
+---
+import {css, cva} from "../../styled-system/css";
+
+const link = cva({
+    base : {
+        position: "relative",
+        fontFamily: 'montserrat',
+        fontSize: 'sm',
+        fontWeight: 'semibold',
+        letterSpacing: '1.7px',
+        color: 'primary.70',
+        textTransform: 'uppercase',
+        _after: {
+            position: 'absolute',
+            content: '""',
+            width: '0',
+            height: '2px',
+            bottom: '-4px',
+            left: '0',
+            backgroundColor: 'secondary',
+            transition: 'width 0.3s ease',
+        },
+        _hover: {     '&:hover': {
+                color: 'primary.100',
+            },
+            color: 'primary.100',
+            _after: {
+                width: '100%'
+            }
+
+        },
+    },
+    variants: {
+        visual: {
+            highlight: {
+                color: 'secondary'
+            }
+        }
+    }
+});
+---
+
+<nav class={css({
+    position: 'fixed',
+    py: '2',
+    top: '0',
+    z: '50',
+    borderBottom: '1px solid token(colors.primary.5)',
+    width: '100%',
+})} role="navigation" aria-label="Menu principal">
+    <div class={css({
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        alignItems: "center",
+        mx: 'auto',
+        maxWidth: '7xl',
+    })}>
+
+        <div class={css({display: 'flex', alignItems: 'center', gap: '4' })}>
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class={css({width: '5rem', height: '5rem'})}>
+            <span class={css({
+                fontFamily: 'barlow',
+                fontSize: "2xl",
+                fontWeight: 'bold',
+                letterSpacing: '-1.2px',
+                color: 'primary.100',
+            })}>NEATCRAFT</span>
+        </div>
+        <ul class={css({
+            display: 'flex',
+            gap: '10',
+            mdDown: {
+                display: 'none'
+            }
+        })}>
+            <li>
+            <a class={link()} href="#enjeu">L'Enjeu</a>
+            </li>
+            <li>
+            <a href="#analyse" class={link()}>Analyse</a>
+            </li>
+            <li>
+            <a href="#expertise" class={link()}>Expertise</a>
+            </li>
+            <li>
+            <a href="#offres"
+               class={link({ visual: 'highlight' })}>Offres</a>
+            </li>
+        </ul>
+    </div>
+</nav>

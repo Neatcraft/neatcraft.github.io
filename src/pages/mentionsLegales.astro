@@ -1,7 +1,7 @@
 ---
 import '../index.css';
 import {css} from "../../styled-system/css";
-import Header from "../components/header.astro";
+import Nav from "../components/Nav.js";
 import Navigation from "../components/navigation/navigation.astro";
 import NavigationItem from "../components/navigation/navigationItem.astro";
 import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
@@ -31,7 +31,7 @@ import NavigationButton from "../components/navigation/navigationButton.astro";
     justifyContent: "space-between",
 })}>
 
-<Header>
+<Nav>
     <Navigation>
         <NavigationItem href="/#mission" aria-current="true">Mission</NavigationItem>
         <NavigationSeparator/>
@@ -42,7 +42,7 @@ import NavigationButton from "../components/navigation/navigationButton.astro";
         <NavigationItem href="/#activite">Activités</NavigationItem>
         <NavigationButton href="https://calendly.com/antoine-jouan-neatcraft/30min">Prendre rendez-vous</NavigationButton>
     </Navigation>
-</Header>
+</Nav>
 
 <main class={css({
     bgColor: "white",
