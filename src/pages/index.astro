@@ -1,171 +1,22 @@
 ---
-import '../index.css';
-
-import Mission from "../sections/mission.astro";
-import Engagement from "../sections/valeurs.astro";
-import Offre from "../sections/activite.astro";
-import Navigation from "../components/navigation/navigation.astro";
-import NavigationItem from "../components/navigation/navigationItem.astro";
-import NavigationButton from "../components/navigation/navigationButton.astro";
-import {css} from "../../styled-system/css";
-import NavigationSeparator from "../components/navigation/navigationSeparator.astro";
-import Header from "../components/header.astro";
-import Footer from "../components/footer.astro";
-import Vision from "../sections/engagement.astro";
-import Contact from "../sections/contact.astro";
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/landing/Hero.astro';
+import Problem from '../components/landing/Problem.astro';
+import Expertise from '../components/landing/Expertise.astro';
+import Method from '../components/landing/Method.astro';
+import Success from '../components/landing/Success.astro';
+import Offers from '../components/landing/Offers.astro';
+import Footer from '../components/landing/Footer.astro';
 ---
 
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="generator" content={Astro.generator}/>
-    <meta name="description" content="NeatCraft aide les entreprises à améliorer leur organisation, optimiser leurs processus et accroître leur productivité grâce à des solutions agiles." />
-
-    <title>Neatcraft</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SM7D7K227"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-7SM7D7K227');
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "NeatCraft",
-            "url": "https://neatcraft.fr",
-            "publisher": {
-                "@type": "Organization",
-                "name": "NeatCraft",
-                "legalName": "NeatCraft SARL unipersonnelle",
-                "identifier": "RCS 908 882 541",
-                "taxID": "FR42908882541",
-                "foundingDate": "2021",
-                "foundingLocation": {
-                    "@type": "Place",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "38 Boulevard Pasteur",
-                        "addressLocality": "Saint-Brieuc",
-                        "postalCode": "22000",
-                        "addressCountry": "FR"
-                    }
-                },
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "Customer Service",
-                    "name": "Antoine Jouan",
-                    "email": "antoine.jouan@neatcraft.fr",
-                    "telephone": "+33-6-15-93-90-15",
-                    "sameAs": "https://www.linkedin.com/in/jouana/",
-                    "description": "Antoine Jouan, développeur web, architecte et agiliste."
-                }
-            },
-            "copyrightHolder": {
-                "@type": "Organization",
-                "name": "NeatCraft"
-
-            },
-            "audience": {
-                "@type": "Audience",
-                "audienceType": "General Public"
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://neatcraft.fr"
-            },
-            "inLanguage": "fr",
-            "license": "https://neatcraft.fr/license",
-            "keywords": ["optimisation des processus", "efficacité opérationnelle", "gestion d'entreprise", "amélioration continue", "productivité", "organisation entreprise", "agilité", "stratégie d'entreprise", "performance organisationnelle"],
-            "about": {
-                "@type": "CreativeWork",
-                "description": "NeatCraft respecte les lois sur la protection des données personnelles, y compris le RGPD.",
-                "creator": {
-                    "@type": "Organization",
-                    "name": "NeatCraft"
-                },
-                "datePublished": "2024-10-24"
-            },
-            "policy": {
-                "@type": "PrivacyPolicy",
-                "name": "Politique de confidentialité",
-                "url": "https://neatcraft.fr/privacy-policy",
-                "requiresConsent": true,
-                "usesCookies": true
-            },
-            "legalName": "NeatCraft SARL unipersonnelle",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "38 Boulevard Pasteur",
-                "addressLocality": "Saint-Brieuc",
-                "postalCode": "22000",
-                "addressCountry": "FR"
-            },
-            "founder": {
-                "@type": "Person",
-                "name": "Antoine Jouan",
-                "sameAs": "https://www.linkedin.com/in/jouana/",
-                "description": "Antoine Jouan, développeur web, architecte et agiliste."
-            },
-            "legalStatus": "SARL unipersonnelle"
-        }
-    </script>
-</head>
-
-<body class={css({
-    bgColor: "primary.100",
-    color: "white",
-})}>
-<Header>
-    <Navigation>
-        <NavigationItem href="#mission" aria-current="true">Mission</NavigationItem>
-        <NavigationSeparator/>
-        <NavigationItem href="#engagement">Engagement</NavigationItem>
-        <NavigationSeparator/>
-        <NavigationItem href="#valeur">Valeurs</NavigationItem>
-        <NavigationSeparator/>
-        <NavigationItem href="#activite">Activités</NavigationItem>
-        <li>
-            <NavigationButton href="https://calendly.com/antoine-jouan-neatcraft/30min">Prendre rendez-vous</NavigationButton>
-        </li>
-    </Navigation>
-</Header>
-
-
-<main class={css({
-    _portrait: {
-        marginTop: "15vh",
-    },
-    _landscape: {
-        marginTop: {xs: "15vw", lg: "5vw"},
-    },
-})}>
-    <Mission/>
-    <Vision/>
-    <Engagement/>
-    <Offre/>
-    <Contact/>
-</main>
-<Footer/>
-<div aria-hidden="true"
-    class={css({
-        display: {base: "none", _portrait: { xs: "flex" }},
-        justifyContent: "center",
-        position: "fixed",
-        bottom: "0",
-        bgColor: "primary.100",
-        width: "100%",
-        paddingY: "2%"
-    })}>
-    <NavigationButton href="https://calendly.com/antoine-jouan-neatcraft/30min">Prendre rendez-vous</NavigationButton>
-</div>
-</body>
-
-</html>
+<Layout title="Neatcraft - Architecture & Stratégie IT">
+	<main>
+		<Hero />
+		<Problem />
+		<Expertise />
+		<Method />
+		<Success />
+		<Offers />
+		<Footer />
+	</main>
+</Layout>

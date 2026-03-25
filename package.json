@@ -16,7 +16,9 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.6",
     "@pandacss/dev": "^1.8.1",
-    "astro": "^5.16.11"
+    "astro": "^5.16.11",
+    "styled-system": "^5.1.5"
   }
 }
