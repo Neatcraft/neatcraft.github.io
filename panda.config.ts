@@ -42,6 +42,8 @@ export default defineConfig({
                 colors: {
                     primary: {
                         5: {value: "rgb(0 39 64 / 0.05)"},
+                        10: { value: "rgb(0 39 64 / 0.1)" },
+                        60: { value: "rgb(0 39 64 / 0.6)" },
                         70: { value: "rgb(0 39 64 / 0.7)" },
                         100: { value: "rgb(0 39 64)" }
                     },

@@ -1,0 +1,55 @@
+---
+import {css} from "../../styled-system/css";
+import MeetButton from "./MeetButton.astro";
+---
+
+<header class={
+    css({
+        maxW: '5xl',
+        mx: 'auto',
+        pt: '40',
+        pb: '24',
+        px: '6',
+        textAlign: 'center'
+    })}>
+    <h1 class={css({
+        fontFamily: 'barlow',
+        fontSize: '7xl',
+        fontWeight: 'semibold',
+        letterSpacing: '-1',
+        lineHeight: '1',
+        color: 'primary.100',
+        mb: '8',
+        smDown: {
+            fontSize: '5xl',
+        }
+    })}>
+        VOTRE ORGANISATION ÉVOLUE, <br/>
+        <span class={css({
+            color: 'secondary',
+            textDecoration: 'underline',
+            textDecorationThickness: '4px',
+            textDecorationColor: 'primary.10'
+        })}>VOTRE IT AUSSI.</span>
+    </h1>
+    <p class={
+        css({
+            fontFamily: 'montserrat',
+            fontSize: '2xl',
+            fontWeight: 'light',
+            lineHeight: '1.3',
+            color: 'primary.60',
+            maxW: '3xl',
+            mx: 'auto',
+            mb: '3rem',
+        })}>
+        Gardez-les alignées pour scaler sans friction. <br/>
+        <span class={css({
+            fontWeight: 'semibold',
+            color: 'primary.100',
+            textTransform: 'uppercase',
+        })}>Neatcraft</span> apporte la clarté nécessaire pour bâtir
+        votre croissance sur du solide.
+    </p>
+    <MeetButton/>
+</header>
