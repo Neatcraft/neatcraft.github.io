@@ -1,0 +1,168 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Neatcraft</title>
+    <!-- Polices : Barlow (Titres) et Montserrat (Corps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-neat-orange selection:text-white">
+
+<!-- Navigation -->
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neat-navy/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-4 group">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-10 h-10 rounded-full"
+                 onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'">
+            <div id="logo-fallback"
+                 class="hidden w-10 h-10 bg-neat-navy rounded-lg items-center justify-center text-white font-title font-extrabold text-lg">
+                N
+            </div>
+            <span class="text-2xl font-bold tracking-tighter text-neat-navy font-title uppercase">NEATCRAFT</span>
+        </a>
+        <a href="/index.html" class="back-link text-xs font-bold uppercase tracking-widest text-neat-navy">
+            ← Retour au site
+        </a>
+    </div>
+</nav>
+
+<main class="pt-40 pb-24 px-6 max-w-5xl mx-auto">
+    <!-- Header Page -->
+    <header class="text-center mb-24">
+        <h1 class="text-5xl md:text-7xl font-title text-neat-navy uppercase tracking-tight leading-none mb-6">
+            Mentions <br/><span class="text-neat-orange">Légales</span>
+        </h1>
+        <div class="w-20 h-1 bg-neat-orange mx-auto mb-8"></div>
+        <p class="text-slate-400 font-body uppercase tracking-[0.2em] text-[10px] font-bold">
+            Transparence & Sobriété Numérique
+        </p>
+    </header>
+
+    <div class="legal-content space-y-12">
+
+        <!-- Grid pour les infos rapides -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Éditeur -->
+            <section class="legal-card border-t-4 border-t-neat-navy">
+                <span class="section-label">Éditeur du site</span>
+                <h2 class="text-2xl font-title text-neat-navy mb-6">Neatcraft EURL</h2>
+                <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+                    <p>Le site NeatCraft est édité par la société <strong>NeatCraft</strong>, une EURL (Entreprise Unipersonnelle à Responsabilité Limitée) au capital social de 1 000,00 €, immatriculée au RCS de Saint-Brieuc sous le numéro <strong>908 882 541</strong>.</p>
+                    <div class="pt-4 border-t border-slate-200 grid grid-cols-2 gap-4">
+                        <div>
+                            <span class="block text-[9px] uppercase font-bold text-slate-400 tracking-wider">SIRET</span>
+                            <span class="text-neat-navy font-bold">908 882 541 00018</span>
+                        </div>
+                        <div>
+                            <span class="block text-[9px] uppercase font-bold text-slate-400 tracking-wider">TVA Intracom.</span>
+                            <span class="text-neat-navy font-bold">FR42908882541</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <span class="block text-[9px] uppercase font-bold text-slate-400 tracking-wider">Siège Social</span>
+                        <address class="not-italic text-neat-navy">38 Boulevard Pasteur<br>22000 Saint-Brieuc, France</address>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publication & Contact -->
+            <section class="legal-card border-t-4 border-t-neat-orange">
+                <span class="section-label">Contact & Publication</span>
+                <h2 class="text-2xl font-title text-neat-navy mb-6">Responsabilité</h2>
+                <div class="space-y-6 text-sm text-slate-600">
+                    <div>
+                        <span class="block text-[9px] uppercase font-bold text-slate-400 tracking-wider">Responsable de publication</span>
+                        <span class="text-lg font-title text-neat-navy uppercase">Antoine Jouan</span>
+                    </div>
+                    <div>
+                        <span class="block text-[9px] uppercase font-bold text-slate-400 tracking-wider">Email Direct</span>
+                        <a href="mailto:contact@neatcraft.fr" class="text-lg font-title">contact@neatcraft.fr</a>
+                    </div>
+                    <div class="pt-6">
+                        <span class="section-label !mb-2">Hébergement</span>
+                        <p class="font-bold text-neat-navy">GitHub Pages</p>
+                        <p class="text-[11px] leading-tight">GitHub, Inc., 88 Colin P. Kelly Jr Street,<br>San Francisco, CA 94107, USA</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sections Pleine Largeur -->
+        <div class="space-y-20 max-w-3xl mx-auto">
+
+            <section class="legal-section">
+                <h2 class="text-2xl font-title text-neat-navy mb-6">Propriété intellectuelle</h2>
+                <div class="text-sm text-slate-600 leading-relaxed space-y-4">
+                    <p>L'ensemble des éléments présents sur le site (textes, images, vidéos, etc.) sont la propriété exclusive de <strong>NeatCraft</strong>, sauf mentions contraires.</p>
+                    <p>Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces éléments, même partielle, est strictement interdite sans l'accord écrit de NeatCraft.</p>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <h3 class="font-title text-neat-navy text-xs uppercase tracking-widest mb-3 font-bold">Identité visuelle</h3>
+                        <p>L'identité visuelle de NeatCraft ainsi que la création du logotype original ont été réalisées par <strong>RobyStudio</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="text-2xl font-title text-neat-navy mb-6">Protection des données & Cookies</h2>
+                <div class="text-sm text-slate-600 leading-relaxed space-y-6">
+                    <p>NeatCraft s'engage à une transparence totale concernant vos données. Conformément au RGPD :</p>
+
+                    <div class="bg-slate-50 p-6 rounded-neat border border-neat-orange/10">
+                        <h3 class="font-title text-neat-navy text-xs uppercase tracking-widest mb-3 font-bold">Sobriété par défaut</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Pas de cookies :</strong> Ce site n'utilise aucun cookie de suivi, publicitaire ou statistique.</li>
+                            <li><strong>Pas de collecte directe :</strong> Aucune donnée personnelle n'est captée directement par ce site (pas de formulaire de contact interne).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-title text-neat-navy text-xs uppercase tracking-widest mb-3 font-bold">Cas particulier : Prise de rendez-vous</h3>
+                        <p>La seule collecte de données intervient lorsque vous choisissez de planifier une séance de cadrage via l'interface <strong>Google Calendar</strong>.</p>
+                        <p class="mt-2 text-xs">Dans ce cadre, les données que vous saisissez (nom, e-mail) sont traitées par Google conformément à leurs propres politiques de confidentialité et sont utilisées exclusivement par Antoine Jouan pour l'organisation de votre rendez-vous.</p>
+                    </div>
+
+                    <p><strong>Vos droits :</strong> Vous pouvez à tout moment demander l'accès ou la suppression de vos informations de rendez-vous en contactant : <a href="mailto:antoine.jouan@neatcraft.fr">antoine.jouan@neatcraft.fr</a>.</p>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2 class="text-2xl font-title text-neat-navy mb-6">Conditions d'utilisation</h2>
+                <div class="text-sm text-slate-600 leading-relaxed space-y-4">
+                    <p>Le contenu du site est fourni à titre informatif. NeatCraft ne saurait être tenu responsable des erreurs ou omissions. Nous nous réservons le droit de modifier le contenu à tout moment, sans préavis.</p>
+                    <p class="font-bold text-neat-navy">Les présentes mentions légales sont régies par la loi française. En cas de litige, les tribunaux de Saint-Brieuc seront seuls compétents.</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<!-- Footer signature -->
+<footer class="bg-neat-navy py-24 text-white text-center" id="footer-cta" role="contentinfo">
+    <div class="max-w-4xl mx-auto px-6 font-title uppercase tracking-widest">
+        <div class="flex justify-center items-center gap-4 mb-10 text-3xl font-bold tracking-tighter">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-12 h-12 rounded-full"
+                 onerror="this.style.display='none'">
+            <span>NEATCRAFT</span>
+        </div>
+        <h2 class="text-2xl mb-10 leading-relaxed normal-case tracking-normal font-bold">Votre IT change tout le temps.
+            <br/> <span class="text-neat-orange">Donnons-lui la bonne direction.</span></h2>
+        <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-white text-neat-navy px-12 py-4 rounded-neat text-lg hover:bg-neat-orange hover:text-white transition-all mb-16 uppercase shadow-lg font-bold">PRENDRE
+            RENDEZ-VOUS</a>
+        <div class="pt-8 flex flex-col md:flex-row justify-center gap-8 text-[10px] opacity-30 tracking-[0.2em]">
+            <span>&copy; 2024 NEATCRAFT - Conseil Architecture & Stratégie SI</span>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

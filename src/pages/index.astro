@@ -1,12 +1,514 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from "../components/Nav.astro";
-import Hero from "../components/Hero.astro";
+import "../styles/global.css";
+
+import Carroussel from "../components/carroussel.astro";
+const siteTitle = "Neatcraft | Conseil en Architecture & Stratégie Informatique par Antoine Jouan";
+const siteDescription = "Expert en conseil stratégie IT et architecture SI. Neatcraft vous aide à transformer votre informatique en actif stratégique. Audit, cartographie et alignement métier.";
+const siteKeywords = "conseil en informatique, architecture SI, conseil stratégie IT, Antoine Jouan, Neatcraft, audit informatique, urbanisation SI, dette technique, DDD, TDD";
+const siteUrl = "https://www.neatcraft.fr";
+const ogTitle = "Neatcraft | Pilotage de Trajectoire & Architecture IT";
+const ogDescription = "Votre organisation évolue, votre IT aussi. Donnons-lui la bonne direction. Conseil expert en stratégie et architecture.";
 ---
 
-<Layout title="Neatcraft - Architecture & Stratégie IT">
-	<Nav/>
-	<main>
-		<Hero/>
-	</main>
-</Layout>
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Fondamental -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription}>
+    <meta name="keywords" content={siteKeywords}>
+    <link rel="canonical" href={siteUrl}>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/logos/neatcraft.svg">
+
+    <!-- Open Graph (Partage Réseaux Sociaux) -->
+    <meta property="og:title" content={ogTitle}>
+    <meta property="og:description" content={ogDescription}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={siteUrl}>
+
+    <!-- Données Structurées JSON-LD (SEO Avancé) -->
+    <script type="application/ld+json" is:inline>
+        {
+            "@context"
+        :
+            "https://schema.org",
+                "@type"
+        :
+            "ProfessionalService",
+                "name"
+        :
+            "Neatcraft",
+                "founder"
+        :
+            {
+                "@type"
+            :
+                "Person",
+                    "name"
+            :
+                "Antoine Jouan"
+            }
+        ,
+            "description"
+        :
+            "Cabinet de conseil en stratégie informatique et architecture SI pour PME et Scale-ups.",
+                "url"
+        :
+            "https://www.neatcraft.fr",
+                "address"
+        :
+            {
+                "@type"
+            :
+                "PostalAddress",
+                    "addressCountry"
+            :
+                "FR"
+            }
+        ,
+            "serviceType"
+        :
+            ["Conseil en informatique", "Architecture SI", "Audit stratégique IT"]
+        }
+    </script>
+
+    <!-- Polices : Barlow (Titres) et Montserrat (Corps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-neat-orange selection:text-white">
+
+<a href="#main-content" class="skip-link font-title uppercase text-xs tracking-widest">Passer au contenu</a>
+
+<!-- Navigation -->
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neat-navy/5" role="navigation"
+     aria-label="Menu principal">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-10 h-10 rounded-full"
+                 onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'">
+            <div id="logo-fallback"
+                 class="hidden w-10 h-10 bg-neat-navy rounded-lg items-center justify-center text-white font-title font-extrabold text-lg">
+                N
+            </div>
+            <span class="text-2xl font-bold tracking-tighter text-neat-navy font-title text-nowrap">NEATCRAFT</span>
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-semibold uppercase tracking-widest">
+            <a href="#enjeu" class="nav-link text-neat-navy/70 hover:text-neat-navy">L'Enjeu</a>
+            <a href="#analyse" class="nav-link text-neat-navy/70 hover:text-neat-navy">Analyse</a>
+            <a href="#expertise" class="nav-link text-neat-navy/70 hover:text-neat-navy">Expertise</a>
+            <a href="#offres"
+               class="nav-link text-neat-navy/70 hover:text-neat-navy font-bold text-neat-orange">Offres</a>
+        </div>
+    </div>
+</nav>
+
+<main id="main-content">
+    <!-- 1. Hero Section -->
+    <header class="pt-40 pb-24 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-title text-neat-navy leading-[1.1] mb-8">
+            VOTRE ORGANISATION ÉVOLUE, <br/>
+            <span class="text-neat-orange underline decoration-neat-navy/10 decoration-4">VOTRE IT AUSSI.</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-body text-neat-navy/60 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
+            Plus votre entreprise évolue, plus vous avez l'impression de perdre le contrôle de votre informatique. Ne
+            laissez pas la complexité prendre le dessus. <br/>
+            Je vous redonne la <strong>maîtrise</strong> de votre
+            <strong>Service Informatique</strong> pour scaler en toute sérénité.
+        </p>
+        <div class="flex justify-center">
+            <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-neat-navy text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg shadow-lg hover:bg-neat-orange transition-all transform hover:-translate-y-1 uppercase font-bold">
+                PRENDRE RENDEZ-VOUS
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Section Enjeu -->
+    <section id="enjeu" class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-enjeu">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-enjeu" class="text-3xl md:text-4xl text-neat-navy mb-4 font-title">Ne laissez pas la
+                    chance donner la direction</h2>
+                <p class="text-lg text-neat-navy/60 max-w-2xl mx-auto font-body">
+                    Nous prenons tous nos décisions stratégiques avec les informations que nous avons à l'instant T.
+                    Mais lorsque votre système d'information devient opaque, piloter son évolution relève du pari et
+                    devient un risque majeur.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <article class="bg-white p-10 rounded-neat border-t-4 border-neat-pink shadow-sm hover-card">
+                    <div class="mb-6 flex items-center justify-between">
+                        <h3 class="text-2xl font-title text-neat-pink tracking-tight uppercase">La chance</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 font-body mb-8 leading-relaxed">
+                        Naviguer à vue, ne pas voir la complexité s'accumuler et finir par s'embourber.
+                    </p>
+                    <ul class="space-y-4 font-body text-xs text-neat-navy">
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-pink font-bold">✕</span>
+                            <p><strong>Boîte noire :</strong> Des décisions techniques prises sans visibilité réelle sur
+                                le ROI.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-pink font-bold">✕</span>
+                            <p><strong>Lenteur opérationnelle :</strong> La dette technique freine chaque nouvelle
+                                évolution.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-pink font-bold">✕</span>
+                            <p><strong>Risque de rupture :</strong> Des fondations techniques fragiles qui menacent
+                                votre activité.</p>
+                        </li>
+                    </ul>
+                    <div class="mt-10 pt-6 border-t border-slate-100 text-center">
+                        <span class="text-[10px] uppercase tracking-widest font-title">Approche par le hasard</span>
+                    </div>
+                </article>
+
+                <article
+                        class="bg-neat-navy p-10 rounded-neat border-t-4 border-neat-orange shadow-xl hover-card text-white">
+                    <div class="mb-6 flex items-center justify-between">
+                        <h3 class="text-2xl font-title text-neat-orange tracking-tight uppercase">La Maîtrise</h3>
+                    </div>
+                    <p class="text-sm text-white/60 font-body mb-8 leading-relaxed">
+                        Maintenir une vision claire, connaître l'impact de vos choix rapidement prendre les bonnes
+                        décisions.
+                    </p>
+                    <ul class="space-y-4 font-body text-xs">
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold">✓</span>
+                            <p class="text-white"><strong>État des lieux :</strong> Une cartographie précise pour
+                                orienter chaque investissement.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold">✓</span>
+                            <p class="text-white"><strong>Agilité :</strong> Un système capable de livrer vite,
+                                sans bugs et sans friction.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold">✓</span>
+                            <p class="text-white"><strong>Actif stratégique :</strong> Votre IT devient le moteur qui
+                                propulse votre organisation.</p>
+                        </li>
+                    </ul>
+                    <div class="mt-10 pt-6 border-t border-white/10 text-center text-white">
+                        <span class="text-[10px] uppercase tracking-widest font-title">Pilotage par la valeur</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-neat-orange text-white px-10 py-4 rounded-neat font-title tracking-widest text-md hover:bg-neat-navy transition-all uppercase font-bold shadow-lg">
+                    PRENDRE RENDEZ-VOUS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Section réussite -->
+    <section id="succes" class="py-24 bg-white" aria-labelledby="heading-succes">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-succes" class="text-3xl md:text-4xl text-neat-navy mb-4 font-title">L'informatique n'est pas une fonction support, c'est un levier de croissance</h2>
+                <p class="text-lg text-neat-navy/60 max-w-3xl mx-auto font-body">
+                    Les leaders de leur marché partagent un point commun, ils ont transformé leur système d'information
+                    en un avantage concurrentiel décisif.</br>Voici le résultat d'une architecture maîtrisée.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Avantage 1 -->
+                <article class="bg-slate-50 p-8 rounded-neat border border-slate-100 hover-card">
+                    <img class="w-10 h-10" alt="arrow up" src="/img/icons/rocket.svg"/>
+                    <h3 class="text-xl font-title text-neat-navy font-bold uppercase mb-3">Time-to-Market accéléré</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Des cycles de développement plus courts. Une architecture saine permet de lancer de nouvelles
+                        offres et fonctionnalités en quelques jours, sans risquer de tout casser.
+                    </p>
+                </article>
+
+                <!-- Avantage 2 -->
+                <article class="bg-slate-50 p-8 rounded-neat border border-slate-100 hover-card">
+                    <img class="w-10 h-10" alt="arrow up" src="/img/icons/improve.svg"/>
+                    <h3 class="text-xl font-title text-neat-navy font-bold uppercase mb-3">Scalabilité sans
+                        friction</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Votre entreprise double de taille ? Votre IT encaisse la charge naturellement. Finis les goulots
+                        d'étranglement techniques qui bloquent votre expansion ou vos rachats.
+                    </p>
+                </article>
+
+                <!-- Avantage 3 -->
+                <article class="bg-slate-50 p-8 rounded-neat border border-slate-100 hover-card">
+                    <img class="w-10 h-10" alt="arrow up" src="/img/icons/target.svg"/>
+                    <h3 class="text-xl font-title text-neat-navy font-bold uppercase mb-3">Alignement Métier / IT
+                        absolu</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        La technique parle enfin le langage du business. Chaque investissement technologique est
+                        directement mesurable et contribue à la création de valeur de l'entreprise.
+                    </p>
+                </article>
+            </div>
+
+            <div class="mt-16 bg-neat-navy p-10 rounded-neat relative overflow-hidden text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 hover-card">
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-neat-orange rounded-full opacity-20 blur-3xl"></div>
+                <div class="relative z-10 md:w-2/3">
+                    <h3 class="text-2xl font-title tracking-tight mb-4 font-bold uppercase">Prêt à transformer votre IT
+                        en actif performant ?</h3>
+                    <p class="text-sm text-white/70 font-body leading-relaxed">
+                        Passez d'une approche réactive (éteindre des incendies) à une approche proactive. Faisons le
+                        point sur la trajectoire actuelle de votre système d'information lors d'un échange direct.
+                    </p>
+                </div>
+                <div class="relative z-10">
+                    <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+                       class="inline-block bg-neat-orange text-white px-8 py-4 rounded-neat font-title tracking-widest text-xs hover:bg-white hover:text-neat-navy transition-all uppercase font-bold shadow-lg text-center whitespace-nowrap">
+                        PRENDRE RENDEZ-VOUS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Social Proof : Logos -->
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-40 grayscale font-title text-xl font-black tracking-tighter text-center">
+                <div class="flex justify-center uppercase italic"><img alt="Logo BigBen"
+                                                                       src="/img/logos/clients/Bigben.png"/></div>
+                <div class="flex justify-center uppercase italic h-24"><img alt="Logo Brico Dépôt"
+                                                                            src="/img/logos/clients/Brico_Depot.svg"/>
+                </div>
+                <div class="flex justify-center uppercase italic h-24"><img alt="Logo Macif"
+                                                                            src="/img/logos/clients/Macif.svg"/></div>
+                <div class="flex justify-center uppercase italic h-24"><img alt="Logo Smacl"
+                                                                            src="/img/logos/clients/Smacl.jpeg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Expertise Section : Antoine Jouan -->
+    <section id="expertise" class="py-24 bg-neat-navy text-white overflow-hidden" aria-labelledby="heading-expertise">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 text-left">
+                <div class="flex items-center gap-6">
+                    <div class="relative">
+                        <div class="w-24 h-24 rounded-full border-4 border-neat-orange overflow-hidden bg-slate-200">
+                            <img src="/img/profile-pic.avif"
+                                 alt="Antoine Jouan - Expert Architecture et Conseil Stratégie IT" loading="lazy"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-neat-orange text-white p-1 rounded-full px-2 text-[8px] font-bold uppercase tracking-wider">
+                            Expert
+                        </div>
+                    </div>
+                    <div>
+                        <h2 id="heading-expertise" class="text-3xl font-title leading-tight mb-1 flex items-center">
+                            Antoine Jouan
+                            <a href="https://linkedin.com/in/jouana" target="_blank" rel="noopener noreferrer"
+                               class="linkedin-badge ml-3 hover:scale-110 transition-transform"
+                               title="Suivre Antoine Jouan sur LinkedIn">in</a>
+                        </h2>
+                        <p class="text-neat-orange font-title uppercase tracking-widest text-xs font-bold">Architecte
+                            Stratégique SI</p>
+                    </div>
+                </div>
+
+                <p class="text-lg opacity-70 leading-relaxed font-body">
+                    Après 13 ans passés à concevoir et redresser des systèmes d'information complexes, j'accompagne
+                    aujourd'hui les dirigeants dans leurs choix technologiques stratégiques. Mon rôle est de faire le
+                    pont entre votre vision business et l'exécution technique, afin de transformer votre architecture en
+                    véritable levier de rentabilité.
+                </p>
+
+                <div class="flex flex-wrap gap-3 font-title">
+                    <span class="bg-white/10 px-4 py-2 rounded-lg text-[10px] font-bold tracking-widest uppercase">Urbanisation SI</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-lg text-[10px] font-bold tracking-widest uppercase">Cartographie de Flux</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-lg text-[10px] font-bold tracking-widest uppercase">DDD / TDD</span>
+                </div>
+
+                <div class="pt-4">
+                    <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+                       class="inline-block border-2 border-white text-white px-10 py-4 rounded-neat font-title tracking-widest text-md hover:bg-white hover:text-neat-navy transition-all uppercase font-bold">
+                        PRENDRE RENDEZ-VOUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-10 rounded-neat relative">
+                <div class="absolute -top-4 -right-4 w-12 h-12 bg-neat-orange/20 blur-xl"></div>
+                <h3 class="text-neat-orange font-title mb-6 tracking-widest text-xs uppercase">Ma Valeur Ajoutée</h3>
+                <p class="text-2xl font-body font-light italic leading-snug">
+                    "Une architecture bien pensée est la garantie absolue que votre entreprise ne sera jamais freinée
+                    par sa propre technologie."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Social Proof : LinkedIn -->
+    <section id="recommandations" class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 font-title">
+                <h2 class="text-2xl text-neat-navy mb-2 font-bold uppercase">Ils recommandent mes services</h2>
+                <p class="text-[10px] text-slate-400 uppercase tracking-[0.2em]">Extraits certifiés LinkedIn</p>
+            </div>
+            <Carroussel/>
+        </div>
+    </section>
+
+    <!-- 7. Offres : Les Services & Formats -->
+    <section id="offres" class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl text-neat-navy mb-4 tracking-tighter font-bold uppercase">Mes offres</h2>
+                <p class="text-neat-navy/60 font-body uppercase tracking-widest text-xs font-bold">Des modèles flexibles
+                    adaptés à votre contexte</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 font-body">
+                <!-- Format 1 : Le Pack Plan -->
+                <article
+                        class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-orange transition-all shadow-sm">
+                    <h3 class="text-lg mb-4 text-neat-navy/40 font-title uppercase font-bold">Cadrage & Audit</h3>
+                    <div class="text-3xl font-title text-neat-navy mb-6 font-bold leading-tight">Le Pack<br/>Plan</div>
+                    <div class="mb-6">
+                        <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold block mb-1">À partir de</span>
+                        <div class="text-3xl font-title text-neat-navy font-bold">10 000 € <span
+                                class="text-xs opacity-40 font-normal">HT</span></div>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">
+                        L'intervention "coup de poing" pour cartographier un périmètre précis et tracer une feuille de
+                        route claire. Une exécution ciblée et rapide pour garantir un impact immédiat.
+                    </p>
+                    <ul class="space-y-4 mb-4 text-sm font-body opacity-80 flex-grow text-xs leading-relaxed font-semibold">
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Audit
+                            approfondi d'un processus ou sujet
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Cadrage
+                            technique pour un nouveau produit
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Exécution
+                            rapide et périmètre défini
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Plan
+                            d'action et cible d'architecture
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Format 2 : Le Pack Conseil -->
+                <article
+                        class="p-8 bg-neat-navy text-white rounded-neat shadow-2xl scale-105 relative flex flex-col border border-white/5 font-body">
+                    <h3 class="text-lg mb-4 text-neat-orange font-title uppercase font-bold">Direction Technique</h3>
+                    <div class="text-3xl font-title mb-6 font-bold leading-tight">Le Pack<br/>Conseil</div>
+                    <div class="mb-6">
+                        <span class="text-[10px] uppercase tracking-widest text-white/60 font-bold block mb-1">À partir de</span>
+                        <div class="text-3xl font-title font-bold">5 000 € <span class="text-xs opacity-40 font-normal">HT / MOIS</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white/70 mb-6 flex-grow leading-relaxed">
+                        L'accompagnement continu pour sécuriser votre trajectoire technologique. Un partenaire expert
+                        pour valider vos choix et débloquer vos équipes <i>(zéro production directe)</i>.
+                    </p>
+                    <ul class="space-y-4 mb-4 text-sm opacity-80 flex-grow text-xs leading-relaxed font-semibold">
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> 1 Board
+                            stratégique mensuel avec le C-Level
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Validation
+                            continue de l'architecture
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Échanges
+                            collectifs avec l'équipe technique
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Support
+                            mail et visio (réponse sous 4h)
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Format 3 : Le Pack Transformation -->
+                <article
+                        class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-purple transition-all shadow-sm font-body text-neat-navy">
+                    <h3 class="text-lg mb-4 opacity-40 font-title uppercase tracking-tight font-bold">Intervention
+                        Globale</h3>
+                    <div class="text-3xl font-title mb-6 font-bold leading-tight">Le Pack<br/>Transformation</div>
+                    <div class="text-3xl font-title mb-6 font-bold uppercase">Sur Devis</div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">
+                        L'intervention sur mesure pour structurer une hyper-croissance ou redresser un SI en souffrance.
+                        Un alignement total sur l'atteinte de vos objectifs business.
+                    </p>
+                    <ul class="space-y-4 mb-4 text-sm opacity-80 flex-grow text-xs leading-relaxed font-body font-semibold">
+                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Mise en
+                            place de plans et pilotage par OKRs
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span>
+                            Accompagnement au redressement du SI
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Conseil
+                            expert sur l'organisation des équipes
+                        </li>
+                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span>
+                            Optimisation des méthodes et flux de travail
+                        </li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="mt-12 bg-neat-navy/5 border border-neat-navy/10 p-8 rounded-[0.75rem] flex flex-col sm:flex-row items-center sm:items-start gap-6 max-w-4xl mx-auto text-center sm:text-left hover-card">
+                <div>
+                    <h4 class="font-title font-bold text-neat-navy uppercase tracking-widest text-sm mb-2">Mon Engagement Personnel</h4>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Dans le conseil traditionnel, c'est le client qui assume le risque des dépassements. Mon approche est différente, je ne vends pas du temps, je m'engage sur un résultat. Peu importe la complexité rencontrée, <strong>j'assume l'intégralité du risque d'exécution.</strong> J'irai au bout de la prestation et des objectifs que nous aurons fixés, sans surprise ni surcoût.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-neat-orange text-white px-12 py-5 rounded-neat font-title tracking-widest text-md hover:bg-neat-navy transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
+                    PRENDRE RENDEZ-VOUS
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-neat-navy py-24 text-white text-center" id="footer-cta" role="contentinfo">
+    <div class="max-w-4xl mx-auto px-6 font-title uppercase tracking-widest">
+        <div class="flex justify-center items-center gap-4 mb-10 text-3xl font-bold tracking-tighter">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-12 h-12 rounded-full"
+                 onerror="this.style.display='none'">
+            <span>NEATCRAFT</span>
+        </div>
+        <h2 class="text-2xl mb-10 leading-relaxed normal-case tracking-normal font-bold">Votre IT change tout le temps.
+            <br/> <span class="text-neat-orange">Donnons-lui la bonne direction.</span></h2>
+        <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-white text-neat-navy px-12 py-4 rounded-neat text-lg hover:bg-neat-orange hover:text-white transition-all mb-16 uppercase shadow-lg font-bold">PRENDRE
+            RENDEZ-VOUS</a>
+        <div class="pt-8 flex flex-col md:flex-row justify-center gap-8 text-[10px] opacity-30 tracking-[0.2em]">
+            <span>&copy; 2024 NEATCRAFT - Conseil Architecture & Stratégie SI</span>
+            <nav aria-label="Liens légaux">
+                <ul class="flex gap-8">
+                    <li><a href="https://www.linkedin.com/in/jouana/"
+                           class="hover:opacity-100 transition-opacity font-bold">LinkedIn</a></li>
+                    <li><a href="/mentions-legales" class="hover:opacity-100 transition-opacity font-bold">Mentions
+                        Légales</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

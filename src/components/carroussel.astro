@@ -1,0 +1,51 @@
+---
+import avis from "./avis";
+---
+
+<div class="relative w-full" aria-roledescription="carousel">
+    <!-- Piste du Carrousel (Défilement CSS natif) -->
+    <ul class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 -mx-4 px-4 hide-scrollbar" id="carousel-track">
+        {avis.map((item, index) => (
+                <li class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 snap-start" role="group" aria-roledescription="slide" aria-label={`Slide ${index + 1} sur ${avis.length}`}>
+                    <article class="p-6 bg-slate-50 rounded-neat border border-slate-100 shadow-sm font-body flex flex-col h-full hover:border-neat-orange/30 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="min-w-0">
+                                <h4 class="text-neat-navy text-xs font-title mb-1 uppercase tracking-tight font-bold truncate">{item.fullName}</h4>
+                                <h4 class="text-neat-navy text-xs font-title mb-1 uppercase tracking-tight font-bold truncate">
+                                    {item.role}
+                                    <span class="inline-flex items-center justify-center w-4 h-4 ml-1 bg-[#0077b5] text-white text-[8px] font-bold rounded-sm" aria-label="Lien LinkedIn">in</span>
+                                </h4>
+                                <p class="text-[9px] text-slate-400 uppercase font-bold tracking-wider leading-none font-body truncate">{item.entreprise}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow flex flex-col items-start mb-6">
+                            <p class="text-sm text-slate-600 italic leading-relaxed line-clamp-3 transition-all duration-300" id={`reco-text-${index}`} set:html={`"${item.texte}"`}></p>
+                            <button
+                                    type="button"
+                                    class="text-[10px] font-bold text-neat-orange uppercase tracking-widest mt-2 hover:text-neat-navy transition-colors focus:outline-none"
+                                    onclick={`document.getElementById('reco-text-${index}').classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'VOIR PLUS' ? 'VOIR MOINS' : 'VOIR PLUS';`}
+                            >
+                                Voir plus
+                            </button>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 mt-auto">
+                            <a href={item.lienLinkedin} target="_blank" rel="noopener noreferrer" class="text-[9px] font-bold text-neat-navy hover:text-neat-orange transition-colors uppercase tracking-widest">Voir le profil LinkedIn →</a>
+                        </div>
+                    </article>
+                </li>
+        ))}
+    </ul>
+</div>
+
+<style>
+    /* Masquer la barre de défilement pour un rendu plus propre */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+</style>
