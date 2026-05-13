@@ -200,7 +200,7 @@ const ogDescription = "Votre SI freine votre croissance ? Diagnostic en 3 semain
     </section>
 
     <!-- 4. Section Avant et après -->
-    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-avant-apres">
+    <section id="analyse" class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-avant-apres">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 id="heading-avant-apres" class="text-3xl md:text-4xl text-neat-navy mb-4 font-title">Avant et après</h2>
@@ -222,11 +222,7 @@ const ogDescription = "Votre SI freine votre croissance ? Diagnostic en 3 semain
 
             <div class="mt-12 pt-10 border-t border-slate-200">
                 <p class="text-center text-[10px] uppercase tracking-[0.2em] text-slate-400 font-title font-bold mb-8">Résultats mesurés</p>
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-                    <div>
-                        <p class="font-title font-bold text-neat-navy text-xs uppercase tracking-tight mb-1">bioMérieux</p>
-                        <p class="font-body text-xs text-slate-500 leading-relaxed">Temps de développement divisé par 3</p>
-                    </div>
+                <div class="grid grid-cols-3 gap-6 text-center max-w-2xl mx-auto">
                     <div>
                         <p class="font-title font-bold text-neat-navy text-xs uppercase tracking-tight mb-1">BigBen Connected</p>
                         <p class="font-body text-xs text-slate-500 leading-relaxed">−55% sur les coûts d'infrastructure</p>
@@ -234,10 +230,6 @@ const ogDescription = "Votre SI freine votre croissance ? Diagnostic en 3 semain
                     <div>
                         <p class="font-title font-bold text-neat-navy text-xs uppercase tracking-tight mb-1">SMACL Assurances</p>
                         <p class="font-body text-xs text-slate-500 leading-relaxed">Échecs de livraison divisés par 2</p>
-                    </div>
-                    <div>
-                        <p class="font-title font-bold text-neat-navy text-xs uppercase tracking-tight mb-1">AXA</p>
-                        <p class="font-body text-xs text-slate-500 leading-relaxed">Projet livré 3 mois en avance, 41% de marge</p>
                     </div>
                     <div>
                         <p class="font-title font-bold text-neat-navy text-xs uppercase tracking-tight mb-1">Macif</p>
@@ -332,53 +324,53 @@ const ogDescription = "Votre SI freine votre croissance ? Diagnostic en 3 semain
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 font-body">
-                <!-- Carte 1 : Diagnostic Architecture & Performance -->
-                <article class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-orange transition-all shadow-sm">
-                    <h3 class="text-sm mb-4 text-neat-navy/40 font-title uppercase font-bold">Le point de départ — 3 semaines</h3>
-                    <div class="text-2xl font-title text-neat-navy mb-6 font-bold leading-tight">Diagnostic Architecture<br/>&amp; Performance</div>
+                <!-- Carte 1 : Sparring Architecte -->
+                <article class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-orange transition-all shadow-sm font-body text-neat-navy">
+                    <h3 class="text-sm mb-4 text-neat-navy/40 font-title uppercase font-bold">L'expertise architecte à la demande</h3>
+                    <div class="text-2xl font-title text-neat-navy mb-6 font-bold leading-tight">Sparring Architecte</div>
                     <p class="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">
+                        Votre sparring partner architecture sur la durée. Pour les dirigeants qui ont besoin de
+                        challenger leurs décisions stratégiques tech sans recruter un architecte d'entreprise à temps
+                        plein.
+                    </p>
+                    <ul class="space-y-3 mb-6 text-xs font-body font-semibold opacity-80 flex-grow">
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Sparring stratégique avec la direction</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Validation des décisions d'architecture</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Point régulier de synchronisation</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Disponibilité asynchrone sur la durée</li>
+                    </ul>
+                    <p class="text-[10px] text-slate-400 italic mb-6 font-body leading-relaxed">Retainer mensuel · Engagement 6 mois minimum · 100% remote</p>
+                    <a href="/sparring-architecte/"
+                       class="mt-auto inline-block text-neat-orange font-title font-bold text-xs uppercase tracking-widest hover:text-neat-navy transition-colors">
+                        Découvrir l'offre →
+                    </a>
+                </article>
+
+                <!-- Carte 2 : Diagnostic Architecture & Performance -->
+                <article class="p-8 bg-neat-navy text-white rounded-neat shadow-2xl scale-105 relative flex flex-col border border-white/5 font-body">
+                    <h3 class="text-sm mb-4 text-neat-orange font-title uppercase font-bold">Le point de départ — 3 semaines</h3>
+                    <div class="text-2xl font-title mb-6 font-bold leading-tight">Diagnostic Architecture<br/>&amp; Performance</div>
+                    <p class="text-sm text-white/70 mb-6 flex-grow leading-relaxed">
                         Pour comprendre en profondeur pourquoi votre SI résiste au changement et obtenir une feuille de
                         route exploitable. Méthode directe combinant Event Storming, cartographie Wardley et lecture
                         Team Topologies.
                     </p>
-                    <ul class="space-y-3 mb-6 text-xs font-body font-semibold opacity-80 flex-grow">
+                    <ul class="space-y-3 mb-6 text-xs opacity-80 flex-grow font-semibold">
                         <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Atelier Event Storming avec vos équipes</li>
                         <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Cartographie macro de votre SI</li>
                         <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Identification des causes racines</li>
                         <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Feuille de route à 12-18 mois</li>
                         <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Restitution COMEX/CODIR</li>
                     </ul>
-                    <p class="text-[10px] text-slate-400 italic mb-6 font-body leading-relaxed">Engagement forfaitaire · Démarrage sous 4 à 8 semaines · Réalisable en remote ou en présentiel</p>
+                    <p class="text-[10px] text-white/40 italic mb-6 font-body leading-relaxed">Engagement forfaitaire · Démarrage sous 4 à 8 semaines · Réalisable en remote ou en présentiel</p>
                     <a href="/diagnostic-architecture/"
-                       class="mt-auto inline-block text-neat-orange font-title font-bold text-xs uppercase tracking-widest hover:text-neat-navy transition-colors">
+                       class="mt-auto inline-block text-neat-orange font-title font-bold text-xs uppercase tracking-widest hover:text-white transition-colors">
                         Découvrir le diagnostic →
                     </a>
                 </article>
 
-                <!-- Carte 2 : Sparring Architecte -->
-                <article class="p-8 bg-neat-navy text-white rounded-neat shadow-2xl scale-105 relative flex flex-col border border-white/5 font-body">
-                    <h3 class="text-sm mb-4 text-neat-orange font-title uppercase font-bold">L'expertise architecte à la demande</h3>
-                    <div class="text-2xl font-title mb-6 font-bold leading-tight">Sparring Architecte</div>
-                    <p class="text-sm text-white/70 mb-6 flex-grow leading-relaxed">
-                        Votre sparring partner architecture sur la durée. Pour les dirigeants qui ont besoin de
-                        challenger leurs décisions stratégiques tech sans recruter un architecte d'entreprise à temps
-                        plein.
-                    </p>
-                    <ul class="space-y-3 mb-6 text-xs opacity-80 flex-grow font-semibold">
-                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Sparring stratégique avec la direction</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Validation des décisions d'architecture</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Point régulier de synchronisation</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">✓</span> Disponibilité asynchrone sur la durée</li>
-                    </ul>
-                    <p class="text-[10px] text-white/40 italic mb-6 font-body leading-relaxed">Retainer mensuel · Engagement 6 mois minimum · 100% remote</p>
-                    <a href="/sparring-architecte/"
-                       class="mt-auto inline-block text-neat-orange font-title font-bold text-xs uppercase tracking-widest hover:text-white transition-colors">
-                        Découvrir l'offre →
-                    </a>
-                </article>
-
                 <!-- Carte 3 : Transformation cadrée -->
-                <article class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-purple transition-all shadow-sm font-body text-neat-navy">
+                <article class="p-8 border border-slate-200 bg-white rounded-neat flex flex-col hover:border-neat-orange transition-all shadow-sm font-body text-neat-navy">
                     <h3 class="text-sm mb-4 opacity-40 font-title uppercase tracking-tight font-bold">Piloter un chantier stratégique</h3>
                     <div class="text-2xl font-title mb-6 font-bold leading-tight">Transformation cadrée</div>
                     <p class="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">
@@ -386,14 +378,14 @@ const ogDescription = "Votre SI freine votre croissance ? Diagnostic en 3 semain
                         Team Topologies, migration cadrée, fusion post-acquisition. Engagement de résultat contractualisé.
                     </p>
                     <ul class="space-y-3 mb-6 text-xs opacity-80 flex-grow font-semibold">
-                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Pilotage du chantier sur 4-9 mois</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Engagement de résultat contractualisé</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Coaching opérationnel des équipes</li>
-                        <li class="flex items-start gap-2"><span class="text-neat-purple font-bold">•</span> Reporting mensuel à la direction</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Pilotage du chantier sur 4-9 mois</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Engagement de résultat contractualisé</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Coaching opérationnel des équipes</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold">•</span> Reporting mensuel à la direction</li>
                     </ul>
                     <p class="text-[10px] text-slate-400 italic mb-6 font-body leading-relaxed">Forfait sur devis · Préalable : diagnostic réalisé · Hybride remote / présentiel</p>
                     <a href="/transformation-si/"
-                       class="mt-auto inline-block text-neat-purple font-title font-bold text-xs uppercase tracking-widest hover:text-neat-navy transition-colors">
+                       class="mt-auto inline-block text-neat-orange font-title font-bold text-xs uppercase tracking-widest hover:text-neat-navy transition-colors">
                         Découvrir l'approche →
                     </a>
                 </article>

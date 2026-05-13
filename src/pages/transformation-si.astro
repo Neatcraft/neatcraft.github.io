@@ -1,0 +1,317 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const siteTitle = "Transformation SI cadrée avec engagement de résultat · Neatcraft";
+const siteDescription = "Piloter une transformation SI majeure avec engagement contractuel de résultat. Modularisation, refonte d'équipes, migration cadrée. Forfait sur devis.";
+const siteUrl = "https://www.neatcraft.fr/transformation-si/";
+const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
+---
+
+<Layout
+    title={siteTitle}
+    description={siteDescription}
+    canonical={siteUrl}
+    ogTitle={siteTitle}
+    ogDescription={siteDescription}
+>
+
+    <!-- 1. Hero -->
+    <header class="pt-40 pb-24 px-6 text-center max-w-5xl mx-auto">
+        <p class="text-xs font-title uppercase tracking-[0.2em] text-neat-orange font-bold mb-6">Offre 3 — Piloter un chantier stratégique</p>
+        <h1 class="text-5xl md:text-7xl font-title text-neat-navy leading-[1.1] mb-8">
+            Transformation cadrée<br/>
+            <span class="text-neat-orange">Piloter un chantier SI structurant, avec engagement de résultat</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-body text-neat-navy/60 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
+            Pour les dirigeants qui doivent exécuter une transformation SI majeure — modularisation d'un legacy, refonte d'équipes, migration cadrée, fusion post-acquisition — et qui veulent un pilote senior qui s'engage sur le résultat, pas sur le temps passé.
+        </p>
+        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-neat-navy text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg shadow-lg hover:bg-neat-orange transition-all transform hover:-translate-y-1 uppercase font-bold">
+            Réserver un échange (45 min)
+        </a>
+    </header>
+
+    <!-- 2. Quand cette offre est pertinente -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-quand">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-quand" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Quand cette offre est pertinente</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <article class="bg-white rounded-neat border border-slate-100 p-8 hover-card flex flex-col">
+                    <div class="w-8 h-1 bg-neat-orange mb-5"></div>
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Modularisation d'un monolithe</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Vous avez identifié qu'un système central doit être éclaté en composants modulaires pour redonner de la souplesse, mais vous ne savez pas par où commencer ni comment ne pas casser l'existant.
+                    </p>
+                </article>
+
+                <article class="bg-white rounded-neat border border-slate-100 p-8 hover-card flex flex-col">
+                    <div class="w-8 h-1 bg-neat-orange mb-5"></div>
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Refonte de l'organisation IT</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Votre structure d'équipes est devenue inadaptée à votre business actuel. Vous avez besoin de redéfinir les périmètres, les modes de collaboration, et la gouvernance — sans paralyser le delivery pendant la bascule.
+                    </p>
+                </article>
+
+                <article class="bg-white rounded-neat border border-slate-100 p-8 hover-card flex flex-col">
+                    <div class="w-8 h-1 bg-neat-orange mb-5"></div>
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Migration stratégique</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Vous changez de socle technique (cloud, plateforme, framework majeur) et vous voulez sécuriser à la fois la trajectoire technique et la trajectoire humaine.
+                    </p>
+                </article>
+
+                <article class="bg-white rounded-neat border border-slate-100 p-8 hover-card flex flex-col">
+                    <div class="w-8 h-1 bg-neat-orange mb-5"></div>
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Fusion ou intégration post-acquisition</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Vous devez intégrer deux SI hétérogènes, ou rationaliser un patrimoine après une opération de croissance externe.
+                    </p>
+                </article>
+
+                <article class="bg-neat-navy rounded-neat p-8 hover-card flex flex-col text-white shadow-xl md:col-span-2 lg:col-span-1">
+                    <div class="w-8 h-1 bg-neat-orange mb-5"></div>
+                    <h3 class="text-base font-title uppercase mb-3">Redressement opérationnel</h3>
+                    <p class="text-sm text-white/70 font-body leading-relaxed flex-grow">
+                        Votre delivery ne livre plus prévisiblement. Le problème est multifactoriel et demande une intervention coordonnée sur l'organisation, l'architecture, et les pratiques.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Engagement de résultat -->
+    <section class="py-24 bg-white" aria-labelledby="heading-engagement">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-engagement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Engagement de résultat, pas de moyens</h2>
+            </div>
+            <div class="space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base">
+                    Dans le conseil traditionnel, c'est le client qui assume le risque des dépassements. Le cabinet facture en régie, et si le projet déborde, le client paie.
+                </p>
+                <p class="text-base">
+                    Mon approche est différente. Je vends un résultat contractualisé, pas un volume de jours. Nous définissons ensemble, en amont, ce qui caractérise la transformation réussie. Mon prix est fixe. Si l'exécution prend plus de temps que prévu, c'est mon problème — pas le vôtre.
+                </p>
+                <p class="text-base font-medium text-neat-navy border-l-4 border-neat-orange pl-4">
+                    Cela suppose un préalable indispensable : avoir réalisé un diagnostic (le mien, ou un travail équivalent), pour que les objectifs soient clairs et que le périmètre soit cadré. Sans cette base, l'engagement de résultat n'est pas tenable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Comment ça se déroule -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-deroulement">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-deroulement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Comment se déroule une transformation</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Phase 1 -->
+                <article class="bg-white rounded-neat border border-slate-100 p-8 shadow-sm hover-card flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-navy text-white font-title font-black text-lg flex items-center justify-center shrink-0">1</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">2 à 3 semaines</p>
+                            <h3 class="text-xl font-title text-neat-navy uppercase">Cadrage contractuel</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Définition précise des objectifs de la transformation, des critères de succès mesurables, du périmètre, du calendrier, et des points de jalon. Validation par la direction.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400">Objectif : des engagements écrits, clairs et signés</p>
+                    </div>
+                </article>
+
+                <!-- Phase 2 -->
+                <article class="bg-neat-navy rounded-neat p-8 shadow-xl hover-card flex flex-col text-white">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-orange text-white font-title font-black text-lg flex items-center justify-center shrink-0">2</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">4 à 9 mois</p>
+                            <h3 class="text-xl font-title uppercase">Exécution</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white/80 font-body leading-relaxed flex-grow">
+                        Pilotage du chantier, coaching opérationnel des équipes internes qui livrent, arbitrages d'architecture, gestion des dépendances, reporting mensuel à la direction. Je ne remplace pas vos équipes — je les amène à livrer ce qu'elles ne pouvaient pas livrer seules.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-white/40">Objectif : tenir la trajectoire, semaine après semaine</p>
+                    </div>
+                </article>
+
+                <!-- Phase 3 -->
+                <article class="bg-white rounded-neat border border-slate-100 p-8 shadow-sm hover-card flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-navy text-white font-title font-black text-lg flex items-center justify-center shrink-0">3</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">2 à 4 semaines</p>
+                            <h3 class="text-xl font-title text-neat-navy uppercase">Transmission</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Passation à vos équipes internes ou à votre architecte/CTO pour que la dynamique se poursuive sans moi. C'est mon engagement de sortie : la transformation tient quand je ne suis plus là.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400">Objectif : l'autonomie réelle de vos équipes</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Hybride remote / présentiel -->
+    <section class="py-24 bg-white" aria-labelledby="heading-format">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-format" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Hybride remote / présentiel</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Pilotage à distance</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        L'essentiel du pilotage se fait en visio quotidienne ou bi-hebdomadaire, ateliers Miro, revue des documents d'architecture en asynchrone. La géographie n'est jamais un frein.
+                    </p>
+                </article>
+                <article class="bg-neat-navy rounded-neat p-8 hover-card text-white shadow-xl">
+                    <div class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-2">Recommandé</div>
+                    <h3 class="text-base font-title uppercase mb-3">Hybride</h3>
+                    <p class="text-sm text-white/70 font-body leading-relaxed">
+                        1 à 2 déplacements sur site par mois pour les moments clés : kickoff, séminaires d'équipe, comités de pilotage stratégiques, restitutions. Les frais de déplacement sont à la charge du client sous forme d'enveloppe prévisionnelle définie au cadrage.
+                    </p>
+                </article>
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Présentiel renforcé</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Pour les organisations qui souhaitent une présence physique plus fréquente ou dont la culture de travail distribué est moins établie. Défini ensemble au cadrage.
+                    </p>
+                </article>
+            </div>
+            <p class="text-center text-sm text-slate-500 font-body mt-8">Nous définissons le bon rythme lors du cadrage contractuel, selon votre contexte et vos équipes.</p>
+        </div>
+    </section>
+
+    <!-- 6. Investissement -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-investissement">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-investissement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Investissement et modalités</h2>
+            </div>
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8">
+                    <div>
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400 font-bold mb-2">Forfait sur devis</p>
+                        <p class="text-4xl font-title text-neat-navy font-black">60 000 € – 180 000 €</p>
+                        <p class="text-sm text-slate-500 font-body mt-1">HT · selon l'ampleur du chantier et la valeur business attendue</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-neat-orange text-white px-8 py-4 rounded-neat font-title tracking-widest text-sm hover:bg-neat-navy transition-all uppercase font-bold shadow-lg">
+                            Réserver un échange →
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8 border-t border-slate-200 mb-8">
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">Paiement échelonné en 3 tranches :</p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 rounded-neat p-5 border border-slate-100 text-center">
+                            <p class="text-2xl font-title font-black text-neat-navy mb-1">40%</p>
+                            <p class="text-xs font-body text-slate-500 leading-relaxed">Au démarrage</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-neat p-5 border border-slate-100 text-center">
+                            <p class="text-2xl font-title font-black text-neat-navy mb-1">40%</p>
+                            <p class="text-xs font-body text-slate-500 leading-relaxed">À mi-parcours</p>
+                        </div>
+                        <div class="bg-neat-navy rounded-neat p-5 border border-neat-orange/30 text-center shadow-lg">
+                            <p class="text-2xl font-title font-black text-neat-orange mb-1">20%</p>
+                            <p class="text-xs font-body text-white/60 leading-relaxed">À la validation des critères de succès</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-neat-navy/5 rounded-neat border border-neat-navy/10 p-6">
+                    <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-3">Ce que matérialise la dernière tranche</p>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        La tranche finale n'est due que si les objectifs contractualisés sont atteints. C'est la concrétisation de mon engagement de résultat : je n'ai pas intérêt à livrer un chantier inachevé.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="py-24 bg-white" aria-labelledby="heading-faq-tr">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-faq-tr" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Questions fréquentes</h2>
+            </div>
+            <div class="space-y-3">
+                {[
+                    {
+                        q: "Comment sont définis les critères de succès ?",
+                        a: "Ensemble, lors de la phase de cadrage contractuel. Ce sont des indicateurs mesurables et objectifs : temps de cycle de livraison, fréquence de déploiement, réduction des incidents, capacité d'une équipe à livrer de façon autonome. Pas de critères vagues. Si nous ne parvenons pas à en définir de clairs, c'est un signal que le chantier n'est pas encore prêt à démarrer."
+                    },
+                    {
+                        q: "Que se passe-t-il si la transformation prend plus de temps que prévu ?",
+                        a: "C'est mon risque, pas le vôtre. Le prix est fixe. Si l'exécution demande plus d'implication de ma part, j'absorbe la différence. C'est la contrepartie directe de l'engagement de résultat : je n'ai aucun intérêt à faire durer la mission."
+                    },
+                    {
+                        q: "Faut-il avoir réalisé votre Diagnostic pour engager une Transformation ?",
+                        a: "Dans la quasi-totalité des cas, oui. L'engagement de résultat n'est tenable que si le périmètre et les causes racines sont clairement identifiés en amont. Si vous avez réalisé un diagnostic équivalent avec un autre prestataire, nous pouvons en discuter lors de l'échange initial."
+                    },
+                    {
+                        q: "Combien de temps cela mobilise-t-il mes équipes ?",
+                        a: "La phase de cadrage mobilise 2 à 3 personnes clés à mi-temps pendant 2 à 3 semaines. En phase d'exécution, mes interactions se concentrent sur les leads techniques et le management — pas sur l'ensemble des équipes. Mon rôle est de fluidifier le delivery, pas d'y ajouter de la charge."
+                    },
+                    {
+                        q: "Quelle est la différence avec un DSI de transition ?",
+                        a: "Un DSI de transition occupe un poste, manage des équipes, prend des décisions opérationnelles au quotidien. Mon rôle est différent : je pilote un chantier précis sans occuper de ligne hiérarchique. Je travaille avec vos équipes sans les remplacer, sur un périmètre défini contractuellement."
+                    },
+                    {
+                        q: "Comment se passe la phase de transmission ?",
+                        a: "2 à 4 semaines dédiées à documenter les décisions structurantes prises, à aligner votre architecte interne ou CTO sur les patterns mis en place, et à s'assurer que les équipes peuvent continuer sans moi. Cette phase est incluse dans le forfait — ce n'est pas une option."
+                    },
+                    {
+                        q: "Intervenez-vous partout en France ?",
+                        a: "Oui. Le pilotage est majoritairement à distance, avec des déplacements sur site aux moments clés (1 à 2 par mois en phase d'exécution). Les frais de déplacement sont à la charge du client sous forme d'enveloppe prévisionnelle définie lors du cadrage."
+                    }
+                ].map((item, i) => (
+                    <div class="bg-white rounded-neat border border-slate-100 overflow-hidden">
+                        <button
+                            type="button"
+                            class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 font-body font-semibold text-neat-navy text-sm hover:bg-slate-50 transition-colors"
+                            onclick={`const a=document.getElementById('faq-tr-${i}');const open=a.style.display!=='none';a.style.display=open?'none':'block';this.querySelector('span').textContent=open?'+':'−'`}
+                            aria-expanded="false"
+                        >
+                            {item.q}
+                            <span class="shrink-0 text-neat-orange font-title font-black text-lg leading-none">+</span>
+                        </button>
+                        <div id={`faq-tr-${i}`} style="display:none" class="px-6 pb-5">
+                            <p class="text-sm text-slate-600 font-body leading-relaxed border-t border-slate-100 pt-4">{item.a}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA finale -->
+    <section class="py-24 bg-slate-50 text-center border-t border-slate-100" aria-labelledby="heading-cta">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 id="heading-cta" class="text-3xl md:text-4xl font-title text-neat-navy mb-6 normal-case tracking-normal">Parlons de votre transformation</h2>
+            <p class="text-lg text-neat-navy/60 font-body font-light leading-relaxed mb-10 max-w-xl mx-auto">
+                Si vous avez un chantier précis en tête, ou si vous voulez explorer les options avant de vous engager, réservez un échange de 45 minutes. Je vous dirai honnêtement si mon approche correspond à votre situation.
+            </p>
+            <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-neat-orange text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg hover:bg-neat-navy transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
+                Réserver un échange (45 min)
+            </a>
+        </div>
+    </section>
+
+</Layout>

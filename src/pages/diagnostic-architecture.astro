@@ -171,13 +171,13 @@ const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
                     <div class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-2">Recommandé</div>
                     <h3 class="text-base font-title uppercase mb-3">Hybride</h3>
                     <p class="text-sm text-white/70 font-body leading-relaxed">
-                        Event Storming sur site (1 déplacement, 2 jours), interviews et restitution en visio. Frais de déplacement en sus, selon barème transparent.
+                        Event Storming sur site (1 déplacement, 2 jours), interviews et restitution en visio. Les frais de déplacement sont à la charge du client, sous forme d'enveloppe prévisionnelle définie au contrat.
                     </p>
                 </article>
                 <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
                     <h3 class="text-base font-title text-neat-navy uppercase mb-3">Présentiel</h3>
                     <p class="text-sm text-slate-600 font-body leading-relaxed">
-                        L'ensemble du diagnostic sur site. Frais de déplacement en sus (transport au réel, hébergement plafonné à 200 €/nuit, repas à 50 €/jour).
+                        L'ensemble du diagnostic sur site. Les frais de déplacement sont à la charge du client, sous forme d'enveloppe prévisionnelle définie au contrat (transport au réel, hébergement plafonné à 200 €/nuit, repas à 50 €/jour).
                     </p>
                 </article>
             </div>
@@ -305,7 +305,7 @@ const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
             <div class="text-center mb-12">
                 <h2 id="heading-investissement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Investissement</h2>
             </div>
-            <div class="bg-slate-50 rounded-neat border border-slate-100 p-10 shadow-sm">
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8">
                     <div>
                         <p class="text-[10px] font-title uppercase tracking-widest text-slate-400 font-bold mb-2">Forfait fixe</p>
@@ -319,17 +319,31 @@ const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
                         </a>
                     </div>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6 pt-8 border-t border-slate-200">
-                    <div class="space-y-3 text-sm font-body text-slate-600">
-                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Paiement : 50% à la commande, 50% à la restitution finale</p>
-                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Démarrage planifié 4 à 8 semaines après signature</p>
-                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Frais de déplacement en sus (format hybride/présentiel uniquement)</p>
+                <div class="pt-8 border-t border-slate-200 space-y-6">
+                    <div>
+                        <p class="text-sm text-slate-600 font-body leading-relaxed mb-4">Paiement en 2 tranches :</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-slate-50 rounded-neat p-5 border border-slate-100 text-center">
+                                <p class="text-2xl font-title font-black text-neat-navy mb-1">50%</p>
+                                <p class="text-xs font-body text-slate-500 leading-relaxed">À la commande</p>
+                            </div>
+                            <div class="bg-neat-navy rounded-neat p-5 border border-neat-orange/30 text-center shadow-lg">
+                                <p class="text-2xl font-title font-black text-neat-orange mb-1">50%</p>
+                                <p class="text-xs font-body text-white/60 leading-relaxed">À la restitution finale</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-neat border border-neat-orange/20 p-6">
-                        <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-3">Mon engagement</p>
-                        <p class="text-sm text-slate-600 font-body leading-relaxed">
-                            Peu importe la complexité rencontrée, j'assume l'intégralité du risque d'exécution. Vous repartez avec un diagnostic exploitable, ou je révise sans frais supplémentaires.
-                        </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3 text-sm font-body text-slate-600">
+                            <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Démarrage planifié 4 à 8 semaines après signature</p>
+                            <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Frais de déplacement à la charge du client sous forme d'enveloppe prévisionnelle (format hybride/présentiel uniquement)</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-neat border border-neat-orange/20 p-6">
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-3">Mon engagement</p>
+                            <p class="text-sm text-slate-600 font-body leading-relaxed">
+                                Peu importe la complexité rencontrée, j'assume l'intégralité du risque d'exécution. Vous repartez avec un diagnostic exploitable, ou je révise sans frais supplémentaires.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -363,7 +377,7 @@ const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
                     },
                     {
                         q: "Sur quel périmètre travaillez-vous ?",
-                        a: "Pour une PME jusqu'à 800 personnes, je couvre l'intégralité du SI en 3 semaines. Pour une ETI au-delà de 1 500 personnes, nous définissons ensemble un périmètre prioritaire (domaine métier, ligne business, brique technique). Cette définition est faite lors de l'échange initial gratuit."
+                        a: "Le périmètre exact est défini lors de l'échange initial, selon votre contexte et l'enjeu prioritaire. Ce qui est sûr : en 3 semaines, je couvre au minimum un processus métier complet — par exemple, tout ce qui se passe depuis qu'un client passe commande jusqu'à ce que vous puissiez livrer, facturer, et mesurer. C'est ce niveau de granularité qui permet de révéler les vrais points de friction, là où la technique et l'organisation se percutent."
                     },
                     {
                         q: "Le diagnostic peut-il démarrer rapidement ?",
@@ -399,14 +413,14 @@ const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
     </section>
 
     <!-- 11. CTA finale -->
-    <section class="py-24 bg-neat-navy text-white text-center" aria-labelledby="heading-cta">
+    <section class="py-24 bg-white text-center border-t border-slate-100" aria-labelledby="heading-cta">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 id="heading-cta" class="text-3xl md:text-4xl font-title mb-6 normal-case tracking-normal">Et si on en parlait ?</h2>
-            <p class="text-lg text-white/60 font-body font-light leading-relaxed mb-10 max-w-xl mx-auto">
+            <h2 id="heading-cta" class="text-3xl md:text-4xl font-title text-neat-navy mb-6 normal-case tracking-normal">Et si on en parlait ?</h2>
+            <p class="text-lg text-neat-navy/60 font-body font-light leading-relaxed mb-10 max-w-xl mx-auto">
                 45 minutes pour comprendre votre situation, identifier si le diagnostic vous correspond, et vous donner une lecture honnête. Sans pitch commercial. Sans engagement.
             </p>
             <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
-               class="inline-block bg-white text-neat-navy px-12 py-5 rounded-neat font-title tracking-widest text-lg hover:bg-neat-orange hover:text-white transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
+               class="inline-block bg-neat-orange text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg hover:bg-neat-navy transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
                 Réserver un échange (45 min)
             </a>
         </div>
