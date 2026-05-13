@@ -1,0 +1,40 @@
+---
+interface Props {
+    isHome?: boolean;
+}
+const { isHome = false } = Astro.props;
+const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
+---
+
+<a href="#main-content" class="skip-link font-title uppercase text-xs tracking-widest">Passer au contenu</a>
+
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neat-navy/5" role="navigation" aria-label="Menu principal">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-4">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-10 h-10 rounded-full"
+                 onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'">
+            <div id="logo-fallback"
+                 class="hidden w-10 h-10 bg-neat-navy rounded-lg items-center justify-center text-white font-title font-extrabold text-lg">
+                N
+            </div>
+            <span class="text-2xl font-bold tracking-tighter text-neat-navy font-title text-nowrap">NEATCRAFT</span>
+        </a>
+
+        {isHome ? (
+            <div class="hidden md:flex gap-10 text-sm font-semibold uppercase tracking-widest">
+                <a href="#enjeu" class="nav-link text-neat-navy/70 hover:text-neat-navy">L'Enjeu</a>
+                <a href="#analyse" class="nav-link text-neat-navy/70 hover:text-neat-navy">Analyse</a>
+                <a href="#expertise" class="nav-link text-neat-navy/70 hover:text-neat-navy">Expertise</a>
+                <a href="#offres" class="nav-link text-neat-navy/70 hover:text-neat-navy font-bold text-neat-orange">Offres</a>
+            </div>
+        ) : (
+            <div class="flex items-center gap-6">
+                <a href="/#offres" class="hidden md:block text-sm font-semibold uppercase tracking-widest text-neat-navy/70 hover:text-neat-navy nav-link">Les offres</a>
+                <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+                   class="inline-block bg-neat-orange text-white px-6 py-3 rounded-neat font-title tracking-widest text-xs hover:bg-neat-navy transition-all uppercase font-bold shadow-sm">
+                    Réserver un échange
+                </a>
+            </div>
+        )}
+    </div>
+</nav>

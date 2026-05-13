@@ -1,0 +1,34 @@
+---
+const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
+---
+
+<footer class="bg-neat-navy py-24 text-white text-center" id="footer-cta" role="contentinfo">
+    <div class="max-w-4xl mx-auto px-6 font-title uppercase tracking-widest">
+        <div class="flex justify-center items-center gap-4 mb-10 text-3xl font-bold tracking-tighter">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-12 h-12 rounded-full"
+                 onerror="this.style.display='none'">
+            <span>NEATCRAFT</span>
+        </div>
+        <h2 class="text-2xl mb-10 leading-relaxed normal-case tracking-normal font-bold">
+            J'aide les dirigeants de PME et ETI françaises à passer d'un SI qui les prend en otage<br/>
+            <span class="text-neat-orange">à une trajectoire technologique qu'ils maîtrisent.</span>
+        </h2>
+        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-white text-neat-navy px-12 py-4 rounded-neat text-lg hover:bg-neat-orange hover:text-white transition-all mb-16 uppercase shadow-lg font-bold">
+            PRENDRE RENDEZ-VOUS
+        </a>
+        <div class="pt-8 flex flex-col md:flex-row justify-center gap-8 text-[10px] opacity-30 tracking-[0.2em]">
+            <span>&copy; 2024 NEATCRAFT - Conseil Architecture & Stratégie SI</span>
+            <nav aria-label="Liens légaux">
+                <ul class="flex gap-8">
+                    <li>
+                        <a href="https://www.linkedin.com/in/jouana/" class="hover:opacity-100 transition-opacity font-bold">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="/mentions-legales" class="hover:opacity-100 transition-opacity font-bold">Mentions Légales</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>

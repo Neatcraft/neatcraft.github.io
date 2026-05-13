@@ -1,0 +1,218 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const siteTitle = "Sparring Architecte — Expertise architecture senior à la demande · Neatcraft";
+const siteDescription = "L'accès à un architecte senior sur la durée, pour challenger vos décisions stratégiques. Retainer mensuel, 100% à distance. Pour PME et ETI françaises.";
+const siteUrl = "https://www.neatcraft.fr/sparring-architecte/";
+const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
+---
+
+<Layout
+    title={siteTitle}
+    description={siteDescription}
+    canonical={siteUrl}
+    ogTitle={siteTitle}
+    ogDescription={siteDescription}
+>
+
+    <!-- 1. Hero -->
+    <header class="pt-40 pb-24 px-6 text-center max-w-5xl mx-auto">
+        <p class="text-xs font-title uppercase tracking-[0.2em] text-neat-orange font-bold mb-6">Offre 2 — L'expertise à la demande</p>
+        <h1 class="text-5xl md:text-7xl font-title text-neat-navy leading-[1.1] mb-8">
+            Sparring Architecte<br/>
+            <span class="text-neat-orange">L'expertise senior en architecture, à la demande, sur la durée</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-body text-neat-navy/60 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
+            Pour les dirigeants de PME et ETI qui ont besoin d'un sparring partner architecture sur la durée — sans pouvoir (ou vouloir) recruter un architecte d'entreprise à temps plein. 100% à distance, partout en France.
+        </p>
+        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-neat-navy text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg shadow-lg hover:bg-neat-orange transition-all transform hover:-translate-y-1 uppercase font-bold">
+            Réserver un échange (45 min)
+        </a>
+    </header>
+
+    <!-- 2. À qui s'adresse cette offre -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-a-qui">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-a-qui" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">À qui s'adresse cette offre</h2>
+            </div>
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base">
+                    Vous êtes dirigeant d'une PME ou ETI entre 200 et 3 000 collaborateurs. Vous prenez régulièrement des décisions structurantes d'architecture et vous n'avez personne en interne avec qui les challenger sérieusement.
+                </p>
+                <p class="text-base">
+                    Votre DSI ou CTO est solide opérationnellement mais a besoin d'un sparring partner stratégique sur les sujets transverses — choix de plateforme, redécoupage d'équipes, arbitrages dette/feature, décisions de build vs buy.
+                </p>
+                <p class="text-base">
+                    Vous sortez d'un diagnostic et vous voulez vous assurer que la trajectoire reste tenue, sans engager une mission de transformation lourde.
+                </p>
+                <p class="text-base">
+                    Vous préparez une transformation majeure et vous voulez sécuriser les choix d'architecture en amont avec un avis externe expérimenté.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Ce que vous obtenez concrètement -->
+    <section class="py-24 bg-white" aria-labelledby="heading-obtient">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-obtient" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Ce que vous obtenez concrètement</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-8 h-8 rounded-full bg-neat-navy text-white font-title font-black text-sm flex items-center justify-center shrink-0">1</span>
+                        <h3 class="text-lg font-title text-neat-navy uppercase">Un sparring partner architecture sur la durée</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Je connais votre contexte, vos équipes, votre dette, vos enjeux business. Quand vous me sollicitez, vous obtenez une réponse contextualisée — pas un avis générique.
+                    </p>
+                </article>
+
+                <article class="bg-neat-navy rounded-neat p-8 hover-card text-white shadow-xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-8 h-8 rounded-full bg-neat-orange text-white font-title font-black text-sm flex items-center justify-center shrink-0">2</span>
+                        <h3 class="text-lg font-title uppercase">Validation des décisions d'architecture</h3>
+                    </div>
+                    <p class="text-sm text-white/70 font-body leading-relaxed">
+                        Avant de valider un document d'architecture structurant, un choix de plateforme, ou de lancer un chantier majeur, vous pouvez me soumettre la décision. Je challenge, j'identifie les angles morts, je propose des alternatives.
+                    </p>
+                </article>
+
+                <article class="bg-neat-navy rounded-neat p-8 hover-card text-white shadow-xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-8 h-8 rounded-full bg-neat-orange text-white font-title font-black text-sm flex items-center justify-center shrink-0">3</span>
+                        <h3 class="text-lg font-title uppercase">Sparring stratégique avec la direction</h3>
+                    </div>
+                    <p class="text-sm text-white/70 font-body leading-relaxed">
+                        Un point régulier (hebdomadaire ou bi-mensuel selon votre besoin) avec vous et/ou votre DSI pour faire le point sur les enjeux, anticiper les décisions, désamorcer les sujets sensibles.
+                    </p>
+                </article>
+
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="w-8 h-8 rounded-full bg-neat-navy text-white font-title font-black text-sm flex items-center justify-center shrink-0">4</span>
+                        <h3 class="text-lg font-title text-neat-navy uppercase">Disponibilité asynchrone</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Entre nos points, vous pouvez me solliciter par mail, Slack ou visio quand un sujet émerge. Je réponds sous 24 à 48h ouvrées, avec une réflexion construite — pas dans la précipitation.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Ce que cette offre n'est pas -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-pas">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-pas" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Ce que cette offre n'est pas</h2>
+            </div>
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un temps facturé à l'heure.</strong> Vous achetez l'accès à mon expertise et ma connaissance de votre contexte, pas un volume d'heures.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un service de hotline 24/7.</strong> Je ne suis pas à disposition immédiate — je suis disponible avec un délai raisonnable et une qualité de réflexion supérieure.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas de la production directe.</strong> Je ne code pas, je ne rédige pas vos ADR à votre place, je ne pilote pas vos équipes. Je vous aide à mieux décider.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un substitut à un architecte interne.</strong> C'est un complément : je vous aide à structurer la fonction architecture, à monter votre architecte interne en compétence, ou à patienter le temps que vous recrutiez.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Un fonctionnement 100% à distance -->
+    <section class="py-24 bg-white" aria-labelledby="heading-remote">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-remote" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Un fonctionnement 100% à distance</h2>
+            </div>
+            <div class="space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base">
+                    Le Sparring Architecte est conçu pour fonctionner à distance par défaut. Visio, mail, Slack ou Teams selon votre environnement. Cela me permet d'accompagner des PME et ETI dans toute la France sans contrainte géographique, et cela vous garantit ma disponibilité réelle.
+                </p>
+                <p class="text-base">
+                    Si un point physique est nécessaire (séminaire stratégique, restitution annuelle, atelier complexe), un déplacement ponctuel est possible — frais facturés en sus selon barème transparent.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Investissement -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-investissement">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-investissement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Investissement</h2>
+            </div>
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8">
+                    <div>
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400 font-bold mb-2">Retainer mensuel</p>
+                        <p class="text-4xl font-title text-neat-navy font-black">4 500 € – 7 500 €</p>
+                        <p class="text-sm text-slate-500 font-body mt-1">HT par mois · selon la taille de votre organisation et l'intensité de l'accompagnement</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-neat-orange text-white px-8 py-4 rounded-neat font-title tracking-widest text-sm hover:bg-neat-navy transition-all uppercase font-bold shadow-lg">
+                            Réserver un échange →
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-3 text-sm font-body text-slate-600 pt-8 border-t border-slate-200 mb-8">
+                    <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Engagement minimum 6 mois</p>
+                    <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Paiement trimestriel d'avance</p>
+                    <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Frais de déplacement en sus pour les points physiques ponctuels</p>
+                </div>
+                <div class="bg-slate-50 rounded-neat border border-slate-100 p-6">
+                    <p class="text-[10px] font-title uppercase tracking-widest text-slate-400 font-bold mb-3">Pour comparaison</p>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        Un architecte senior à temps plein vous coûte entre 130 et 180 k€ par an chargé. Une mission de consultant senior en régie coûte entre 900 et 1 200 € par jour, soit 18 à 24 k€ par mois pour un temps plein.
+                    </p>
+                    <p class="text-sm text-neat-navy font-semibold font-body leading-relaxed mt-3">
+                        Le Sparring Architecte vous donne l'accès à cette expertise sur la durée, exactement quand vous en avez besoin, à un coût compatible avec une PME ou ETI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Un préalable simple -->
+    <section class="py-24 bg-white" aria-labelledby="heading-prealable">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-prealable" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Un préalable simple</h2>
+            </div>
+            <div class="bg-slate-50 rounded-neat border border-slate-100 p-10 shadow-sm space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base">
+                    Le Sparring Architecte fonctionne d'autant mieux que je connais déjà votre contexte. Dans la majorité des cas, il fait suite à un Diagnostic Architecture &amp; Performance.
+                </p>
+                <p class="text-base">
+                    Si vous souhaitez engager directement un Sparring sans diagnostic préalable, nous prévoyons une phase d'immersion de 1 à 2 semaines en début d'engagement (sans surcoût) pour que je m'approprie suffisamment votre contexte.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA finale -->
+    <section class="py-24 bg-neat-navy text-white text-center" aria-labelledby="heading-cta">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 id="heading-cta" class="text-3xl md:text-4xl font-title mb-6 normal-case tracking-normal">Discutons de votre situation</h2>
+            <p class="text-lg text-white/60 font-body font-light leading-relaxed mb-10 max-w-xl mx-auto">
+                45 minutes pour comprendre où vous en êtes, identifier si le Sparring Architecte vous correspond, et vous donner une lecture honnête. Sans pitch commercial. Sans engagement.
+            </p>
+            <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-white text-neat-navy px-12 py-5 rounded-neat font-title tracking-widest text-lg hover:bg-neat-orange hover:text-white transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
+                Réserver un échange (45 min)
+            </a>
+        </div>
+    </section>
+
+</Layout>

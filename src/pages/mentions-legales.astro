@@ -1,44 +1,11 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales - Neatcraft</title>
-    <!-- Polices : Barlow (Titres) et Montserrat (Corps) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T98459DP');</script>
-    <!-- End Google Tag Manager -->
-</head>
-<body class="antialiased selection:bg-neat-orange selection:text-white">
-
-<!-- Navigation -->
-<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neat-navy/5">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-4 group">
-            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-10 h-10 rounded-full"
-                 onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'">
-            <div id="logo-fallback"
-                 class="hidden w-10 h-10 bg-neat-navy rounded-lg items-center justify-center text-white font-title font-extrabold text-lg">
-                N
-            </div>
-            <span class="text-2xl font-bold tracking-tighter text-neat-navy font-title uppercase">NEATCRAFT</span>
-        </a>
-        <a href="/index.html" class="back-link text-xs font-bold uppercase tracking-widest text-neat-navy">
-            ← Retour au site
-        </a>
-    </div>
-</nav>
+<Layout
+    title="Mentions Légales - Neatcraft"
+    description="Mentions légales de Neatcraft EURL — Cabinet de conseil en architecture SI pour PME et ETI."
+>
 
 <main class="pt-40 pb-24 px-6 max-w-5xl mx-auto">
     <!-- Header Page -->
@@ -151,25 +118,4 @@ import "../styles/global.css";
     </div>
 </main>
 
-<!-- Footer signature -->
-<footer class="bg-neat-navy py-24 text-white text-center" id="footer-cta" role="contentinfo">
-    <div class="max-w-4xl mx-auto px-6 font-title uppercase tracking-widest">
-        <div class="flex justify-center items-center gap-4 mb-10 text-3xl font-bold tracking-tighter">
-            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-12 h-12 rounded-full"
-                 onerror="this.style.display='none'">
-            <span>NEATCRAFT</span>
-        </div>
-        <h2 class="text-2xl mb-10 leading-relaxed normal-case tracking-normal font-bold">Votre IT change tout le temps.
-            <br/> <span class="text-neat-orange">Donnons-lui la bonne direction.</span></h2>
-        <a href="https://calendar.app.google/VWp8SeE54z1jaqwR9" target="_blank" rel="noopener noreferrer"
-           class="inline-block bg-white text-neat-navy px-12 py-4 rounded-neat text-lg hover:bg-neat-orange hover:text-white transition-all mb-16 uppercase shadow-lg font-bold">PRENDRE
-            RENDEZ-VOUS</a>
-        <div class="pt-8 flex flex-col md:flex-row justify-center gap-8 text-[10px] opacity-30 tracking-[0.2em]">
-            <span>&copy; 2024 NEATCRAFT - Conseil Architecture & Stratégie SI</span>
-        </div>
-    </div>
-</footer>
-
-
-</body>
-</html>
+</Layout>
