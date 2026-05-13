@@ -1,0 +1,486 @@
+---
+import "../styles/global.css";
+
+const siteTitle = "Diagnostic Architecture & Performance en 3 semaines · Neatcraft";
+const siteDescription = "Comprendre pourquoi votre SI résiste au changement et obtenir une feuille de route exploitable. Méthode Event Storming + Wardley + Team Topologies. Remote ou hybride, partout en France.";
+const siteUrl = "https://www.neatcraft.fr/diagnostic-architecture/";
+const calendarUrl = "https://calendar.app.google/VWp8SeE54z1jaqwR9";
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription}>
+    <link rel="canonical" href={siteUrl}>
+    <link rel="icon" type="image/svg+xml" href="/img/logos/neatcraft.svg">
+
+    <meta property="og:title" content={siteTitle}>
+    <meta property="og:description" content={siteDescription}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={siteUrl}>
+
+    <!-- Google Tag Manager -->
+    <script is:inline>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T98459DP');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-neat-orange selection:text-white">
+
+<a href="#main-content" class="skip-link font-title uppercase text-xs tracking-widest">Passer au contenu</a>
+
+<!-- Navigation -->
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neat-navy/5" role="navigation" aria-label="Menu principal">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-4">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-10 h-10 rounded-full"
+                 onerror="this.style.display='none'">
+            <span class="text-2xl font-bold tracking-tighter text-neat-navy font-title text-nowrap">NEATCRAFT</span>
+        </a>
+        <div class="flex items-center gap-6">
+            <a href="/#offres" class="hidden md:block text-sm font-semibold uppercase tracking-widest text-neat-navy/70 hover:text-neat-navy nav-link">Les offres</a>
+            <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-neat-orange text-white px-6 py-3 rounded-neat font-title tracking-widest text-xs hover:bg-neat-navy transition-all uppercase font-bold shadow-sm">
+                Réserver un échange
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main id="main-content">
+
+    <!-- 1. Hero -->
+    <header class="pt-40 pb-24 px-6 text-center max-w-5xl mx-auto">
+        <p class="text-xs font-title uppercase tracking-[0.2em] text-neat-orange font-bold mb-6">Offre 1 — Le point de départ</p>
+        <h1 class="text-5xl md:text-7xl font-title text-neat-navy leading-[1.1] mb-8">
+            Diagnostic Architecture<br/>
+            <span class="text-neat-orange">&amp; Performance</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-body text-neat-navy/60 font-light max-w-3xl mx-auto mb-4 leading-relaxed">
+            3 semaines pour révéler ce qui fige votre SI — et savoir comment le débloquer.
+        </p>
+        <p class="text-base font-body text-neat-navy/50 font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+            Pour les dirigeants de PME et ETI françaises dont les projets IT dérapent, dont la dette s'accumule, et qui veulent comprendre la cause racine avant d'engager le moindre euro de transformation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-neat-navy text-white px-12 py-5 rounded-neat font-title tracking-widest text-lg shadow-lg hover:bg-neat-orange transition-all transform hover:-translate-y-1 uppercase font-bold">
+                Réserver un échange (45 min)
+            </a>
+            <a href="#deroulement"
+               class="inline-block border-2 border-neat-navy text-neat-navy px-10 py-4 rounded-neat font-title tracking-widest text-sm hover:bg-neat-navy hover:text-white transition-all uppercase font-bold">
+                Voir le déroulé
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. À qui s'adresse ce diagnostic -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-a-qui">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-a-qui" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">À qui s'adresse ce diagnostic</h2>
+            </div>
+            <div class="bg-white rounded-neat border border-slate-100 p-10 shadow-sm space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base">
+                    Vous êtes dirigeant (DG, CEO, DSI, CTO) d'une PME ou ETI française entre 200 et 3 000 collaborateurs. Vous portez un enjeu business — croissance, modernisation, nouvelle offre, intégration post-acquisition — et vous sentez que votre SI ne suivra pas.
+                </p>
+                <p class="text-base">
+                    Vous voulez comprendre la cause racine avant d'engager un budget de transformation. Vous voulez un avis indépendant et structuré, pas un pitch commercial déguisé en audit.
+                </p>
+                <p class="text-base">
+                    Vous êtes prêt à mobiliser vos équipes 2-3 jours sur des ateliers ciblés. Vous voulez un livrable exploitable, pas une présentation de 80 slides.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Le problème invisible -->
+    <section class="py-24 bg-white" aria-labelledby="heading-probleme">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-probleme" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Ce qui fige votre SI n'est presque jamais ce que vous croyez</h2>
+            </div>
+            <div class="space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-base italic text-neat-navy/70">Voici ce que 12 ans à diagnostiquer des SI m'ont appris :</p>
+                <p class="text-xl text-neat-navy font-semibold leading-snug">
+                    Dans 9 cas sur 10, le problème n'est ni technique, ni un problème de compétences.
+                </p>
+                <p class="text-base">
+                    C'est un problème d'organisation qui s'est progressivement matérialisé dans le code. Des périmètres d'équipes mal alignés sur le métier. Des décisions d'architecture prises sous pression sans cadre. Une dette qui s'accumule plus vite qu'elle ne se résorbe — jusqu'au jour où le système entier devient impossible à faire évoluer sans douleur.
+                </p>
+                <p class="text-base">
+                    Cette mécanique est silencieuse. Elle est invisible depuis un cockpit de direction. Mais elle est diagnosticable — et elle est réversible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Comment ça se déroule -->
+    <section id="deroulement" class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-deroulement">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-deroulement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Comment se déroule le diagnostic en 3 semaines</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Semaine 1 -->
+                <article class="bg-white rounded-neat border border-slate-100 p-8 shadow-sm hover-card flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-navy text-white font-title font-black text-lg flex items-center justify-center shrink-0">1</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">Semaine 1</p>
+                            <h3 class="text-xl font-title text-neat-navy uppercase">Révéler</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 font-body leading-relaxed mb-4 italic">
+                        J'observe votre système dans sa réalité, pas dans sa documentation.
+                    </p>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed flex-grow">
+                        Atelier Event Storming Big Picture sur 1 à 2 jours avec 8–15 personnes clés (en présentiel ou distribué sur Miro). Cartographie Wardley de votre paysage applicatif. Lecture Team Topologies de votre organisation IT. Analyse de votre chaîne de livraison.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400">Objectif : voir où la complexité s'est réellement logée</p>
+                    </div>
+                </article>
+
+                <!-- Semaine 2 -->
+                <article class="bg-neat-navy rounded-neat p-8 shadow-xl hover-card flex flex-col text-white">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-orange text-white font-title font-black text-lg flex items-center justify-center shrink-0">2</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">Semaine 2</p>
+                            <h3 class="text-xl font-title uppercase">Comprendre</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white/60 font-body leading-relaxed mb-4 italic">
+                        Recouper ce que dit le système, ce que disent vos équipes, et ce que vit votre business.
+                    </p>
+                    <p class="text-sm text-white/80 font-body leading-relaxed flex-grow">
+                        Interviews ciblées en visio de 5 à 8 personnes clés (DSI, leads tech, product, métier). Croisement des lectures. Identification des causes racines — celles qui, une fois traitées, libèrent toute la chaîne.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-white/40">Objectif : identifier les 3 à 5 causes racines précises</p>
+                    </div>
+                </article>
+
+                <!-- Semaine 3 -->
+                <article class="bg-white rounded-neat border border-slate-100 p-8 shadow-sm hover-card flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-neat-navy text-white font-title font-black text-lg flex items-center justify-center shrink-0">3</span>
+                        <div>
+                            <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold">Semaine 3</p>
+                            <h3 class="text-xl font-title text-neat-navy uppercase">Cadrer</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 font-body leading-relaxed mb-4 italic">
+                        Rédaction du rapport exécutif et restitution au COMEX/CODIR.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 font-body flex-grow">
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Cartographie de la réalité de votre SI</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Identification précise des causes racines</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> 3 à 5 quick wins activables sous 30 jours</li>
+                        <li class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Feuille de route à 6–12 mois, avec valeur business estimée</li>
+                    </ul>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400">Objectif : une feuille de route exploitable dès le lendemain</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Modalités -->
+    <section class="py-24 bg-white" aria-labelledby="heading-modalites">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-modalites" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Remote, présentiel ou hybride — vous choisissez</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">100% Remote</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        L'ensemble du diagnostic en visio, Event Storming distribué sur Miro. Idéal pour les organisations habituées au travail distribué. <strong>Aucun frais de déplacement.</strong>
+                    </p>
+                </article>
+                <article class="bg-neat-navy rounded-neat p-8 hover-card text-white shadow-xl">
+                    <div class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-2">Recommandé</div>
+                    <h3 class="text-base font-title uppercase mb-3">Hybride</h3>
+                    <p class="text-sm text-white/70 font-body leading-relaxed">
+                        Event Storming sur site (1 déplacement, 2 jours), interviews et restitution en visio. Frais de déplacement en sus, selon barème transparent.
+                    </p>
+                </article>
+                <article class="bg-slate-50 rounded-neat border border-slate-100 p-8 hover-card">
+                    <h3 class="text-base font-title text-neat-navy uppercase mb-3">Présentiel</h3>
+                    <p class="text-sm text-slate-600 font-body leading-relaxed">
+                        L'ensemble du diagnostic sur site. Frais de déplacement en sus (transport au réel, hébergement plafonné à 200 €/nuit, repas à 50 €/jour).
+                    </p>
+                </article>
+            </div>
+            <p class="text-center text-sm text-slate-500 font-body mt-8">Nous décidons ensemble du format lors de l'échange initial, selon votre contexte.</p>
+        </div>
+    </section>
+
+    <!-- 6. Ce que vous emportez -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-livrables">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-livrables" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Ce que vous emportez à l'issue</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <article class="bg-white p-10 rounded-neat border-t-4 border-neat-orange shadow-sm hover-card">
+                    <h3 class="text-xl font-title text-neat-orange uppercase mb-6">Inclus dans le forfait</h3>
+                    <ul class="space-y-4 font-body text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Atelier Event Storming Big Picture (1–2 jours, 8–15 participants)
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Interviews ciblées de 5 à 8 personnes clés
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Analyse documentaire et technique
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Rapport exécutif (15–25 pages, PDF)
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Restitution COMEX/CODIR (2 heures)
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                            Session de questions-réponses à J+15 (1 heure)
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="bg-white p-10 rounded-neat border-t-4 border-slate-200 shadow-sm hover-card">
+                    <h3 class="text-xl font-title text-slate-400 uppercase mb-6">Pour aller plus loin (non inclus)</h3>
+                    <ul class="space-y-4 font-body text-sm text-slate-500">
+                        <li class="flex items-start gap-3">
+                            <span class="text-slate-300 font-bold shrink-0 mt-0.5">—</span>
+                            Mise en œuvre des recommandations
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-slate-300 font-bold shrink-0 mt-0.5">—</span>
+                            Accompagnement continu du dirigeant
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-slate-300 font-bold shrink-0 mt-0.5">—</span>
+                            Coaching opérationnel des équipes
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-slate-300 font-bold shrink-0 mt-0.5">—</span>
+                            Audit de sécurité, audit de code, audit infrastructure détaillé
+                        </li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-slate-100">
+                        <p class="text-xs text-slate-400 font-body leading-relaxed">Ces sujets font l'objet d'offres distinctes ou de recommandations vers les prestataires adaptés.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Ce que ce n'est pas -->
+    <section class="py-24 bg-white" aria-labelledby="heading-pas">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-pas" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Ce que ce diagnostic n'est pas</h2>
+            </div>
+            <div class="bg-slate-50 rounded-neat border border-slate-100 p-10 space-y-6 font-body text-slate-600 leading-relaxed">
+                <p class="text-sm">Pour que vous engagiez ce diagnostic en toute clarté, voici ce qu'il ne livre pas :</p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un audit ligne-à-ligne de votre code applicatif.</strong> Si vous cherchez une revue qualité par application, c'est un autre métier — et un autre budget, plutôt 80 à 200 k€.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un audit de sécurité, de conformité, ou d'infrastructure détaillé.</strong> Je peux identifier les zones de risque évidentes, pas remplacer un pentest ou un audit RGPD.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un chiffrage précis (jours/homme) de chaque chantier proposé.</strong> La roadmap est posée au niveau exécutif — chaque chantier majeur sera ensuite à chiffrer finement en phase de préparation.
+                </p>
+                <p class="text-sm">
+                    <strong class="text-neat-navy">Ce n'est pas un plan de migration détaillé d'une application spécifique.</strong>
+                </p>
+                <p class="text-sm font-medium text-neat-navy border-l-4 border-neat-orange pl-4">
+                    Pourquoi je vous le dis franchement : parce que ce diagnostic est puissant parce qu'il est ciblé. Il identifie les 3 à 5 causes racines qui, traitées, libèrent l'essentiel de la valeur. C'est cela qui vaut son prix.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Pourquoi 3 semaines suffisent -->
+    <section class="py-24 bg-neat-navy text-white" aria-labelledby="heading-pourquoi">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-pourquoi" class="text-3xl md:text-4xl font-title mb-4">Pourquoi 3 semaines suffisent là où d'autres prennent 3 mois</h2>
+            </div>
+            <div class="space-y-6 font-body text-white/70 leading-relaxed">
+                <p class="text-base">
+                    Un audit classique de cabinet conseil dure 3 à 6 mois. Il s'appuie majoritairement sur des entretiens 1-à-1 et la lecture de votre documentation existante. Il produit un livrable épais qui décrit le système tel qu'il est documenté — pas tel qu'il fonctionne réellement.
+                </p>
+                <p class="text-base">
+                    Mon diagnostic dure 3 semaines parce qu'il s'appuie sur l'Event Storming Big Picture, une méthode collaborative qui révèle en 2 jours ce que des entretiens individuels mettent 3 mois à approcher. Vos équipes elles-mêmes, dans la même salle (physique ou virtuelle), font émerger la réalité du système — les flux invisibles, les contournements, les zones de souffrance, les langages métier incohérents entre équipes.
+                </p>
+                <p class="text-base font-semibold text-white">
+                    Ce que vous obtenez n'est pas plus court par compromis. C'est plus court parce que la méthode est plus directe.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Investissement -->
+    <section class="py-24 bg-white" aria-labelledby="heading-investissement">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="heading-investissement" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Investissement</h2>
+            </div>
+            <div class="bg-slate-50 rounded-neat border border-slate-100 p-10 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8">
+                    <div>
+                        <p class="text-[10px] font-title uppercase tracking-widest text-slate-400 font-bold mb-2">Forfait fixe</p>
+                        <p class="text-4xl font-title text-neat-navy font-black">18 000 € – 28 000 €</p>
+                        <p class="text-sm text-slate-500 font-body mt-1">HT · selon la taille de votre organisation et le périmètre couvert</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+                           class="inline-block bg-neat-orange text-white px-8 py-4 rounded-neat font-title tracking-widest text-sm hover:bg-neat-navy transition-all uppercase font-bold shadow-lg">
+                            Réserver un échange →
+                        </a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 pt-8 border-t border-slate-200">
+                    <div class="space-y-3 text-sm font-body text-slate-600">
+                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Paiement : 50% à la commande, 50% à la restitution finale</p>
+                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Démarrage planifié 4 à 8 semaines après signature</p>
+                        <p class="flex items-start gap-2"><span class="text-neat-orange font-bold shrink-0">•</span> Frais de déplacement en sus (format hybride/présentiel uniquement)</p>
+                    </div>
+                    <div class="bg-white rounded-neat border border-neat-orange/20 p-6">
+                        <p class="text-[10px] font-title uppercase tracking-widest text-neat-orange font-bold mb-3">Mon engagement</p>
+                        <p class="text-sm text-slate-600 font-body leading-relaxed">
+                            Peu importe la complexité rencontrée, j'assume l'intégralité du risque d'exécution. Vous repartez avec un diagnostic exploitable, ou je révise sans frais supplémentaires.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100" aria-labelledby="heading-faq">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="heading-faq" class="text-3xl md:text-4xl text-neat-navy font-title mb-4">Questions fréquentes</h2>
+            </div>
+            <div class="space-y-3" id="faq-list">
+
+                {[
+                    {
+                        q: "Pourquoi 3 semaines et pas 3 mois comme un audit classique ?",
+                        a: "Parce que je n'audite pas votre documentation, j'observe votre système réel. L'Event Storming et la cartographie Wardley révèlent en quelques jours ce qu'une démarche d'entretiens individuels met des mois à approcher. La méthode est plus directe, pas plus superficielle."
+                    },
+                    {
+                        q: "Mes équipes vont-elles bloquer leur quotidien pendant 3 semaines ?",
+                        a: "Non. La charge concentrée est sur 1–2 jours d'ateliers (8 à 15 personnes mobilisées) et 5 à 8 entretiens d'1h à 1h30. Le reste se passe en analyse de mon côté."
+                    },
+                    {
+                        q: "Travaillez-vous partout en France ?",
+                        a: "Oui. Le diagnostic est conçu pour être réalisé en remote par défaut, donc la géographie n'est jamais un frein. Pour les organisations qui préfèrent le présentiel, je me déplace dans toute la France métropolitaine — frais de déplacement facturés en sus selon barème transparent."
+                    },
+                    {
+                        q: "Que se passe-t-il après la restitution ?",
+                        a: "Vous êtes libre. Vous pouvez exécuter la feuille de route avec vos équipes seules, faire appel à d'autres prestataires, ou choisir un accompagnement avec moi. Le diagnostic est livré pour être exploitable indépendamment."
+                    },
+                    {
+                        q: "Sur quel périmètre travaillez-vous ?",
+                        a: "Pour une PME jusqu'à 800 personnes, je couvre l'intégralité du SI en 3 semaines. Pour une ETI au-delà de 1 500 personnes, nous définissons ensemble un périmètre prioritaire (domaine métier, ligne business, brique technique). Cette définition est faite lors de l'échange initial gratuit."
+                    },
+                    {
+                        q: "Le diagnostic peut-il démarrer rapidement ?",
+                        a: "Mon calendrier de diagnostics est planifié 4 à 8 semaines à l'avance. La conversation initiale et la contractualisation peuvent se faire rapidement, mais le démarrage effectif demande de respecter ces délais."
+                    },
+                    {
+                        q: "L'Event Storming distribué en remote fonctionne-t-il vraiment aussi bien qu'en présentiel ?",
+                        a: "Honnêtement, le présentiel reste légèrement plus puissant pour les organisations qui n'ont pas une culture remote établie. Pour les organisations habituées au travail distribué, le format remote sur Miro fonctionne très bien — et il a l'avantage de produire un livrable digital directement réutilisable. Je vous conseillerai en fonction de votre contexte lors de l'échange initial."
+                    },
+                    {
+                        q: "Travaillez-vous avec des startups ou des grands groupes du CAC40 ?",
+                        a: "Mon positionnement est PME et ETI françaises entre 200 et 3 000 collaborateurs. C'est là que mon impact est le plus fort et où l'accès direct au dirigeant rend le diagnostic vraiment exploitable."
+                    }
+                ].map((item, i) => (
+                    <div class="bg-white rounded-neat border border-slate-100 overflow-hidden">
+                        <button
+                            type="button"
+                            class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 font-body font-semibold text-neat-navy text-sm hover:bg-slate-50 transition-colors"
+                            onclick={`const a=document.getElementById('faq-a-${i}');const open=a.style.display!=='none';a.style.display=open?'none':'block';this.querySelector('span').textContent=open?'+':'−'`}
+                            aria-expanded="false"
+                        >
+                            {item.q}
+                            <span class="shrink-0 text-neat-orange font-title font-black text-lg leading-none">+</span>
+                        </button>
+                        <div id={`faq-a-${i}`} style="display:none" class="px-6 pb-5">
+                            <p class="text-sm text-slate-600 font-body leading-relaxed border-t border-slate-100 pt-4">{item.a}</p>
+                        </div>
+                    </div>
+                ))}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CTA finale -->
+    <section class="py-24 bg-neat-navy text-white text-center" aria-labelledby="heading-cta">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 id="heading-cta" class="text-3xl md:text-4xl font-title mb-6 normal-case tracking-normal">Et si on en parlait ?</h2>
+            <p class="text-lg text-white/60 font-body font-light leading-relaxed mb-10 max-w-xl mx-auto">
+                45 minutes pour comprendre votre situation, identifier si le diagnostic vous correspond, et vous donner une lecture honnête. Sans pitch commercial. Sans engagement.
+            </p>
+            <a href={calendarUrl} target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-white text-neat-navy px-12 py-5 rounded-neat font-title tracking-widest text-lg hover:bg-neat-orange hover:text-white transition-all uppercase font-bold shadow-xl transform hover:-translate-y-1">
+                Réserver un échange (45 min)
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-neat-navy border-t border-white/5 py-12 text-white text-center" role="contentinfo">
+    <div class="max-w-4xl mx-auto px-6 font-title uppercase tracking-widest">
+        <div class="flex justify-center items-center gap-4 mb-6 text-xl font-bold tracking-tighter">
+            <img src="/img/logos/neatcraft.svg" alt="Neatcraft Logo" class="w-8 h-8 rounded-full" onerror="this.style.display='none'">
+            <span>NEATCRAFT</span>
+        </div>
+        <div class="pt-6 flex flex-col md:flex-row justify-center gap-8 text-[10px] opacity-30 tracking-[0.2em]">
+            <span>&copy; 2024 NEATCRAFT — Conseil Architecture &amp; Stratégie SI</span>
+            <nav aria-label="Liens légaux">
+                <ul class="flex gap-8 justify-center">
+                    <li><a href="/" class="hover:opacity-100 transition-opacity font-bold">Accueil</a></li>
+                    <li><a href="https://www.linkedin.com/in/jouana/" class="hover:opacity-100 transition-opacity font-bold">LinkedIn</a></li>
+                    <li><a href="/mentions-legales" class="hover:opacity-100 transition-opacity font-bold">Mentions Légales</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
