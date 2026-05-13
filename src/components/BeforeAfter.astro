@@ -1,0 +1,81 @@
+---
+const rows = [
+    {
+        avant: "Vos projets dérapent de 2 à 3 fois leur durée annoncée",
+        apres: "Vous savez ce qui dérape, pourquoi, et comment l'arrêter",
+    },
+    {
+        avant: 'Vos équipes vous disent "il faut tout refaire"',
+        apres: "Vos équipes savent exactement quels chantiers prioriser",
+    },
+    {
+        avant: "Vos estimations sont systématiquement fausses",
+        apres: "Vous pilotez par observation, pas par prédiction",
+    },
+    {
+        avant: "Vous redoutez vos comités tech",
+        apres: "Vous arrivez en comité tech avec des décisions, pas des questions",
+    },
+    {
+        avant: "Vous engagez des cabinets qui livrent 80 slides sans impact",
+        apres: "Vous avez un diagnostic exploitable en 3 semaines",
+    },
+    {
+        avant: "Vous payez en régie et vous subissez les dépassements",
+        apres: "Vous payez un forfait et c'est le consultant qui porte le risque",
+    },
+    {
+        avant: "Votre SI est devenu le frein business",
+        apres: "Votre SI est redevenu un levier business",
+    },
+    {
+        avant: "Vous êtes pris en otage par votre SI",
+        apres: "Vous êtes maître de votre trajectoire technologique",
+        highlight: true,
+    },
+];
+---
+
+<div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    <!-- Carte AVANT -->
+    <article class="bg-white p-10 rounded-neat border-t-4 border-neat-pink shadow-sm hover-card">
+        <div class="mb-6 flex items-center justify-between">
+            <h3 class="text-2xl font-title text-neat-pink tracking-tight uppercase">Avant</h3>
+        </div>
+        <p class="text-sm text-slate-500 font-body mb-8 leading-relaxed">
+            Ce que vous vivez aujourd'hui — des signaux que vous connaissez bien.
+        </p>
+        <ul class="space-y-4 font-body text-xs text-neat-navy">
+            {rows.map((row) => (
+                <li class={`flex items-start gap-3 ${row.highlight ? 'pt-4 mt-4 border-t border-slate-100' : ''}`}>
+                    <span class="text-neat-pink font-bold shrink-0 mt-0.5">✕</span>
+                    <p class={row.highlight ? 'font-bold text-sm text-neat-pink' : ''}>{row.avant}</p>
+                </li>
+            ))}
+        </ul>
+        <div class="mt-10 pt-6 border-t border-slate-100 text-center">
+            <span class="text-[10px] uppercase tracking-widest font-title">Situation actuelle</span>
+        </div>
+    </article>
+
+    <!-- Carte APRÈS -->
+    <article class="bg-neat-navy p-10 rounded-neat border-t-4 border-neat-orange shadow-xl hover-card text-white">
+        <div class="mb-6 flex items-center justify-between">
+            <h3 class="text-2xl font-title text-neat-orange tracking-tight uppercase">Après</h3>
+        </div>
+        <p class="text-sm text-white/60 font-body mb-8 leading-relaxed">
+            Ce que vous obtenez — une maîtrise réelle de votre trajectoire.
+        </p>
+        <ul class="space-y-4 font-body text-xs">
+            {rows.map((row) => (
+                <li class={`flex items-start gap-3 ${row.highlight ? 'pt-4 mt-4 border-t border-white/10' : ''}`}>
+                    <span class="text-neat-orange font-bold shrink-0 mt-0.5">✓</span>
+                    <p class={row.highlight ? 'font-bold text-sm text-neat-orange' : 'text-white'}>{row.apres}</p>
+                </li>
+            ))}
+        </ul>
+        <div class="mt-10 pt-6 border-t border-white/10 text-center text-white">
+            <span class="text-[10px] uppercase tracking-widest font-title">Après le diagnostic</span>
+        </div>
+    </article>
+</div>
